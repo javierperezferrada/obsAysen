@@ -17,10 +17,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+63y3bedtph@mq3+v9tj!)z&^gnuyk_ecp*=1l+9g(3+)=)45o'
+SECRET_KEY = '*2f%=hh+6@r8h2r1%yjjf+$#+7@ol9edj+@r(pgc6bryxtbwh-'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,14 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gui',
 ]
 
-MIDDLEWARE = [
+
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -71,7 +75,9 @@ WSGI_APPLICATION = 'obsAysen.wsgi.application'
 
 
 # Database
+
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -83,6 +89,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -101,7 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.10/topics/i18n/
+# https://docs.djangoproject.com/en/1.9/topics/i18n/
+
 
 LANGUAGE_CODE = 'en-us'
 
@@ -125,3 +133,4 @@ MEDIA_ROOT = u'/home/javierperezferrada/obsAysen/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = u'/home/javierperezferrada/obsAysen/static'
 STATIC_URL = '/static/'
+

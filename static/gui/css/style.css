@@ -1,0 +1,22 @@
+.nav-wrapper{
+	background-color: #91a5af;
+}
+body{
+	background-color: rgb(226,226,226);
+	color: #444;
+	font-size: 16px;
+	line-height: 25px;
+	text-rendering: optimizelegibility;
+}
+#divHome{
+	border: 1px solid black;
+}
+#imgBanner{
+	padding-top: 60px;
+}
+#imgMap{
+	max-width: 100%;
+}
+.page-footer{
+	background-color: #ffffff;
+}
