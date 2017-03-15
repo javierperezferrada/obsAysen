@@ -1,8 +1,10 @@
 .nav-wrapper{
-	background-color: #91a5af;
+	background-color: rgb(255,255,255);
+
+
 }
 body{
-	background-color: rgb(226,226,226);
+	background-color: rgb(230,230,230);
 	color: #444;
 	font-size: 16px;
 	line-height: 25px;
@@ -11,12 +13,13 @@ body{
 #divHome{
 	border: 1px solid black;
 }
-#imgBanner{
-	padding-top: 60px;
-}
+
 #imgMap{
 	max-width: 100%;
 }
 .page-footer{
 	background-color: #ffffff;
+}
+li{
+	color:blue;
 }
