@@ -6,9 +6,90 @@
 {% block content %}
 <div class='row'>
 	<div class="col s12">
-	<h4>Bienvenido al Observatorio Laboral de Aysen</h4>
-	<p>El Observatorio Laboral de Aysen (OLA) se enmarca en un proyecto nacional de instalación de observatorios laborales en todas las regiones del país. En términos operativos el trabajo del OLA se realiza de acuerdo a los lineamientos del Observatorio Nacional, instancia que define los productos y las metodologías de trabajo, y al mismo tiempo apoya y monitorea la instalación de los observatorios en las regiones.</p>
+		<h4>Bienvenido al Observatorio Laboral de Aysen</h4>
+		<p>El Observatorio Laboral de Aysen (OLA) se enmarca en un proyecto nacional de instalación de observatorios laborales en todas las regiones del país. En términos operativos el trabajo del OLA se realiza de acuerdo a los lineamientos del Observatorio Nacional, instancia que define los productos y las metodologías de trabajo, y al mismo tiempo apoya y monitorea la instalación de los observatorios en las regiones.</p>
+		<div class="divider"></div>
 	</div>
 </div>
+<div class="row">
+	<div class="col s12">
+		<div class="blue-text"><h5>Principales Ocupaciones</h5></div>
+	</div>
+</div>
+<div class="row">
+	<div class="col s12">
+		<div class="card-panel white">
+			<table class='bordered centered'>
+				<thead>
+					<tr>
+						<th></th>
+						<th data-field="id">Vendedores y demostradores de tiendas y almacenes</th>
+						<th data-field="name">Mecánicos y ajustadores de vehiculos de motor</th>
+						<th data-field="price">Limpiadores de oficinas, hoteles y otros establecimientos</th>
+						<th>Conductores de camiones pesados</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><img src="{% static 'gui/img/salario.png' %}"><br>Salario Promedio</td>
+						<td>Alvin</td>
+						<td>Eclair</td>
+						<td>$0.87</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/promedio.png' %}"><br>Años de escolaridad</td>
+						<td>Alan</td>
+						<td>Jellybean</td>
+						<td>$3.76</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/mujeres.png' %}"><br>Mujeres(%)</td>
+						<td>Jonathan</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/capacitacion.png' %}"><br>Capacitados(%)</td>
+						<td>Jonathan</td>
+						<td>Lollipop</td>
+						<td>$7.00</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</div>
+		<div class="divider"></div>
+	</div>
+</div>
+<div class="row">
+	<div class="col s12">
+		<div class="blue-text"><h5>Sectores Productivos</h5></div>
+	</div>
+</div>
+<div class="row">
+	<div class="card-panel blue">
+		<div class="row">
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/industria1.png' %}"></div>
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/construccion-1.png' %}"></div>
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/agricultura-1.png' %}"></div>
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/industria.png' %}"></div>
+		</div>
+		<div class="row">
+			<div class="col s3"><center><div class="white-text">Comercio</div></center></div>
+			<div class="col s3"><center><div class="white-text">Construcción</div></center></div>
+			<div class="col s3"><center><div class="white-text">Agricultura</div></center></div>
+			<div class="col s3"><center><div class="white-text">Industria Manufacturera</div></center></div>
+		</div>
+		<div class="row">
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/iconos_comercio_icono.png' %}"></div>
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/iconos_construccion_icono.png' %}"></div>
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/iconos_agricultura_icono.png' %}"></div>
+			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/iconos_industria_icono.png' %}"></div>
+		</div>
+	</div>
+</div>
+
 
 {% endblock content %}	

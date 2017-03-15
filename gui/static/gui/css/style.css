@@ -1,3 +1,7 @@
+html{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .nav-wrapper{
 	background-color: rgb(255,255,255);
 
@@ -18,8 +22,26 @@ body{
 	max-width: 100%;
 }
 .page-footer{
-	background-color: #ffffff;
+	background-color: rgb(255,255,255);
 }
-li{
-	color:blue;
+.divider{
+	background-color: rgb(118,123,139);
 }
+th{
+	color:rgb(6,50,163);
+}
+td img{
+	width: 40px;
+}
+.franjaDerecha{
+	padding:2px;
+	padding-left: 0px;
+}
+.franjaIzquierda{
+	padding:2px;
+	padding-right: 0px;
+}
+#footerDiv{
+	padding:0px;
+}
+
