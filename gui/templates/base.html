@@ -16,99 +16,93 @@
 </head>
 
 <body >
-   <DIV class="CONTAINER">
+  <!--
+ <DIV class="CONTAINER">
   <img class="responsive-img" src="{% static 'gui/img/Observatorio_Laboral_banner-02.jpg'%}" id='imgBanner'>  
-  </DIV>
-  <!-- menu inicial -->
-
-  
-
-
-  <div class='container'>
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a class='grey-text text-darken-3' href="#!">MISION Y OBJETIVOS</a></li>
-      <li><a class='grey-text text-darken-3' href="#!">CONSEJO ASESOR</a></li>
-    </ul>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="center hide-on-med-and-down">
-          <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
-          <li><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a class='grey-text text-darken-3' href="badges.html">PANORAMA REGIONAL</a></li>
-          <li><a class='grey-text text-darken-3' href="collapsible.html">OCUPACIONES</a></li>
-          <li><a class='grey-text text-darken-3' href="mobile.html">NOTICIAS</a></li>
-          <li><a class='grey-text text-darken-3' href="mobile.html">CONTACTO</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
-          <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-              <li>
-                <a class="collapsible-header class='grey-text text-darken-3'">QUIÉNES SOMOS<i class="mdi-navigation-arrow-drop-down"></i></a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a class='grey-text text-darken-3' href="#!">MISION Y OBJETIVOS</a></li>
-                    <li><a class='grey-text text-darken-3' href="#!">CONSEJO ASESOR</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li><a class='grey-text text-darken-3' href="badges.html">PANORAMA REGIONAL</a></li>
-          <li><a class='grey-text text-darken-3' href="collapsible.html">OCUPACIONES</a></li>
-          <li><a class='grey-text text-darken-3' href="mobile.html">NOTICIAS</a></li>
-          <li><a class='grey-text text-darken-3' href="mobile.html">CONTACTO</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- end menu -->
-
-    <div class="row">
-      <div class="col s12 m12 l8">{% block content %}{% endblock %}</div>
-      <div class="col s12 m12 l4">
-        <div class="row">
-          <div class="col s12">
-            <DIV CLASS='CARD-PANEL TEAL WHITE'>
-          <SPAN CLASS='RED-TEXT'>PRINCIPALES SECTORES PRODUCTIVOS POR REGIÓN</SPAN>
+</DIV>
+<!-- menu inicial -->
+<div class='container'>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a class='grey-text text-darken-3' href="#!">MISION Y OBJETIVOS</a></li>
+    <li><a class='grey-text text-darken-3' href="#!">CONSEJO ASESOR</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" data-activates="mobile-demo" class="button-collapse"><div class='grey-text text-darken-3'>MENU</div></a>
+      <ul class="center hide-on-med-and-down">
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
+        <li><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class='grey-text text-darken-3' href="badges.html">PANORAMA REGIONAL</a></li>
+        <li><a class='grey-text text-darken-3' href="collapsible.html">OCUPACIONES</a></li>
+        <li><a class='grey-text text-darken-3' href="mobile.html">NOTICIAS</a></li>
+        <li><a class='grey-text text-darken-3' href="mobile.html">CONTACTO</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header class='grey-text text-darken-3'">QUIÉNES SOMOS<i class="mdi-navigation-arrow-drop-down"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class='grey-text text-darken-3' href="#!">MISION Y OBJETIVOS</a></li>
+                  <li><a class='grey-text text-darken-3' href="#!">CONSEJO ASESOR</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a class='grey-text text-darken-3' href="badges.html">PANORAMA REGIONAL</a></li>
+        <li><a class='grey-text text-darken-3' href="collapsible.html">OCUPACIONES</a></li>
+        <li><a class='grey-text text-darken-3' href="mobile.html">NOTICIAS</a></li>
+        <li><a class='grey-text text-darken-3' href="mobile.html">CONTACTO</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- end menu -->
+  <!-- begin content base with right panel and footer page -->
+  <div class="row">
+    <div class="col s12 m12 l8">{% block content %}{% endblock %}</div>
+    <div class="col s12 m12 l4">
+      <div class="row">
+        <div class="col s12">
+          <DIV CLASS='CARD-PANEL TEAL WHITE'>
+            <SPAN CLASS='RED-TEXT'>PRINCIPALES SECTORES PRODUCTIVOS POR REGIÓN</SPAN>
           </DIV>
         </div>
       </div>
-        <div class="row">
-          <div class="col s12">
-            <DIV CLASS='card-panel teal WHITE'>
-              <img class="responsive-img" src="{% static 'gui/img/rda.png' %}" id='imgMap'>
-            </DIV>
-          </div>
+      <div class="row">
+        <div class="col s12">
+          <DIV CLASS='card-panel teal WHITE'>
+            <img class="responsive-img" src="{% static 'gui/img/rda.png' %}" id='imgMap'>
+          </DIV>
         </div>
-        <div class="row">
-          <div class="col s12"><img class="responsive-img" src="{% static 'gui/img/sil.jpg' %}" id='sil'>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col s12"><img class="responsive-img" src="{% static 'gui/img/sil.jpg' %}" id='sil'>
         </div>
+      </div>
 
 
-        <div class="row">
-          <div class="col s12"><img class="responsive-img" src="{% static 'gui/img/bne.jpg' %}" id='bne'>
-          </div>
+      <div class="row">
+        <div class="col s12"><img class="responsive-img" src="{% static 'gui/img/bne.jpg' %}" id='bne'>
         </div>
       </div>
     </div>
-
-
-    <footer>
-      
-      <div class='card-panel white' id='footerDiv'>
-        <div class="row">
+  </div>
+  <footer>
+    <div class='card-panel white' id='footerDiv'>
+      <div class="row">
         <div class="col s5 "><div class="card-panel blue franjaDerecha"></div></div>
         <div class="col s7 "><div class="card-panel red franjaIzquierda"></div></div>
       </div>
-        <div class="row">
-          <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/logos.png' %}" id='bid'></div>
-          <div class="col s6 m6 l3"></div>
-          <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/otic.png' %}" id='otic'></div>
-          <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/logou.png' %}" id='logou'></div>
-        </div>
+      <div class="row">
+        <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/logos.png' %}" id='bid'></div>
+        <div class="col s6 m6 l3"></div>
+        <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/otic.png' %}" id='otic'></div>
+        <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/logou.png' %}" id='logou'></div>
       </div>
-    </footer>
-  </body>
-  </html>
+    </div>
+  </footer>
+</body>
+</html>
