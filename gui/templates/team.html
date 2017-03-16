@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Equipo - Observatorio Aysen{% endblock title%}
+
+{% block content %}
+<div class="row">
+	<div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="#"> Equipo >></a></div>
+	<div class="col s3"></div>	
+</div>
+<div class="row">
+	<div class="col s12 card-panel white">
+		<div class="row">
+			<div class="col s12">
+				<h4>Equipo</h4>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="row">
+			<div class="col s12">
+				<p>NOMBRES DE LOS INTEGRANTES DEL EQUIPO AYSEN </p>
+				<P>Asimismo, se cuenta con el apoyo para el análisis del alumnado de postgrado del Departamento de Economía de la UCN y con el apoyo en la administración del proyecto de Berta Romero, Lorena Saldes y Mélida Barrios. </P>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content%}

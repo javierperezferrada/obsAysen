@@ -12,19 +12,20 @@
   <script src="{% static 'gui/js/materialize.js' %}"></script> 
   <script src="{% static 'gui/js/scripts.js' %}"></script>
   <link rel='stylesheet' href="{% static 'gui/css/style.css' %}"></link>
-
+  <link rel="shortcut icon" href="{% static 'gui/img/favicon.ico' %}" />
 </head>
 
 <body >
-  <!--
+  
  <DIV class="CONTAINER">
-  <img class="responsive-img" src="{% static 'gui/img/Observatorio_Laboral_banner-02.jpg'%}" id='imgBanner'>  
+  <img class="responsive-img banner" src="{% static 'gui/img/Observatorio_Laboral_banner-02.jpg'%}" >  
 </DIV>
 <!-- menu inicial -->
 <div class='container'>
   <ul id="dropdown1" class="dropdown-content">
-    <li><a class='grey-text text-darken-3' href="#!">MISION Y OBJETIVOS</a></li>
-    <li><a class='grey-text text-darken-3' href="#!">CONSEJO ASESOR</a></li>
+    <li><a class='grey-text text-darken-3' href="{% url 'gui:about' %}">QUIÉNES SOMOS</a></li>
+    <li><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
+    <li><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
   </ul>
   <nav>
     <div class="nav-wrapper">
@@ -32,10 +33,10 @@
       <ul class="center hide-on-med-and-down">
         <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
         <li><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class='grey-text text-darken-3' href="badges.html">PANORAMA REGIONAL</a></li>
-        <li><a class='grey-text text-darken-3' href="collapsible.html">OCUPACIONES</a></li>
-        <li><a class='grey-text text-darken-3' href="mobile.html">NOTICIAS</a></li>
-        <li><a class='grey-text text-darken-3' href="mobile.html">CONTACTO</a></li>
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
+        <li><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
@@ -45,17 +46,17 @@
               <a class="collapsible-header class='grey-text text-darken-3'">QUIÉNES SOMOS<i class="mdi-navigation-arrow-drop-down"></i></a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a class='grey-text text-darken-3' href="#!">MISION Y OBJETIVOS</a></li>
-                  <li><a class='grey-text text-darken-3' href="#!">CONSEJO ASESOR</a></li>
+                  <li><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
+                  <li><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
                 </ul>
               </div>
             </li>
           </ul>
         </li>
-        <li><a class='grey-text text-darken-3' href="badges.html">PANORAMA REGIONAL</a></li>
-        <li><a class='grey-text text-darken-3' href="collapsible.html">OCUPACIONES</a></li>
-        <li><a class='grey-text text-darken-3' href="mobile.html">NOTICIAS</a></li>
-        <li><a class='grey-text text-darken-3' href="mobile.html">CONTACTO</a></li>
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
+        <li><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
+        <li><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
       </ul>
     </div>
   </nav>

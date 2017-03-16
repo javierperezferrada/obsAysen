@@ -1,25 +1,41 @@
 html{
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+h4{
+	color:rgb(15,105,189);
+}
+h5{
+	color:rgb(15,105,189);
+}
+p{
+	line-height: 1.2em;
+	text-align: justify;
+}
+li{
+	text-align: justify;
+}
 
 .nav-wrapper{
 	background-color: rgb(255,255,255);
-
-
 }
 body{
 	background-color: rgb(230,230,230);
-	color: #444;
+	color: rgb(71,81,86);
 	font-size: 16px;
 	line-height: 25px;
 	text-rendering: optimizelegibility;
 }
+a{
+	color: rgb(71,81,86);
+}
 #divHome{
 	border: 1px solid black;
 }
-
-#imgMap{
+.banner{
 	max-width: 100%;
+	width:100%;
+	margin:0 auto;
+	background-size:100% auto;
 }
 .page-footer{
 	background-color: rgb(255,255,255);
@@ -45,3 +61,9 @@ td img{
 	padding:0px;
 }
 
+.depur{
+	border:1px solid black;
+}
+#panoramaUl{
+
+}

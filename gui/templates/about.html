@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}QUIÉNES SOMOS - Observatorio Aysen{% endblock title%}
+
+{% block content %}
+<div class="row">
+	<div class="col s12"><a href="{% url 'gui:home' %}">INICIO /</a><a href="#"> QUIÉNES SOMOS >></a></div>
+	<div class="col s3"></div>	
+</div>
+<div class="row">
+	<div class="col s12 card-panel white">
+		<div class="row">
+			<div class="col s12">
+				<img class="responsive-img banner" src="{% static 'gui/img/cropped.jpg' %}">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<h4>QUIÉNES SOMOS</h4>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="row">
+			<div class="col s12">
+				<p>El Observatorio Laboral para la Región de Antofagasta se encuentra integrado en la red de Observatorios Laborales desarrollada por el Servicio Nacional de Capacitación y Empleo, contando con el financiamiento de la Sociedad de Fomento Fabril. La misión del observatorio es producir conocimiento e información sobre el funcionamiento y caracterización del mercado de trabajo y su dinámica para la Región de Antofagasta, avanzando hacia la anticipación de las brechas futuras de capital humano. Esto con el objetivo de mejorar la empleabilidad de los trabajadores y productividad de la región, por medio de proveer información que apoye la pertinencia de la formación, y el vínculo entre vacantes de empleo y buscadores de empleo. Los principales usuarios de la información provista por el Observatorio son instituciones de Gobierno, las Oficinas Municipales de Información Laboral, instituciones educacionales/formativas, trabajadores y empresarios a nivel regional como nacional. El Observatorio Laboral para la Región de Antofagasta es parte de una red de observatorios regionales (uno para cada región del país) coordinados por el Observatorio Nacional (http://observatorionacional.cl/). Este Observatorio Nacional está conformado por una oficina central y la red de 15 observatorios. El Director de SENCE y los respectivos Directores Regionales del Servicio son los responsables y representantes del proyecto a nivel central y regional. Cada observatorio contará con un consejo asesor que integrará representantes del Estado, del mundo empresarial, empresarios, trabajadores y académicos.  </p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content%}
