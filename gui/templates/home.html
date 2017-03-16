@@ -16,7 +16,8 @@
 		<div><h5>Principales Ocupaciones</h5></div>
 	</div>
 </div>
-<div class="row">
+<!-- table principal activities in big display -->
+<div class="row hide-on-med-and-down">
 	<div class="col s12">
 		<div class="card-panel white">
 			<table class='bordered centered'>
@@ -57,18 +58,108 @@
 					</tr>
 				</tbody>
 			</table>
-
-
 		</div>
 		<div class="divider"></div>
 	</div>
 </div>
+<!-- table principal activities in medium and small display -->
+<div class="row hide-on-large-only">
+	<div class="col s12">
+		<div class="card-panel white">
+			<table class='bordered centered'>
+				<thead>
+					<tr>
+						<th></th>
+						<th data-field="id">Vendedores y demostradores de tiendas y almacenes</th>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><img src="{% static 'gui/img/salario.png' %}"><br>Salario Promedio</td>
+						<td>$0.87</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/promedio.png' %}"><br>Años de escolaridad</td>
+						<td>$3.76</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/mujeres.png' %}"><br>Mujeres(%)</td>
+						<td>$7.00</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/capacitacion.png' %}"><br>Capacitados(%)</td>
+						<td>$7.00</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class='bordered centered'>
+				<thead>
+					<tr>
+						<th></th>
+						<th data-field="name">Mecánicos y ajustadores de vehiculos de motor</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><img src="{% static 'gui/img/salario.png' %}"><br>Salario Promedio</td>
+						<td>Alvin</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/promedio.png' %}"><br>Años de escolaridad</td>
+						<td>Alan</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/mujeres.png' %}"><br>Mujeres(%)</td>
+						<td>Jonathan</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/capacitacion.png' %}"><br>Capacitados(%)</td>
+						<td>Jonathan</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class='bordered centered'>
+				<thead>
+					<tr>
+						<th></th>
+						<th data-field="price">Limpiadores de oficinas, hoteles y otros establecimientos</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><img src="{% static 'gui/img/salario.png' %}"><br>Salario Promedio</td>
+						<td>Eclair</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/promedio.png' %}"><br>Años de escolaridad</td>
+						<td>Jellybean</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/mujeres.png' %}"><br>Mujeres(%)</td>
+						<td>Lollipop</td>
+					</tr>
+					<tr>
+						<td><img src="{% static 'gui/img/capacitacion.png' %}"><br>Capacitados(%)</td>
+						<td>Lollipop</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="divider"></div>
+	</div>
+</div>
+
 <div class="row">
 	<div class="col s12">
 		<div class="blue-text"><h5>Sectores Productivos</h5></div>
 	</div>
 </div>
-<div class="row">
+<!-- Productive sectors for pc-->
+<div class="row hide-on-small-only">
 	<div class="card-panel blue">
 		<div class="row">
 			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/industria1.png' %}"></div>
@@ -87,6 +178,35 @@
 			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/iconos_construccion_icono.png' %}"></div>
 			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/iconos_agricultura_icono.png' %}"></div>
 			<div class="col s3"><img class='responsive-img' src="{% static 'gui/img/iconos_industria_icono.png' %}"></div>
+		</div>
+	</div>
+</div>
+<!-- Productive sectors for mobile-->
+<div class="row hide-on-med-and-up">
+	<div class="card-panel blue">
+		<div class="row">
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/industria1.png' %}"></div>
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/construccion-1.png' %}"></div>
+		</div>
+		<div class="row">
+			<div class="col s6"><center><div class="white-text">Comercio</div></center></div>
+			<div class="col s6"><center><div class="white-text">Construcción</div></center></div>
+		</div>
+		<div class="row">
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/iconos_comercio_icono.png' %}"></div>
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/iconos_construccion_icono.png' %}"></div>
+		</div>
+		<div class="row">
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/agricultura-1.png' %}"></div>
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/industria.png' %}"></div>
+		</div>
+		<div class="row">
+			<div class="col s6"><center><div class="white-text">Agricultura</div></center></div>
+			<div class="col s6"><center><div class="white-text">Industria Manufacturera</div></center></div>
+		</div>
+		<div class="row">
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/iconos_agricultura_icono.png' %}"></div>
+			<div class="col s6"><img class='responsive-img' src="{% static 'gui/img/iconos_industria_icono.png' %}"></div>
 		</div>
 	</div>
 </div>
