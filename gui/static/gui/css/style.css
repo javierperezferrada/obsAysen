@@ -10,7 +10,9 @@ h5{
 p{
 	line-height: 1.2em;
 	text-align: justify;
+	font-size: 1em;
 }
+
 li{
 	text-align: justify;
 }
@@ -69,4 +71,7 @@ td img{
 }
 #download a{
 	color: white;
+}
+.activities{
+	font-size: 0.8em;
 }
