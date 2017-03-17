@@ -4,10 +4,12 @@
 
 {% block content %}
 <br>
-
+<!-- principal row -->
 <div class="row">
-	<div class="col s12">
-
+  <!-- div left side -->
+	<div class="col s12 m12 l8">
+    <!-- div regional panorama -->
+    <div class="row"><div class="col s12">
     <ul class="collapsible" data-collapsible="accordion">
       <li class='blue'>
         <div class="collapsible-header blue">
@@ -57,7 +59,301 @@
       </div>
     </li>
   </ul>
+  </div></div>
+  <!-- div workers -->
+<div class="row">
+  <div class="col s12">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header">
+         <div class="row">
+          <div class="col s4">
+            <br>
+            <img class='responsive-img' src="{% static 'gui/img/general.png' %}">
+          </div>
+          <div class="col s8">
+            <div class="row">
+              <div class="col s12">
+                <h5 class='grey-text text-darken-3'>Trabajadores</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <p class='grey-text text-darken-3'>En esta sección encontrarás una descripción general de los trabajadores de la región, considerando en las estadísticas a los trabajadores conmutantes, y de sus condiciones de empleo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-body white">
+        <div class="row">
+          <div class="col s12">
+            <ul class='grey-text text-darken-3'>
+              <li > Cambio 2014-2015:</li>
+              <li class="collection-item"><i class="tiny material-icons">adjust</i> La tasa de desempleo regional se sitúa en 6,7% (6,2% nacional) para el año 2015, manteniendo la tendencia alcista experimentada desde el año 2012.</li>
+              <li><i class="tiny material-icons">adjust</i> El sector que mayor descenso relativo experimenta en la contratación es el de transporte y comunicaciones con una caída del empleo en los últimos doce meses del 10% (aproximadamente 2.800 puestos de trabajo destruidos).</li>
+              <li><i class="tiny material-icons">adjust</i> La minería (el sector más importante en la ocupación) sigue manifestando un descenso en la contratación, al caer ésta un 8% en variación interanual, equivaliendo este descenso a cerca de 8.500 trabajadores menos.</li>
+              <li><i class="tiny material-icons">adjust</i> De los aproximadamente 8.500 puestos de trabajo destruidos en la minería el 37% pertenecían a trabajadores no residentes (conmutantes).</li>
+              <li><i class="tiny material-icons">adjust</i> A pesar de los descensos en transporte y minería, existen dos sectores que lideran la contratación en el último año: restaurantes y hoteles (creciendo la contratación cerca de un 21%; 1.900 ocupados nuevos) y comercio (11,5% de crecimiento en la ocupación; 5.400 ocupados nuevos).</li>
+            </ul>
+          </div>
+        </div>
+        <div class='row'>
+          <div class="col s12">
+            <p class='grey-text text-darken-3'><strong>Peso de la conmutación sobre el empleo total de cada sector, para cada una de los trece sectores económicos de la Región de Antofagasta </strong>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <img class='responsive-img' src="{% static 'gui/img/peso-conmutacion.png' %}">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
 </div>
+<!-- div employers -->
+<div class="row">
+  <div class="col s12">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li class='blue'>
+        <div class="collapsible-header blue">
+         <div class="row">
+          <div class="col s4">
+            <br>
+            <img class='responsive-img' src="{% static 'gui/img/empresa.png' %}">
+          </div>
+          <div class="col s8">
+            <div class="row">
+              <div class="col s12">
+                <h5 class='white-text'>Empleadores</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <p class='white-text'>En esta sección encontrarás información sobre la distribución de trabajadores entre los distintos tamaño de empresas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-body">
+        <div class="row">
+          <div class="col s12">
+            <ul class='white-text'>
+              <li > Cambio 2014-2015:</li>
+              <li class="collection-item"><i class="tiny material-icons">adjust</i> La mayor parte del empleo en la región se concentra en las grandes empresas (41,4% del empleo total).</li>
+              <li><i class="tiny material-icons">adjust</i> Las grandes empresas concentran el 76,3% de las ventas registradas en la región.</li>
+              <li><i class="tiny material-icons">adjust</i> Las microempresas son mayoría en la región en tanto que representan el 65% del total del número de empresas existentes. No obstante, tan sólo emplean al 7% de los trabajadores.</li>
+              <li><i class="tiny material-icons">adjust</i> De los aproximadamente 8.500 puestos de trabajo destruidos en la minería el 37% pertenecían a trabajadores no residentes (conmutantes).</li>
+              <li><i class="tiny material-icons">adjust</i> A pesar de los descensos en transporte y minería, existen dos sectores que lideran la contratación en el último año: restaurantes y hoteles (creciendo la contratación cerca de un 21%; 1.900 ocupados nuevos) y comercio (11,5% de crecimiento en la ocupación; 5.400 ocupados nuevos).</li>
+            </ul>
+          </div>
+        </div>
+        <div class='row'>
+          <div class="col s12">
+            <p class='white-text bold'><strong>Total de trabajadores y ventas por tamaño de empresa (según ventas) para la Región de Antofagasta, año 2014.</strong>
+            </p>
+          </div>
+        </div>
+        <!-- table total workers in big display -->
+        <div class="row hide-on-med-and-down blue">
+          <div class="col s12">
+              <table class='bordered centered blue white-text'>
+                <thead>
+                  <tr>
+                    <th>Tamaño De Empresa</th>
+                    <th data-field="id">N° de trabajadores(% sobre total)</th>
+                    <th data-field="name">Total ventas(UF)(% sobre total)</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Sin Ventas</td>
+                    <td>9.475 <br> (5,15%)</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Microempresa</td>
+                    <td>9.475 <br> (5,15%)</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Pequeña</td>
+                    <td>9.475 <br> (5,15%)</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Mediana</td>
+                    <td>9.475 <br> (5,15%)</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Grande</td>
+                    <td>9.475 <br> (5,15%)</td>
+                    <td> - <br> - </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div><!-- end table total workers in big display -->
+        <!-- table total workers in medium and small display -->
+        <div class="row hide-on-large-only blue">
+          <div class="col s12">
+              <table class='bordered centered blue white-text'>
+                <thead>
+                  <tr>
+                    <th>Tamaño De Empresa</th>
+                    <th data-field="id">N° de trabajadores(% sobre total)</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Sin Ventas</td>
+                    <td>9.475 <br> (5,15%)</td>
+                  </tr>
+                  <tr>
+                    <td>Microempresa</td>
+                    <td>9.475 <br> (5,15%)</td>
+                  </tr>
+                  <tr>
+                    <td>Pequeña</td>
+                    <td>9.475 <br> (5,15%)</td>
+                  </tr>
+                  <tr>
+                    <td>Mediana</td>
+                    <td>9.475 <br> (5,15%)</td>
+                  </tr>
+                  <tr>
+                    <td>Grande</td>
+                    <td>9.475 <br> (5,15%)</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <table class='bordered centered blue white-text'>
+                <thead>
+                  <tr>
+                    <th>Tamaño De Empresa</th>
+                    <th data-field="name">Total ventas(UF)(% sobre total)</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Sin Ventas</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Microempresa</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Pequeña</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Mediana</td>
+                    <td> - <br> - </td>
+                  </tr>
+                  <tr>
+                    <td>Grande</td>
+                    <td> - <br> - </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div><!-- end table total workers in medium and small display -->
+        <p class='white-text'>Fuente: Servicio de Impuestos Internos 2010-2014.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+ <!-- div young boys -->
+<div class="row">
+  <div class="col s12">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header">
+         <div class="row">
+          <div class="col s4">
+            <br>
+            <img class='responsive-img' src="{% static 'gui/img/ninis.png' %}">
+          </div>
+          <div class="col s8">
+            <div class="row">
+              <div class="col s12">
+                <h5 class='grey-text text-darken-3'>Jóvenes</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <p class='grey-text text-darken-3'>En esta sección encontrará información respecto de la situación de los jóvenes en el mercado laboral (individuos de 15 a 29 años), con especial énfasis en los “nini”, que se define como los jóvenes que no estudian ni trabajan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-body white">
+        <div class="row">
+          <div class="col s12">
+            <ul class='grey-text text-darken-3'>
+              <li class="collection-item"><i class="tiny material-icons">adjust</i> El 59% de los jóvenes varones se encuentran ocupados, siendo esta cifra del 41% para las mujeres.</li>
+              <li><i class="tiny material-icons">adjust</i> Los jóvenes ocupados en la región poseen en su mayoría una formación media científico-humanista completa 23%.</li>
+              <li><i class="tiny material-icons">adjust</i> La población “nini” es del 6% a nivel regional, superando en un punto porcentual al promedio nacional. El 74% de los Nini son mujeres, 26% hombres (CASEN, 2013).</li>
+              <li><i class="tiny material-icons">adjust</i> El 43,5% de los “nini” tienen entre 25 y 29 años.</li>
+              <li><i class="tiny material-icons">adjust</i> Las principales razones de inactividad para los “nini” en la región son: quehaceres del hogar (afectando al 29%) y no tener con quién dejar a los niños (28%).</li>
+            </ul>
+          </div>
+        </div>
+        <div class='row'>
+          <div class="col s12">
+            <p class='grey-text text-darken-3'><strong>Distribución de Ninis según género</strong>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <img class='responsive-img' src="{% static 'gui/img/dist_ninis.png' %}">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+</div><!-- end div left side -->
+
+
+<!-- div right side of page -->
+<div class="col s12 m12 l4">
+  <div class="row">
+    <div class="col s12">
+      <DIV CLASS='CARD-PANEL TEAL WHITE'>
+        <SPAN CLASS='RED-TEXT'><strong>PARTICIPACIÓN % EN EL PIB Y EN EL EMPLEO POR SECTOR ECONÓMICO</strong></SPAN>
+      </DIV>
+    </div>
+    <div class="col s12">
+      <DIV CLASS='card-panel teal WHITE'>
+        <img class="responsive-img" src="{% static 'gui/img/participacion_pib.png' %}" id='imgMap'>
+      </DIV>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <DIV CLASS='CARD-PANEL TEAL WHITE'>
+        <SPAN CLASS='RED-TEXT'><strong>GRADO DE CONCENTRACIÓN ECONÓMICA REGIONAL, MEDIDO A TRAVÉS DEL ÍNDICE DE HERFINDAHL-HIRSCHMANN</strong></SPAN>
+      </DIV>
+    </div>
+    <div class="col s12"><img class="responsive-img" src="{% static 'gui/img/indicador-oficial.jpg' %}" id='sil'>
+    </div>
+  </div>
+</div><!-- end div right side of page -->
+</div><!-- end principal row -->
 
 {% endblock content%}
