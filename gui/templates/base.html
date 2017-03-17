@@ -13,6 +13,7 @@
   <script src="{% static 'gui/js/scripts.js' %}"></script>
   <link rel='stylesheet' href="{% static 'gui/css/style.css' %}"></link>
   <link rel="shortcut icon" href="{% static 'gui/img/favicon.ico' %}" />
+  {% block head %}{% endblock %}
 </head>
 
 <body >
@@ -60,10 +61,10 @@
       </ul>
     </div>
   </nav>
+
   <!-- end menu -->
   {% block content %}{% endblock %}
-  <!-- begin content base with right panel and footer page -->
- 
+  <!-- footer page -->
   <footer>
     <div class='card-panel white' id='footerDiv'>
       <div class="row">
@@ -78,5 +79,6 @@
       </div>
     </div>
   </footer>
+  </div>
 </body>
 </html>

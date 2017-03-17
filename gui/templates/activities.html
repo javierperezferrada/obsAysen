@@ -2,6 +2,8 @@
 {% load static %}
 {% block title %}Ocupaciones - Observatorio Aysen{% endblock title%}
 
+{% block head %}<script src="{% static 'gui/js/activities.js' %}"></script>{% endblock head %}
+
 {% block content %}
 <div class="row">
 	<div class="col s12 card-panel white">
@@ -12,25 +14,46 @@
 		<div class="row">
 			<div class="col s12 m12 l6">
 				<div class="collection activities">
-			        <a href="#!" class="collection-item grey-text text-darken-3">Conductores de automóviles, taxis y camionetas <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			        <a href="#!" class="collection-item grey-text text-darken-3">Empleados de control de abastecimientos inventarios<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			        <a href="#!" class="collection-item grey-text text-darken-3">Mecánicos y ajustadores de vehículos de motors <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			        <a href="#!" class="collection-item grey-text text-darken-3">Porteros y guardianes y afines <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+			        <a href="#modal1" class="collection-item grey-text text-darken-3">Conductores de automóviles, taxis y camionetas <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+			        <a href="#modal1" class="collection-item grey-text text-darken-3">Empleados de control de abastecimientos inventarios<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+			        <a href="#modal1" class="collection-item grey-text text-darken-3">Mecánicos y ajustadores de vehículos de motors <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+			        <a href="#modal1" class="collection-item grey-text text-darken-3">Porteros y guardianes y afines <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
 			        <a href="#!" class="collection-item grey-text text-darken-3">Soldadores y oxicortadores <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
 			      </div>
 			</div>
 			<div class="col s12 m12 l6">
 		      <div class="collection activities">
-		        <a href="#!" class="collection-item grey-text text-darken-3">Conductores de camiones pesados <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="#!" class="collection-item grey-text text-darken-3">Limpiadores de oficinas, hoteles y otros establecimientos <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="#!" class="collection-item grey-text text-darken-3">Personal doméstico<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="#!" class="collection-item grey-text text-darken-3">Secretarios<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="#!" class="collection-item grey-text text-darken-3">Vendedores y demostradores de tiendas y almacenes <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+		        <a href="#modal1" class="collection-item grey-text text-darken-3">Conductores de camiones pesados <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+		        <a href="#modal1" class="collection-item grey-text text-darken-3">Limpiadores de oficinas, hoteles y otros establecimientos <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+		        <a href="#modal1" class="collection-item grey-text text-darken-3">Personal doméstico<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+		        <a href="#modal1" class="collection-item grey-text text-darken-3">Secretarios<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
+		        <a href="#modal1" class="collection-item grey-text text-darken-3">Vendedores y demostradores de tiendas y almacenes <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
 		      </div>
 			</div>
 		</div>
 	</div>
-	
 </div>
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+      	<div class="col s12 m6 l6">
+      		<img class='responsive-img' src="{% static 'gui/img/general.png' %}">
+      	</div>
+      	<div class="col s12 m6 l6">
+      		<h4>Conductores de automóviles, taxis y camionetas</h4>
+      	</div>
+      </div>
+      <div class="row">
+      	<div class="col s2 m1 l2"><img class='responsive-img' src="{% static 'gui/img/salario.png' %}"></div>
+      	<div class="col s7 m9 l8">Salario por hora</div>
+      	<div class="col s3 m2 l2"><h5>$2000</h5></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
 
 {% endblock content%}
