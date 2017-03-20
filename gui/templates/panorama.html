@@ -384,7 +384,9 @@
     </div>
     <div class="col s12">
       <DIV CLASS='card-panel teal WHITE'>
+        <a href="#modal1">
         <img class="responsive-img" src="{% static 'gui/img/participacion_pib.png' %}" id='imgMap'>
+        </a>
       </DIV>
     </div>
   </div>
@@ -394,10 +396,25 @@
         <SPAN CLASS='RED-TEXT'><strong>GRADO DE CONCENTRACIÓN ECONÓMICA REGIONAL, MEDIDO A TRAVÉS DEL ÍNDICE DE HERFINDAHL-HIRSCHMANN</strong></SPAN>
       </DIV>
     </div>
+    <a href="#modal2">
     <div class="col s12"><img class="responsive-img" src="{% static 'gui/img/indicador-oficial.jpg' %}" id='sil'>
+    </a>
     </div>
   </div>
 </div><!-- end div right side of page -->
 </div><!-- end principal row -->
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal noselect">
+    <div class="modal-content">
+      <img class='responsive-img' src="{% static 'gui/img/participacion_pib.png' %}">
+    </div>
+  </div>
+<!-- Modal Structure -->
+  <div id="modal2" class="modal noselect">
+    <div class="modal-content">
+      <img class='responsive-img' src="{% static 'gui/img/indicador-oficial.jpg' %}">
+    </div>
+  </div>
 
 {% endblock content%}
