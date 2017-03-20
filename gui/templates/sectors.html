@@ -2,7 +2,16 @@
 {% load static %}
 {% block title %}Sectores - Observatorio Aysen{% endblock title%}
 
+{% block head %}
+<script src="{% static 'gui/js/sectors.js' %}"></script>
+{% endblock head %}
+
 {% block content_home %}
+<br>
+<div class="row">
+  <div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="#"> Sectores >></a></div>
+  <div class="col s3"></div>  
+</div>
 <div class="row">
 	<div class="col s12">
 	<h4>Sectores</h4>

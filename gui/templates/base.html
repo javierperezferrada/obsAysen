@@ -24,40 +24,40 @@
 <!-- menu inicial -->
 <div class='container'>
   <ul id="dropdown1" class="dropdown-content">
-    <li><a class='grey-text text-darken-3' href="{% url 'gui:about' %}">QUIÉNES SOMOS</a></li>
-    <li><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
-    <li><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
+    <li id='about'><a class='grey-text text-darken-3' href="{% url 'gui:about' %}">QUIÉNES SOMOS</a></li>
+    <li id='advice'><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
+    <li id='team'><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
   </ul>
   <nav>
     <div class="nav-wrapper">
       <a href="#!" data-activates="mobile-demo" class="button-collapse"><div class='grey-text text-darken-3'>MENU</div></a>
       <ul class="center hide-on-med-and-down">
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
-        <li><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
-        <li><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
+        <li id="home"><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
+        <li id="about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li id="panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
+        <li id="sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
+        <li id="activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
+        <li id="news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
+        <li id='home'><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li>
+            <li id="about">
               <a class="collapsible-header class='grey-text text-darken-3'">QUIÉNES SOMOS<i class="mdi-navigation-arrow-drop-down"></i></a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
-                  <li><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
+                  <li id="advice"><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
+                  <li id="team"><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
                 </ul>
               </div>
             </li>
           </ul>
         </li>
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
-        <li><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
-        <li><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
+        <li id="panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
+        <li id="sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
+        <li id="activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
+        <li id="news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
       </ul>
     </div>
   </nav>

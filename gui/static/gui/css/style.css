@@ -7,9 +7,6 @@ h4{
 h5{
 	color:rgb(15,105,189);
 }
-h6{
-	color:rgb(15,105,189);
-}
 p{
 	line-height: 1.2em;
 	text-align: justify;
@@ -66,7 +63,7 @@ td img{
 	padding:0px;
 }
 
-.depur{
+.debug{
 	border:1px solid black;
 }
 #panoramaUl{
@@ -77,4 +74,31 @@ td img{
 }
 .activities{
 	font-size: 0.8em;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.nodrag{
+	-moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none; /* From IE10 only */
+    user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+    -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+    user-drag: none;
+}
+.container .row {
+    margin-left: -0.4rem;
+    }
+
+#auxBreadcrumbs{
+	height: 64px;
 }

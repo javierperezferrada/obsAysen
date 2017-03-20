@@ -2,8 +2,17 @@
 {% load static %}
 {% block title %}Panorama Regional - Observatorio Aysen{% endblock title%}
 
+{% block head %}
+<script src="{% static 'gui/js/panorama.js' %}"></script>
+{% endblock head %}
+
 {% block content %}
 <br>
+<div class="row">
+  <div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="#"> Panorama Regional >></a></div>
+  <div class="col s3"></div>  
+</div>
+
 <!-- principal row -->
 <div class="row">
   <!-- div left side -->
