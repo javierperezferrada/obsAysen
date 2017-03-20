@@ -40,24 +40,25 @@
         <li id="news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li id='home'><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
+        <li id='s_home'><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li id="about">
-              <a class="collapsible-header class='grey-text text-darken-3'">QUIÉNES SOMOS<i class="mdi-navigation-arrow-drop-down"></i></a>
+            <li id="s_about">
+              <a class="collapsible-header grey-text text-darken-3">QUIÉNES SOMOS<i class="mdi-navigation-arrow-drop-down"></i></a>
               <div class="collapsible-body">
                 <ul>
-                  <li id="advice"><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
-                  <li id="team"><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
+                  <li id="s_about2"><a class='grey-text text-darken-3' href="{% url 'gui:about' %}">QUIÉNES SOMOS</a></li>
+                  <li id="s_advice"><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
+                  <li id="s_team"><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
                 </ul>
               </div>
             </li>
           </ul>
         </li>
-        <li id="panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
-        <li id="sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
-        <li id="activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
-        <li id="news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
+        <li id="s_panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
+        <li id="s_sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
+        <li id="s_activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
+        <li id="s_news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
       </ul>
     </div>
   </nav>
