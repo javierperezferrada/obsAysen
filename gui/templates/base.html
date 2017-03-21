@@ -17,8 +17,8 @@
 </head>
 
 <body >
+  <!-- carrousel -->
   <div class="container">
-
     <div class="carousel carousel-slider center" data-indicators="true">
       <div class="carousel-item black white-text" href="#one!">
         <img class="responsive-img banner" id="thebigimage" src="{% static 'gui/img/Observatorio_Laboral_banner-02.jpg'%}" > 
@@ -32,9 +32,8 @@
       <div class="carousel-item blue white-text" href="#four!">
       </div>
     </div>
-  
   </div>
-  
+  <!-- end corrousel -->
  
 <!-- menu inicial -->
 <div class='container'>
@@ -52,7 +51,6 @@
     <div class="nav-wrapper">
       <a href="#!" data-activates="mobile-demo" class="button-collapse"><div class='grey-text text-darken-3'>MENU</div></a>
       <ul class="center hide-on-med-and-down">
-        <li id="home"><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
         <li id="about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
         <li id="panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
         <li id="sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
@@ -60,7 +58,6 @@
         <li id="news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li id="s_home"><a class='grey-text text-darken-3' href="{% url 'gui:home'%}">INICIO</a></li>
         <li id="s_about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown2">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
         <li id="s_panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
         <li id="s_sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
@@ -80,10 +77,12 @@
         <div class="col s7 "><div class="card-panel red franjaIzquierda"></div></div>
       </div>
       <div class="row">
-        <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/logos.png' %}" id='bid'></div>
-        <div class="col s6 m6 l3"></div>
-        <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/otic.png' %}" id='otic'></div>
-        <div class="col s6 m6 l3"><img class="responsive-img" src="{% static 'gui/img/uach_dos.jpg' %}" id='logou'></div>
+        <div class="col s12 m12 l4"><div id="auxLogos"></div><center><img class="responsive-img" src="{% static 'gui/img/logos.png' %}" id='bid'></div></center>
+        <div class="col s12 m12 l4">
+          <div id="auxOtic"></div>
+          <center><img class="responsive-img" src="{% static 'gui/img/otic.png' %}" id='otic'></center>
+        </div>
+        <div class="col s12 m12 l4"><center><img class="responsive-img" src="{% static 'gui/img/uach_dos.jpg' %}" id='logou'></center></div>
       </div>
     </div>
   </footer>

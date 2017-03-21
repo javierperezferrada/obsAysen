@@ -108,25 +108,24 @@ td img{
 
 #logo_sence {
     height: 120px;
-left: 4px;
+left: -35%;
 position: relative;
-top: -235px;
+top: -55%;
 width: 120px;
 }
 #logo_min {
     height: 120px;
-left: 4px;
+left: 35%;
 position: relative;
-top: -235px;
+top: -55%;
 width: 120px;
 }
 
-#thebigimage {
-    /*background-image:url("bread_wine.jpg");
-    height:548px;
-    margin-left:auto;
-    margin-right:auto;*/
-    position:relative; /* and this has to be relative */
-    /*width:731px;*/
-} 
 
+
+#auxOtic{
+	height: 88px;
+}
+#auxLogos{
+	height: 25px;
+}
