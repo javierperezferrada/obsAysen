@@ -19,7 +19,7 @@
 <body >
   <!-- carrousel -->
   <div class="container">
-    <div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel carousel-slider center banner" data-indicators="true">
       <div class="carousel-item black white-text" href="#one!" id='thebigimage'>
         <div class="row">
           <div class="col s1"></div>
@@ -59,20 +59,26 @@
         <li id="panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
         <li id="sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
         <li id="activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
-        <li id="news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
+        <li id="news"><a class='grey-text text-darken-3' href="{% url 'gui:news' %}">NOTICIAS</a></li>
+        {% if user.is_authenticated %}
+          <li id="logout"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:logout' %}" data-tooltip="Salir" data-position="top"><i class="large material-icons">power_settings_new</i></a></li>
+        {% else %}
+          <li id="login"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:login' %}" data-tooltip="Ingresar" data-position="top"><i class="large material-icons">input</i></a></li>
+        {% endif %}
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li id="s_about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown2">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
         <li id="s_panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
         <li id="s_sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
         <li id="s_activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
-        <li id="s_news"><a class='grey-text text-darken-3' href="http://observatorionacional.cl/category/noticias/" target="_blank">NOTICIAS</a></li>
+        <li id="s_news"><a class='grey-text text-darken-3' href="{% url 'gui:news' %}">NOTICIAS</a></li>
       </ul>
     </div>
   </nav>
-
   <!-- end menu -->
+
   {% block content %}{% endblock %}
+
   <!-- footer page -->
   <footer>
     <div class='card-panel white' id='footerDiv'>

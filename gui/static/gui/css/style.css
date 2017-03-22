@@ -13,7 +13,7 @@ p{
 	font-size: 1em;
 }
 
-li{
+.nav-wrapper ul li{
 	text-align: justify;
 	border-bottom: 2px solid #e6e6e6;
 	color:#e6e6e6 !important;
@@ -33,12 +33,7 @@ body{
 #divHome{
 	border: 1px solid black;
 }
-.banner{
-	max-width: 100%;
-	width:100%;
-	margin:0 auto;
-	background-size:100% auto;
-}
+
 .page-footer{
 	background-color: rgb(255,255,255);
 }
@@ -145,11 +140,14 @@ width: 120px;
 	color:#e6e6e6 !important;
 }
 
-.active{
+li.active{
 	border-bottom: 2px solid #0F69B4 !important;
 	color:#0F69B4 !important;
 }
 .nav-wrapper ul li:hover {
    color:#0F69B4 !important;
    border-bottom: 2px solid #0F69B4;
+}
+.banner{
+	height: 250px !important;
 }

@@ -134,3 +134,5 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = u'/home/javierperezferrada/obsAysen/static'
 STATIC_URL = '/static/'
 
+LOGIN_REDIRECT_URL = 'gui:home'
+

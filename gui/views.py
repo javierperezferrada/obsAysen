@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required,permission_required
 
 # Create your views here.
 def home(request):
@@ -24,3 +25,7 @@ def team(request):
 
 def about(request):
 	return render(request,'about.html')
+
+@login_required(login_url='/login/')
+def news(request):
+	return render(request,'news.html')
