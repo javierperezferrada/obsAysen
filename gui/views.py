@@ -13,6 +13,9 @@ def sectors(request):
 def activities(request):
 	return render(request,'activities.html')
 
+def detailActivitie(request):
+	return render(request,'detailActivitie.html')
+
 def advice(request):
 	return render(request,'advice.html')
 
