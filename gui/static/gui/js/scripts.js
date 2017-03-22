@@ -6,7 +6,7 @@
 
   	$('.carousel.carousel-slider').carousel({fullWidth: true});
   	$('.carousel').carousel({dist:0});
-       // window.setInterval(function(){$('.carousel').carousel('next')},6000)
+        window.setInterval(function(){$('.carousel').carousel('next')},6000)
         
 
   }); // end of document ready
