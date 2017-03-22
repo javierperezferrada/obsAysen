@@ -1,5 +1,5 @@
 html{
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "gobCL",Tahoma,Verdana,Segoe,sans-serif;
 }
 h4{
 	color:rgb(15,105,189);
@@ -15,6 +15,8 @@ p{
 
 li{
 	text-align: justify;
+	border-bottom: 2px solid #e6e6e6;
+	color:#e6e6e6 !important;
 }
 
 .nav-wrapper{
@@ -27,9 +29,7 @@ body{
 	line-height: 25px;
 	text-rendering: optimizelegibility;
 }
-a{
-	color: rgb(71,81,86);
-}
+
 #divHome{
 	border: 1px solid black;
 }
@@ -138,4 +138,18 @@ width: 120px;
 }
 #auxLogos{
 	height: 25px;
+}
+
+.nav-wrapper ul li a{
+	border-bottom: 2px solid #e6e6e6;
+	color:#e6e6e6 !important;
+}
+
+.active{
+	border-bottom: 2px solid #0F69B4 !important;
+	color:#0F69B4 !important;
+}
+.nav-wrapper ul li:hover {
+   color:#0F69B4 !important;
+   border-bottom: 2px solid #0F69B4;
 }
