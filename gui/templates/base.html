@@ -72,6 +72,11 @@
         <li id="s_sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
         <li id="s_activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
         <li id="s_news"><a class='grey-text text-darken-3' href="{% url 'gui:news' %}">NOTICIAS</a></li>
+        {% if user.is_authenticated %}
+          <li id="logout"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:logout' %}" data-tooltip="Salir" data-position="top"><i class="large material-icons">power_settings_new</i></a></li>
+        {% else %}
+          <li id="login"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:login' %}" data-tooltip="Ingresar" data-position="top"><i class="large material-icons">input</i></a></li>
+        {% endif %}
       </ul>
     </div>
   </nav>

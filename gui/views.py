@@ -26,6 +26,6 @@ def team(request):
 def about(request):
 	return render(request,'about.html')
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def news(request):
 	return render(request,'news.html')
