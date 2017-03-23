@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import socket
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -125,11 +126,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = u'/home/javierperezferrada/obsAysen/media'
+ip_host = socket.gethostbyname(socket.gethostname())
+if ip_host == '127.0.1.1':
+    MEDIA_ROOT = u'/home/hapticus/obsAysen/media'
+else:
+    MEDIA_ROOT = u'/home/javierperezferrada/obsAysen/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = u'/home/javierperezferrada/obsAysen/static'
 STATIC_URL = '/static/'
