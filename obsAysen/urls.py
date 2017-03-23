@@ -16,10 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 import settings
+from django.views.static import serve
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('gui.urls', namespace="gui")),
-]
+] 
 
-urlpatterns.append(url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}))
+urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+    ]
