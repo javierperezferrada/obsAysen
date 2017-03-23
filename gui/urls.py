@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^quienes-somos/$', views.about ,name='about'),
     url(r'^noticias/$', views.news ,name='news'),
     url(r'^noticias/nueva$', views.newNews ,name='newNews'),
+    url(r'^noticias/borrar/(?P<pk>\d+)/$', views.deleteNews ,name='deleteNews'),
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout, {'template_name': 'home.html'}, name='logout'),
     ]

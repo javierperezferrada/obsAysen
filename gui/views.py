@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required,permission_required
 from gui.forms import NewsForm
 from gui.models import News
@@ -47,3 +47,11 @@ def newNews(request):
         if form.is_valid():
             form.save()
             return redirect('gui:news')
+
+
+def deleteNews(request, pk):
+	print 'delete delete'
+	print pk 
+	new = get_object_or_404(News,pk=pk)
+	new.delete()
+	return redirect('gui:news')

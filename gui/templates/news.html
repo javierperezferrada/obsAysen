@@ -31,14 +31,14 @@
 	<div class="col s12 m6">
 	  <div class="card">
 	    <div class="card-image">
-	      <img src="/media/{{n.imagen}}"> 
+	      <img src="/media/{{n.imagen}}" class='responsive-img'> 
 	    </div>
 	    <div class="card-content">
 	    	<span class="card-title">{{n.title}}</span>
 	    	
 	      <p>{{n.resumen}}</p>
 	      <a href="" id='{{n.pk}}'><span class="new badge" data-badge-caption="Editar"></span></a>
-	      <a href="" id='{{n.pk}}'><span class="new badge red" data-badge-caption="Eliminar"></span></a>
+	      <a href="{% url 'gui:deleteNews' n.pk %}" id='{{n.pk}}'><span class="new badge red" data-badge-caption="Eliminar"></span></a>
 	      
 	    </div>
 	  </div>
