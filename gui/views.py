@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required,permission_required
 from gui.forms import NewsForm
 from gui.models import News
@@ -37,9 +37,6 @@ def about(request):
 #@login_required(login_url='/login/')
 def news(request):
 	news = News.objects.all()[:10]
-
-	news.base = base
-	print news
 	return render(request,'news.html',{'news':news})
 
 def newNews(request):
@@ -49,5 +46,4 @@ def newNews(request):
 		form = NewsForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return render(request,'news.html')
-		#return render(request,'news.html')
+            return redirect('gui:news')
