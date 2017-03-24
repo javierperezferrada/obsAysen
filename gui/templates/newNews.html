@@ -16,6 +16,36 @@
 <div class="row">
 	<form class="col s12" method="post" enctype="multipart/form-data">
 		{% csrf_token %}
+		{% if form %}
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="title" name='title' type="text" class="validate" value='{{ form.title.value }}'>
+				<label for="title">Título</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="resumen" name='resumen' class="materialize-textarea">{{ form.resumen.value }}</textarea>
+				<label for="resumen">Resumen</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="content" name='content' class="materialize-textarea">{{ form.content.value }}</textarea>
+				<label for="content">Contenido</label>
+			</div>
+		</div>
+		<div class="file-field input-field">
+			<div class="btn">
+				<span>Imagen</span>
+				<input type="file" name='imagen'>
+			</div>
+			<div class="file-path-wrapper">
+				<input class="file-path validate" type="text">
+			</div>
+		</div>
+		{% else %}
 		<div class="row">
 			<div class="input-field col s12">
 				<input id="title" name='title' type="text" class="validate">
@@ -44,6 +74,7 @@
 				<input class="file-path validate" type="text">
 			</div>
 		</div>
+		{% endif %}
 		<button class="btn waves-effect waves-light" type="submit" name="action">Aceptar
 			<i class="material-icons right">send</i>
 		</button>

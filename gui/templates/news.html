@@ -37,7 +37,7 @@
 	    	<span class="card-title">{{n.title}}</span>
 	    	
 	      <p>{{n.resumen}}</p>
-	      <a href="" id='{{n.pk}}'><span class="new badge" data-badge-caption="Editar"></span></a>
+	      <a href="{% url 'gui:updateNews' n.pk %}" id='{{n.pk}}'><span class="new badge" data-badge-caption="Editar"></span></a>
 	      <a href="{% url 'gui:deleteNews' n.pk %}" id='{{n.pk}}'><span class="new badge red" data-badge-caption="Eliminar"></span></a>
 	      
 	    </div>

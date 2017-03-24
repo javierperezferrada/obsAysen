@@ -44,10 +44,19 @@ def newNews(request):
 		return render(request,'newNews.html')
 	if request.method == 'POST':
 		form = NewsForm(request.POST, request.FILES)
+		print request.POST
         if form.is_valid():
             form.save()
             return redirect('gui:news')
 
+def updateNews(request, pk, template_name='newNews.html'):
+    new = get_object_or_404(News, pk=pk)
+    print request.POST
+    form = NewsForm(request.POST or None, request.FILES or None,instance=new)
+    if form.is_valid():
+        form.save()
+        return redirect('gui:news')
+    return render(request, template_name, {'form':form})
 
 def deleteNews(request, pk,
 	template_name='confirm_delete.html'):
