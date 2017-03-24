@@ -49,9 +49,11 @@ def newNews(request):
             return redirect('gui:news')
 
 
-def deleteNews(request, pk):
-	print 'delete delete'
-	print pk 
+def deleteNews(request, pk,
+	template_name='confirm_delete.html'):
+	#this function is to delete a news
 	new = get_object_or_404(News,pk=pk)
-	new.delete()
-	return redirect('gui:news')
+	if request.method=='POST':
+		new.delete()
+		return redirect('gui:news')
+	return render(request, template_name,{'object':new})
