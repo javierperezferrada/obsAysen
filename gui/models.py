@@ -8,3 +8,6 @@ class News(models.Model):
     content = models.CharField(max_length=10000)
     imagen = models.FileField(upload_to='news/')
     created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+    	ordering = ["-created_at"]

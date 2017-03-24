@@ -2,13 +2,9 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required,permission_required
 from gui.forms import NewsForm
 from gui.models import News
-import socket
+import math
 
-ip_host = socket.gethostbyname(socket.gethostname())
-if ip_host == '127.0.1.1':
-	base = 'http://localhost:8000/media/'
-else:
-	base = 'http://javierperezferrada.pythonanywhere.com/media/'
+paginationSize = 20
 # Create your views here.
 def home(request):
 	return render(request,'home.html')
@@ -36,8 +32,35 @@ def about(request):
 
 #@login_required(login_url='/login/')
 def news(request):
-	news = News.objects.all()[:10]
-	return render(request,'news.html',{'news':news})
+	news = News.objects.all()[:paginationSize]
+	total = News.objects.count()
+	print total
+	totalPages = math.ceil(total/float(paginationSize))
+	pages = []
+	for p in range(int(totalPages)):
+		print p
+		if p+1 == 1:
+			pages.append({'p':p+1,'class':'active'})
+		else:
+			pages.append({'p':p+1,'class':''})
+	return render(request,'news.html',{'news':news,'pages':pages})
+
+def pageNews(request,page):
+	page = int(page)
+	newsFrom = (page-1)*paginationSize
+	newsTo = page*paginationSize
+	news = News.objects.all()[newsFrom:newsTo]
+	total = News.objects.count()
+	print total
+	totalPages = math.ceil(total/float(paginationSize))
+	pages = []
+	for p in range(int(totalPages)):
+		print p
+		if p+1 == page:
+			pages.append({'p':p+1,'class':'active'})
+		else:
+			pages.append({'p':p+1,'class':''})
+	return render(request,'news.html',{'news':news,'pages':pages})
 
 def newNews(request):
 	if request.method == 'GET':

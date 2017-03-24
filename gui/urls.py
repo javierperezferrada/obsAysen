@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^equipo/$', views.team ,name='team'),
     url(r'^quienes-somos/$', views.about ,name='about'),
     url(r'^noticias/$', views.news ,name='news'),
+    url(r'^noticias/pagina/(?P<page>\d+)/$', views.pageNews ,name='pageNews'),
     url(r'^noticias/nueva$', views.newNews ,name='newNews'),
     url(r'^noticias/borrar/(?P<pk>\d+)/$', views.deleteNews ,name='deleteNews'),
     url(r'^noticias/editar/(?P<pk>\d+)/$', views.updateNews ,name='updateNews'),
