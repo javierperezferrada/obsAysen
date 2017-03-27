@@ -43,8 +43,10 @@
 					<span class="card-title">{{n.title}}</span>
 				</a>
 				<p>{{n.resumen}}</p>
+				{% if user.is_authenticated %}
 				<a href="{% url 'gui:updateNews' n.pk %}" id='{{n.pk}}'><span class="new badge" data-badge-caption="Editar"></span></a>
 				<a href="{% url 'gui:deleteNews' n.pk %}" id='{{n.pk}}'><span class="new badge red" data-badge-caption="Eliminar"></span></a>
+				{% endif %}
 
 			</div>
 		</div>
