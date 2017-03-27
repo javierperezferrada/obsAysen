@@ -62,15 +62,17 @@ def pageNews(request,page):
 			pages.append({'p':p+1,'class':''})
 	return render(request,'news.html',{'news':news,'pages':pages})
 
-def newNews(request):
+def newNews(request, template_name='newNews.html'):
 	if request.method == 'GET':
-		return render(request,'newNews.html')
+		return render(request,template_name)
 	if request.method == 'POST':
 		form = NewsForm(request.POST, request.FILES)
 		print request.POST
         if form.is_valid():
             form.save()
             return redirect('gui:news')
+        else:
+        	return render(request, template_name, {'form':form})
 
 def updateNews(request, pk, template_name='newNews.html'):
     new = get_object_or_404(News, pk=pk)

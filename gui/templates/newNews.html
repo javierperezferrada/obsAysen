@@ -14,6 +14,22 @@
 
 
 <div class="row">
+	{% if form.errors %}
+	<div id="modalError" class="modal bottom-sheet">
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger center">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger center">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
 	<form class="col s12" method="post" enctype="multipart/form-data">
 		{% csrf_token %}
 		{% if form %}
@@ -25,14 +41,14 @@
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="resumen" name='resumen' class="materialize-textarea">{{ form.resumen.value }}</textarea>
+				<textarea id="resumen" name='resumen' class="materialize-textarea validate">{{ form.resumen.value }}</textarea>
 				<label for="resumen">Resumen</label>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="content" name='content' class="materialize-textarea">{{ form.content.value }}</textarea>
+				<textarea id="content" name='content' class="materialize-textarea validate">{{ form.content.value }}</textarea>
 				<label for="content">Contenido</label>
 			</div>
 		</div>
@@ -54,14 +70,14 @@
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="resumen" name='resumen' class="materialize-textarea"></textarea>
+				<textarea id="resumen" name='resumen' class="materialize-textarea validate"></textarea>
 				<label for="resumen">Resumen</label>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="content" name='content' class="materialize-textarea"></textarea>
+				<textarea id="content" name='content' class="materialize-textarea validate"></textarea>
 				<label for="content">Contenido</label>
 			</div>
 		</div>
