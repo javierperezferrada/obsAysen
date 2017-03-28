@@ -129,11 +129,9 @@ width: 120px;
 } 
 
 #auxOtic{
-	height: 88px;
+	height: 32px;
 }
-#auxLogos{
-	height: 25px;
-}
+
 
 .nav-wrapper ul li a{
 	border-bottom: 2px solid #e6e6e6;
