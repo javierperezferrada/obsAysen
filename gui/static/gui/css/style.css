@@ -151,3 +151,8 @@ li.active{
 .banner{
 	height: 250px !important;
 }
+
+.collapsible-header i {
+    float: right;
+
+}

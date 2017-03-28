@@ -353,8 +353,16 @@
             </div>
             <div class="row">
               <div class="col s12">
+                {% if user.is_authenticated %}
+                  <a class="btn-floating btn-large waves-effect waves-light green tooltipped" data-tooltip="Agregar Documento" data-position="top" href="{% url 'gui:newReport' %}"><i class="material-icons">add</i></a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
                 <p class='white-text'>Descargar informes en formato pdf</p>
               </div>
+
             </div>
           </div>
         </div>
@@ -365,6 +373,14 @@
             <a href="{% static 'gui/docs/InformeRegional.pdf' %}">Descargar el pdf con el detalle del informe regional.</a><br>
             <a href="{% static 'gui/docs/Boletin-OLAB-29-09.pdf' %}">Descargar pdf con el boletín trimestre Abril - Junio 2016</a><br>
             <a href="{% static 'gui/docs/Boletin-2-OLAB-julio_septiembre-2016.pdf' %}">Descargar pdf con el boletín trimestre Julio - Septiembre 2016</a>
+            {% if reports %}
+            {% for r in reports %}
+              <a href="/media/{{r.fileReport}}">Descargar {{r.title}}</a>
+              {% if user.is_authenticated %}
+              <a href="{% url 'gui:deleteReport' r.pk %}"><span class="new badge red" data-badge-caption="Eliminar"></span></a>
+              {% endif %}
+            {% endfor %}
+            {% endif %}
           </div>
         </div>
       </div>

@@ -3,8 +3,8 @@ $(document).ready(function(){
 	  $("#s_news").addClass("active");
 	  $('.modal').modal();
 
-  		//$('#modal1').modal('open');
-       $('#modalError').modal('open');
+  	$('#modal0').modal('open');
+    $('#modalError').modal('open');
           
 	});
 

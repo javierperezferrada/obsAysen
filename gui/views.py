@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required,permission_required
-from gui.forms import NewsForm
-from gui.models import News
+from gui.forms import NewsForm, ReportForm
+from gui.models import News, Report
 import math
 
 paginationSize = 20
@@ -10,7 +10,8 @@ def home(request):
 	return render(request,'home.html')
 
 def panorama(request):
-	return render(request,'panorama.html')
+	reports = Report.objects.all()
+	return render(request,'panorama.html',{"reports":reports})
 
 def sectors(request):
 	return render(request,'sectors.html')
@@ -91,3 +92,24 @@ def deleteNews(request, pk,
 		new.delete()
 		return redirect('gui:news')
 	return render(request, template_name,{'object':new})
+
+def newReport(request, template_name='newReport.html'):
+	if request.method == 'GET':
+		return render(request,template_name)
+	if request.method == 'POST':
+		form = ReportForm(request.POST, request.FILES)
+		#print request.POST
+        if form.is_valid():
+            form.save()
+            return redirect('gui:panorama')
+        else:
+        	return render(request, template_name, {'form':form})
+
+def deleteReport(request, pk,
+	template_name='confirm_report_delete.html'):
+	#this function is to delete a report
+	report = get_object_or_404(Report,pk=pk)
+	if request.method=='POST':
+		report.delete()
+		return redirect('gui:panorama')
+	return render(request, template_name,{'object':report})

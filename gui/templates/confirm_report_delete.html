@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Noticias - Observatorio Aysen{% endblock title%}
+{% block title %}Reporte - Observatorio Aysen{% endblock title%}
 
-{% block head %}<script src="{% static 'gui/js/news.js' %}"></script>{% endblock head %}
+{% block head %}<script src="{% static 'gui/js/panorama.js' %}"></script>{% endblock head %}
 
 {% block content %}
 <!-- Modal Structure -->
   <div id="modal0" class="modal">
     <div class="modal-content">
       <h4>Confirmar Eliminar</h4>
-      <p>¿Esta seguro que desea eliminar la noticia "{{ object.title }}" ?</p>
+      <p>¿Esta seguro que desea eliminar el reporte "{{ object.title }}" ?</p>
     </div>
     <div class="modal-footer">
     	<div class="row">
@@ -19,7 +19,7 @@
 	    		</form>
     		</div>
     		<div class="col s6">
-      			<a href="{% url 'gui:news' %}" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+      			<a href="{% url 'gui:panorama' %}" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
       		</div>
       	</div>
     </div>

@@ -6,6 +6,8 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     url(r'^$', views.home ,name='home'),
     url(r'^panorama/$', views.panorama ,name='panorama'),
+    url(r'^panorama/nuevo-reporte$', views.newReport ,name='newReport'),
+    url(r'^panorama/eliminar-reporte/(?P<pk>\d+)/$', views.deleteReport ,name='deleteReport'),
     url(r'^sectores/$', views.sectors ,name='sectors'),
     url(r'^ocupaciones/$', views.activities ,name='activities'),
     url(r'^ocupaciones/detalle$', views.detailActivitie ,name='detailActivitie'),
@@ -15,8 +17,8 @@ urlpatterns = [
     url(r'^noticias/$', views.news ,name='news'),
     url(r'^noticias/pagina/(?P<page>\d+)/$', views.pageNews ,name='pageNews'),
     url(r'^noticias/nueva$', views.newNews ,name='newNews'),
-    url(r'^noticias/borrar/(?P<pk>\d+)/$', views.deleteNews ,name='deleteNews'),
+    url(r'^noticias/eliminar/(?P<pk>\d+)/$', views.deleteNews ,name='deleteNews'),
     url(r'^noticias/editar/(?P<pk>\d+)/$', views.updateNews ,name='updateNews'),
-    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
-    url(r'^logout/$', auth_views.logout, {'template_name': 'home.html'}, name='logout'),
+    url(r'^ingresar/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    url(r'^salir/$', auth_views.logout, {'template_name': 'home.html'}, name='logout'),
     ]

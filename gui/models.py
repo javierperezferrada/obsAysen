@@ -11,3 +11,12 @@ class News(models.Model):
 
     class Meta:
     	ordering = ["-created_at"]
+
+
+class Report(models.Model):
+    title = models.CharField(max_length=500)
+    fileReport = models.FileField(upload_to='reports/')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+    	ordering = ["-created_at"]

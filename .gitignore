@@ -1,5 +1,6 @@
 */migrations/*
 /media/news/*
+/media/reports/*
 *.pyc
 db.sqlite3
 # Byte-compiled / optimized / DLL files

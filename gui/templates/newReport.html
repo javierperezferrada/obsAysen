@@ -1,17 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base_home.html' %}
 {% load static %}
-{% block title %}Nueva Noticia - Observatorio Aysen{% endblock title%}
+{% block title %}Nuevo Reporte - Observatorio Aysen{% endblock title%}
 
-{% block head %}<script src="{% static 'gui/js/news.js' %}"></script>{% endblock head %}
+{% block head %}<script src="{% static 'gui/js/panorama.js' %}"></script>{% endblock head %}
 
-{% block content %}
-
+{% block content_home %}
 <br>
 <div class="row">
-	<div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="{% url 'gui:news' %}"> Noticias / </a><a href="#"> Nueva >></a></div>
+	<div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="{% url 'gui:panorama' %}"> Panorama / </a><a href="#"> Nuevo Reporte >></a></div>
 	<div class="col s3"></div>  
 </div>
-
 <div class="row">
 	{% if form.errors %}
 	<div id="modalError" class="modal bottom-sheet">
@@ -38,23 +36,10 @@
 				<label for="title">Título</label>
 			</div>
 		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="resumen" name='resumen' class="materialize-textarea validate">{{ form.resumen.value }}</textarea>
-				<label for="resumen">Resumen</label>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="content" name='content' class="materialize-textarea validate">{{ form.content.value }}</textarea>
-				<label for="content">Contenido</label>
-			</div>
-		</div>
 		<div class="file-field input-field">
 			<div class="btn">
-				<span>Imagen</span>
-				<input type="file" name='imagen'>
+				<span>Documento</span>
+				<input type="file" name='fileReport'>
 			</div>
 			<div class="file-path-wrapper">
 				<input class="file-path validate" type="text">
@@ -67,23 +52,10 @@
 				<label for="title">Título</label>
 			</div>
 		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="resumen" name='resumen' class="materialize-textarea validate"></textarea>
-				<label for="resumen">Resumen</label>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="content" name='content' class="materialize-textarea validate"></textarea>
-				<label for="content">Contenido</label>
-			</div>
-		</div>
 		<div class="file-field input-field">
 			<div class="btn">
-				<span>Imagen</span>
-				<input type="file" name='imagen'>
+				<span>Documento</span>
+				<input type="file" name='fileReport'>
 			</div>
 			<div class="file-path-wrapper">
 				<input class="file-path validate" type="text">
@@ -95,6 +67,4 @@
 		</button>
 	</form>
 </div>
-
-
-{% endblock content %}
+{% endblock content_home %}
