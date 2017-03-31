@@ -25,11 +25,20 @@ def detailActivitie(request):
 def advice(request):
 	return render(request,'advice.html')
 
+def technicalCommitte(request):
+	return render(request,'technicalCommitte.html')
+
 def team(request):
 	return render(request,'team.html')
 
+def frecuentQuestions(request):
+	return render(request,'frecuentQuestions.html')
+
 def about(request):
 	return render(request,'about.html')
+
+def test(request):
+	return render(request,'test.html')
 
 #@login_required(login_url='/login/')
 def news(request):

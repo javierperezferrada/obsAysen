@@ -1,106 +1,359 @@
 {% load static %}
-<html>
-<head>
-	<title>{% block title %}{% endblock %}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>    
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="{% static 'gui/css/materialize.min.css' %}">
-  <link rel="stylesheet" href="{% static 'gui/css/materialize.css' %}">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-  <script src="{% static 'gui/js/materialize.min.js' %}"></script> 
-  <script src="{% static 'gui/js/materialize.js' %}"></script> 
-  <script src="{% static 'gui/js/scripts.js' %}"></script>
-  <link rel='stylesheet' href="{% static 'gui/css/style.css' %}"></link>
-  <link rel="shortcut icon" href="{% static 'gui/img/favicon.ico' %}" />
-  {% block head %}{% endblock %}
-</head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9">
+    <link rel="stylesheet" href="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/css/ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>{% block title %}{% endblock %}</title>
 
-<body >
-  <!-- carrousel -->
-  <div class="container">
-    <div class="carousel carousel-slider center banner" data-indicators="true">
-      <div class="carousel-item black white-text" href="#one!" id='thebigimage'>
-        <div class="row">
-          <div class="col s1"></div>
-          <div class="col s4"><img src="{% static 'gui/img/logo_sence.png'%}" id='logo_sence' class="responsive-img"></div>
-          <div class="col s4"><img src="{% static 'gui/img/logo_min.png'%}" id='logo_min' class="responsive-img"></div>
+      <link href="{% static 'gui/css/googleapis.css' %}" rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{% static 'gui/css/lightbox.min.css' %}">
+      <link rel="stylesheet" href="{% static 'gui/css/animations.css' %}">
+      <link rel="stylesheet" href="{% static 'gui/css/main.css' %}">
+      <link rel="shortcut icon" type="image/x-icon" href="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/favicon.ico"  />
+      <script src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/js/Chart.bundle.js"></script>
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <style>
+      .chartGoogle{
+        width:100%;
+        min-height: 450px;
+      }
+      .post-sectores .nav-pills > .active > a, .nav-pills > .active > a:hover {
+        background-color: #CE2734 !important;
+      }
+      </style>
+
+      <!-- owl -->
+      <link href="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/owl-carousel/owl.carousel.css" rel="stylesheet">
+      <link href="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/owl-carousel/owl.theme.css" rel="stylesheet">
+
+      <!-- Facebook -->
+
+
+      <meta property="og:title" content="Observatorio Laboral Chile" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://observatorionacional.cl" />
+      <meta property="og:image" content="http://observatorionacional.cl/wp-content/uploads/2016/05/logo_sence.png" />
+      <meta property="og:site_name" content="Observatorio Laboral Chile">
+      <meta property="og:description" content="Gobierno de Chile">
+
+
+
+      <!-- ToDo: Twitter -->
+
+      <!-- All in One SEO Pack 2.3.4.2 by Michael Torbert of Semper Fi Web Design[595,665] -->
+      <meta name="description" itemprop="description" content="El Observatorio Nacional  produce conocimiento sobre la oferta y demanda de ocupaciones en el mercado laboral." />
+      <link rel='next' href='http://observatorionacional.cl/page/2/' />
+
+      <link rel="canonical" href="http://observatorionacional.cl/" />
+      <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-77359907-1', { 'cookieDomain': 'www.observatorionacional.cl' } );
+      
+      ga('send', 'pageview');
+      </script>
+      <script type="text/javascript">
+      function recordOutboundLink(link, category, action) {
+        ga('send', 'event', category, action);
+        if ( link.target == '_blank' ) return true;
+        setTimeout('document.location = "' + link.href + '"', 100);
+        return false;
+      }
+      /* use regular Javascript for this */
+      function getAttr(ele, attr) {
+        var result = (ele.getAttribute && ele.getAttribute(attr)) || null;
+        if( !result ) {
+          var attrs = ele.attributes;
+          var length = attrs.length;
+          for(var i = 0; i < length; i++)
+            if(attr[i].nodeName === attr) result = attr[i].nodeValue;
+        }
+        return result;
+      }
+
+      function aiosp_addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+      }
+
+      function aiosp_addEvent(element, evnt, funct){
+        if (element.attachEvent)
+         return element.attachEvent('on'+evnt, funct);
+       else
+         return element.addEventListener(evnt, funct, false);
+     }
+
+     aiosp_addLoadEvent(function () {
+      var links = document.getElementsByTagName('a');
+      for (var x=0; x < links.length; x++) {
+        if (typeof links[x] == 'undefined') continue;
+        aiosp_addEvent( links[x], 'onclick', function () {
+          var mydomain = new RegExp(document.domain, 'i');
+          href = getAttr(this, 'href');
+          if (href && href.toLowerCase().indexOf('http') === 0 && !mydomain.test(href)) {
+            recordOutboundLink(this, 'Outbound Links', href);
+          }
+        });
+      }
+    });
+     </script>
+     <!-- /all in one seo pack -->
+     <script type="text/javascript">
+     window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/observatorionacional.cl\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.7"}};
+     !function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+     </script>
+     <style type="text/css">
+     img.wp-smiley,
+     img.emoji {
+      display: inline !important;
+      border: none !important;
+      box-shadow: none !important;
+      height: 1em !important;
+      width: 1em !important;
+      margin: 0 .07em !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+      padding: 0 !important;
+    }
+    </style>
+    <link rel='https://api.w.org/' href='http://observatorionacional.cl/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://observatorionacional.cl/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://observatorionacional.cl/wp-includes/wlwmanifest.xml" /> 
+    <meta name="generator" content="WordPress 4.5.7" />
+
+  </head>
+  <body class="home blog page page-id-29 page-template page-template-page-quienessomoscustom2 page-template-page-quienessomoscustom2-php">
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+          // reemplazar ID_DEL_APP_DE_FACEBOOK
+          js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=ID_DEL_APP_DE_FACEBOOK&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <div id="menu-movil">
+          <div class="wrap">
+            <nav id="menu-principal">
+              <!-- Menu Principal - Móvil -->
+              <ul id="menu-main-menu" class="menu-main"><li id="menu-item-639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-639"><a href="{% url 'gui:about' %}">Quiénes Somos</a>
+                <ul class="sub-menu">
+                  <li id="menu-item-641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641"><a href="{% url 'gui:advice' %}">Consejo Asesor</a></li>
+                  <li id="menu-item-640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="{% url 'gui:technicalCommitte' %}">Comité Técnico</a></li>
+                  <li id="menu-item-643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="{% url 'gui:team' %}">Equipo</a></li>
+                  <li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="{% url 'gui:frecuentQuestions' %}">Preguntas Frecuentes</a></li>
+                </ul>
+              </li>
+              <li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="{% url 'gui:panorama' %}">Panorama Regional</a></li>
+              <li id="menu-item-646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-646"><a href="http://observatorionacional.cl/sectores/">Sectores Productivos</a>
+                <ul class="sub-menu">
+                  <li id="menu-item-647" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-647"><a href="http://observatorionacional.cl/sectores/?id=1">Silvoagropecuario</a></li>
+                  <li id="menu-item-648" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-648"><a href="http://observatorionacional.cl/sectores/?id=2">Comercio</a></li>
+                  <li id="menu-item-649" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-649"><a href="http://observatorionacional.cl/sectores/?id=3">Construcción</a></li>
+                  <li id="menu-item-650" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-650"><a href="http://observatorionacional.cl/sectores/?id=4">Hoteles y Restoranes</a></li>
+                  <li id="menu-item-651" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-651"><a href="http://observatorionacional.cl/sectores/?id=5">Industria Manufacturera</a></li>
+                  <li id="menu-item-652" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-652"><a href="http://observatorionacional.cl/sectores/?id=6">Minería</a></li>
+                  <li id="menu-item-653" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-653"><a href="http://observatorionacional.cl/sectores/?id=7">Pesca</a></li>
+                  <li id="menu-item-654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-654"><a href="http://observatorionacional.cl/sectores/?id=8">Transporte, Almacenamiento y Comunicaciones</a></li>
+                </ul>
+              </li>
+              <li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="http://observatorionacional.cl/ocupaciones/">Ocupaciones</a></li>
+              <li id="menu-item-655" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-655"><a href="http://observatorionacional.cl/category/noticias/">Noticias</a></li>
+              <li id="menu-item-642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-642"><a href="http://observatorionacional.cl/descargas/">Descargas</a></li>
+            </ul>            </nav>
+          </div>
         </div>
-         
-         
-      </div>
-      <div class="carousel-item amber white-text" href="#two!">
-      </div>
-      <div class="carousel-item green white-text" href="#three!">
-      </div>
-      <div class="carousel-item blue white-text" href="#four!">
-      </div>
-    </div>
-  </div>
-  <!-- end corrousel -->
- 
-<!-- menu -->
-<div class='container'>
-  <ul id="dropdown1" class="dropdown-content">
-    <li id='about'><a class='grey-text text-darken-3' href="{% url 'gui:about' %}">QUIÉNES SOMOS</a></li>
-    <li id='advice'><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
-    <li id='team'><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
-  </ul>
-  <ul id="dropdown2" class="dropdown-content">
-    <li id='s_about'><a class='grey-text text-darken-3' href="{% url 'gui:about' %}">QUIÉNES SOMOS</a></li>
-    <li id='s_advice'><a class='grey-text text-darken-3' href="{% url 'gui:advice' %}">CONSEJO ASESOR</a></li>
-    <li id='s_team'><a class='grey-text text-darken-3' href="{% url 'gui:team' %}">EQUIPO</a></li>
-  </ul>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" data-activates="mobile-demo" class="button-collapse"><div class='grey-text text-darken-3'>MENU</div></a>
-      <ul class="center hide-on-med-and-down">
-        <li id="about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li id="panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
-        <li id="sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
-        <li id="activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
-        <li id="news"><a class='grey-text text-darken-3' href="{% url 'gui:news' %}">NOTICIAS</a></li>
-        {% if user.is_authenticated %}
-          <li id="logout"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:logout' %}" data-tooltip="Salir" data-position="top"><i class="large material-icons">power_settings_new</i></a></li>
-        {% else %}
-          <li id="login"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:login' %}" data-tooltip="Ingresar" data-position="top"><i class="large material-icons">input</i></a></li>
-        {% endif %}
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li id="s_about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown2">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li id="s_panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
-        <li id="s_sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES</a></li>
-        <li id="s_activities"><a class='grey-text text-darken-3' href="{% url 'gui:activities'%}">OCUPACIONES</a></li>
-        <li id="s_news"><a class='grey-text text-darken-3' href="{% url 'gui:news' %}">NOTICIAS</a></li>
-        {% if user.is_authenticated %}
-          <li id="logout"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:logout' %}" data-tooltip="Salir" data-position="top"><i class="large material-icons">power_settings_new</i></a></li>
-        {% else %}
-          <li id="login"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:login' %}" data-tooltip="Ingresar" data-position="top"><i class="large material-icons">input</i></a></li>
-        {% endif %}
-      </ul>
-    </div>
-  </nav>
-  <!-- end menu -->
 
-  {% block content %}{% endblock %}
+        <header style="background-image:url('http://observatorionacional.cl/wp-content/uploads/2016/05/cropped-cabecera3.jpg');">
+          <div class="wrap">
+            <div class="logo-group">
+              <a href="http://www.sence.cl" title="Sence" class="logo-header main-logo" target="_blank">
+                <img src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/logo/logo_sence.png" alt="Logo Sence" class="img-responsive">
+              </a>
+              <a href="http://www.mintrab.gob.cl" title="Ministerio del Trabajo y Previsión Social" class="logo-header sec-logo" target="_blank">
+                <img src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/logo/logo_min.png" alt="Logo Sence" class="img-responsive">
+              </a>
+            </div>
+            
+            
+            <figure class="site-logo">
+              <a href="{% url 'gui:home' %}" title="Volver al home">
+                <img src="http://observatorionacional.cl/wp-content/uploads/2016/04/olc.png" alt="Observatorio Laboral Chile" class="img-responsive">
+              </a>
+            </figure>
 
-  <!-- footer page -->
-  <footer>
-    <div class='card-panel white' id='footerDiv'>
-      <div class="row">
-        <div class="col s5 "><div class="card-panel blue franjaDerecha"></div></div>
-        <div class="col s7 "><div class="card-panel red franjaIzquierda"></div></div>
+            <nav id="menu-principal">
+              <!-- Menu Principal -->
+              <ul id="menu-main-menu" class="menu-main"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-639 current-menu-item "><a href="{% url 'gui:about' %}">Quiénes Somos</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641"><a href="{% url 'gui:advice' %}">Consejo Asesor</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="{% url 'gui:technicalCommitte' %}">Comité Técnico</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="{% url 'gui:team' %}">Equipo</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="{% url 'gui:frecuentQuestions' %}">Preguntas Frecuentes</a></li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="{% url 'gui:panorama' %}">Panorama Regional</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-646"><a href="http://observatorionacional.cl/sectores/">Sectores Productivos</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-647"><a href="http://observatorionacional.cl/sectores/?id=1">Silvoagropecuario</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-648"><a href="http://observatorionacional.cl/sectores/?id=2">Comercio</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-649"><a href="http://observatorionacional.cl/sectores/?id=3">Construcción</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-650"><a href="http://observatorionacional.cl/sectores/?id=4">Hoteles y Restoranes</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-651"><a href="http://observatorionacional.cl/sectores/?id=5">Industria Manufacturera</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-652"><a href="http://observatorionacional.cl/sectores/?id=6">Minería</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-653"><a href="http://observatorionacional.cl/sectores/?id=7">Pesca</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-654"><a href="http://observatorionacional.cl/sectores/?id=8">Transporte, Almacenamiento y Comunicaciones</a></li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="http://observatorionacional.cl/ocupaciones/">Ocupaciones</a></li>
+              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-655"><a href="http://observatorionacional.cl/category/noticias/">Noticias</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-642"><a href="http://observatorionacional.cl/descargas/">Descargas</a></li>
+            </ul>            </nav>
+
+
+            <a href="#" id="menu-movil-trigger">Menú Principal</a>
+
+          </div>
+        </header> 
+        <!-- begin principal container -->
+        {% block content %}
+        {% endblock %}
+
+          <div class="clearfix"></div>
+
+
+          <footer>
+            <div class="wrap">
+
+              <div class="bicolor">
+                <span class="azul"></span>
+                <span class="rojo"></span>
+              </div>
+
+              <div class="top">
+
+                <div class="listas">
+
+
+
+
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="sep"></div>
+
+              </div>
+
+              <div class="bottom">
+
+                <div class="left">
+                  <span></span>
+                </div>
+                
+                <div class="right text-right">
+          <!--
+<figure>
+            <a href="http://www.mintrab.gob.cl/" title="Ministerio del Trabajo y Previsión Social">
+            <img src="http://observatorionacional.cl/wp-content/uploads/2016/03/ministerio-trabajo.jpg" alt="Gobierno de Chile - Ministerio del Trabajo">
+            </a>
+          </figure>
+        -->
+        <figure>
+          <a href="http://www.iadb.org/es/paises/chile/chile-y-el-bid,1090.html" title="Banco Interamericano de Desarrollo">
+            <img src="http://observatorionacional.cl/wp-content/uploads/2016/04/bid.png" alt="Banco Interamericano de Desarrollo">
+          </a>
+        </figure>
       </div>
-      <div class="row">
-        <div class="col s12 m12 l4"><div id="auxSence"></div><center><img class="responsive-img" src="{% static 'gui/img/logos.png' %}" id='bid'></div></center>
-        <div class="col s12 m12 l4">
-          <div id="auxOtic"></div>
-          <center><img class="responsive-img" src="{% static 'gui/img/otic.png' %}" id='otic'></center>
-        </div>
-        <div class="col s12 m12 l4"><center><img class="responsive-img" src="{% static 'gui/img/uach_dos.jpg' %}" id='logou'></center><div id="auxLogo"></div></div>
+
+      <nav>
+      </nav>
+
+      <div class="clearfix"></div>
+
+      <div class="bicolor">
+        <span class="azul"></span>
+        <span class="rojo"></span>
       </div>
+
     </div>
-  </footer>
+
   </div>
-</body>
-</html>
+
+</footer>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-77359907-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script type='text/javascript' src='http://observatorionacional.cl/wp-includes/js/wp-embed.min.js?ver=4.5.7'></script>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/js/lightbox/js/lightbox.min.js"></script>
+<script type="text/javascript" src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/js/main.js" ></script>
+<!-- owl -->
+<script src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#obsregionalbutton').click(function(){
+  $(this).find('span').toggleClass('glyphicon glyphicon-plus').toggleClass('glyphicon glyphicon-minus');
+});
+ $('#obsregionalbutton').mouseover(function(){
+  $(this).click();
+});
+ $("#owl-mapaspanorama").owlCarousel({
+  autoPlay:6000,
+  singleItem: true,
+  pagination: false
+
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $('#master-mapa').fadeOut(1000);
+
+  $('#seleccion-mapa-sectorial').mouseenter(function(){
+    $('#master-mapa').fadeIn(100);
+  });
+  $('#seleccion-mapa-sectorial').mouseleave(function(){
+    $('#master-mapa').fadeOut(100);
+  });
+
+
+
+  $('#sector1,#sector-agricultura').click(function(e){
+    $("#imagensectores").attr('src','

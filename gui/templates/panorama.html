@@ -7,430 +7,363 @@
 {% endblock head %}
 
 {% block content %}
-<br>
-<div class="row">
-  <div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="#"> Panorama Regional >></a></div>
-  <div class="col s3"></div>  
-</div>
+<div id="content">
 
-<!-- principal row -->
-<div class="row">
-  <!-- div left side -->
-	<div class="col s12 m12 l8">
-    <!-- div regional panorama -->
-    <div class="row"><div class="col s12">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li class='blue'>
-        <div class="collapsible-header blue">
-         <div class="row">
-          <div class="col s4">
-            <br>
-            <img class='responsive-img' src="{% static 'gui/img/icono_panorama.png' %}">
-          </div>
-          <div class="col s8">
-            <div class="row">
-              <div class="col s12">
-                <h5 class='white-text'>Panorama Regional</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <p class='white-text'>La economía de la Región de Aysen está fuertemente caracterizada por un sector: la Minería. Este sector genera aproximadamente el 58% del PIB regional, dando lugar a una fuerte concentración de la actividad económica, crea el 29% del empleo total y explica el 63% de la ocupación que labora en Aysen pero que no reside en ella (empleo conmutante interregional). Tras un largo ciclo donde los precios de los productos mineros han permanecido en niveles históricamente elevados, comienza a experimentar un proceso de normalización, que ha mostrado una repercusión directa sobre la actividad económica y el mercado laboral de la región.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collapsible-body">
-        <div class="row">
-          <div class="col s12">
-            <ul class='white-text'>
-              <li > Cambio 2014-2015:</li>
-              <li class="collection-item"><i class="tiny material-icons">adjust</i> La tasa de desempleo regional se sitúa en 6,7% (6,2% nacional) para el año 2015, manteniendo la tendencia alcista experimentada desde el año 2012.</li>
-              <li><i class="tiny material-icons">adjust</i> El sector que mayor descenso relativo experimenta en la contratación es el de transporte y comunicaciones con una caída del empleo en los últimos doce meses del 10% (aproximadamente 2.800 puestos de trabajo destruidos).</li>
-              <li><i class="tiny material-icons">adjust</i> La minería (el sector más importante en la ocupación) sigue manifestando un descenso en la contratación, al caer ésta un 8% en variación interanual, equivaliendo este descenso a cerca de 8.500 trabajadores menos.</li>
-              <li><i class="tiny material-icons">adjust</i> De los aproximadamente 8.500 puestos de trabajo destruidos en la minería el 37% pertenecían a trabajadores no residentes (conmutantes).</li>
-              <li><i class="tiny material-icons">adjust</i> A pesar de los descensos en transporte y minería, existen dos sectores que lideran la contratación en el último año: restaurantes y hoteles (creciendo la contratación cerca de un 21%; 1.900 ocupados nuevos) y comercio (11,5% de crecimiento en la ocupación; 5.400 ocupados nuevos).</li>
-            </ul>
-          </div>
-        </div>
-        <div class='row'>
-          <div class="col s12">
-            <p class='white-text bold'><strong>Dinámica de los principales indicadores del mercado de trabajo</strong>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <img class='responsive-img' src="{% static 'gui/img/dinamica_indicadores.png' %}">
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-  </div></div>
-  <!-- div workers -->
-<div class="row">
-  <div class="col s12">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header">
-         <div class="row">
-          <div class="col s4">
-            <br>
-            <img class='responsive-img' src="{% static 'gui/img/general.png' %}">
-          </div>
-          <div class="col s8">
-            <div class="row">
-              <div class="col s12">
-                <h5 class='grey-text text-darken-3'>Trabajadores</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <p class='grey-text text-darken-3'>En esta sección encontrarás una descripción general de los trabajadores de la región, considerando en las estadísticas a los trabajadores conmutantes, y de sus condiciones de empleo.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collapsible-body white">
-        <div class="row">
-          <div class="col s12">
-            <ul class='grey-text text-darken-3'>
-              <li > Cambio 2014-2015:</li>
-              <li class="collection-item"><i class="tiny material-icons">adjust</i> La tasa de desempleo regional se sitúa en 6,7% (6,2% nacional) para el año 2015, manteniendo la tendencia alcista experimentada desde el año 2012.</li>
-              <li><i class="tiny material-icons">adjust</i> El sector que mayor descenso relativo experimenta en la contratación es el de transporte y comunicaciones con una caída del empleo en los últimos doce meses del 10% (aproximadamente 2.800 puestos de trabajo destruidos).</li>
-              <li><i class="tiny material-icons">adjust</i> La minería (el sector más importante en la ocupación) sigue manifestando un descenso en la contratación, al caer ésta un 8% en variación interanual, equivaliendo este descenso a cerca de 8.500 trabajadores menos.</li>
-              <li><i class="tiny material-icons">adjust</i> De los aproximadamente 8.500 puestos de trabajo destruidos en la minería el 37% pertenecían a trabajadores no residentes (conmutantes).</li>
-              <li><i class="tiny material-icons">adjust</i> A pesar de los descensos en transporte y minería, existen dos sectores que lideran la contratación en el último año: restaurantes y hoteles (creciendo la contratación cerca de un 21%; 1.900 ocupados nuevos) y comercio (11,5% de crecimiento en la ocupación; 5.400 ocupados nuevos).</li>
-            </ul>
-          </div>
-        </div>
-        <div class='row'>
-          <div class="col s12">
-            <p class='grey-text text-darken-3'><strong>Peso de la conmutación sobre el empleo total de cada sector, para cada una de los trece sectores económicos de la Región de Antofagasta </strong>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <img class='responsive-img' src="{% static 'gui/img/peso-conmutacion.png' %}">
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
-<!-- div employers -->
-<div class="row">
-  <div class="col s12">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li class='blue'>
-        <div class="collapsible-header blue">
-         <div class="row">
-          <div class="col s4">
-            <br>
-            <img class='responsive-img' src="{% static 'gui/img/empresa.png' %}">
-          </div>
-          <div class="col s8">
-            <div class="row">
-              <div class="col s12">
-                <h5 class='white-text'>Empleadores</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <p class='white-text'>En esta sección encontrarás información sobre la distribución de trabajadores entre los distintos tamaño de empresas</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collapsible-body">
-        <div class="row">
-          <div class="col s12">
-            <ul class='white-text'>
-              <li > Cambio 2014-2015:</li>
-              <li class="collection-item"><i class="tiny material-icons">adjust</i> La mayor parte del empleo en la región se concentra en las grandes empresas (41,4% del empleo total).</li>
-              <li><i class="tiny material-icons">adjust</i> Las grandes empresas concentran el 76,3% de las ventas registradas en la región.</li>
-              <li><i class="tiny material-icons">adjust</i> Las microempresas son mayoría en la región en tanto que representan el 65% del total del número de empresas existentes. No obstante, tan sólo emplean al 7% de los trabajadores.</li>
-              <li><i class="tiny material-icons">adjust</i> De los aproximadamente 8.500 puestos de trabajo destruidos en la minería el 37% pertenecían a trabajadores no residentes (conmutantes).</li>
-              <li><i class="tiny material-icons">adjust</i> A pesar de los descensos en transporte y minería, existen dos sectores que lideran la contratación en el último año: restaurantes y hoteles (creciendo la contratación cerca de un 21%; 1.900 ocupados nuevos) y comercio (11,5% de crecimiento en la ocupación; 5.400 ocupados nuevos).</li>
-            </ul>
-          </div>
-        </div>
-        <div class='row'>
-          <div class="col s12">
-            <p class='white-text bold'><strong>Total de trabajadores y ventas por tamaño de empresa (según ventas) para la Región de Antofagasta, año 2014.</strong>
-            </p>
-          </div>
-        </div>
-        <!-- table total workers in big display -->
-        <div class="row hide-on-med-and-down blue">
-          <div class="col s12">
-              <table class='bordered centered blue white-text'>
-                <thead>
-                  <tr>
-                    <th>Tamaño De Empresa</th>
-                    <th data-field="id">N° de trabajadores(% sobre total)</th>
-                    <th data-field="name">Total ventas(UF)(% sobre total)</th>
-                  </tr>
-                </thead>
+        <div class="wrap">
 
-                <tbody>
-                  <tr>
-                    <td>Sin Ventas</td>
-                    <td>9.475 <br> (5,15%)</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Microempresa</td>
-                    <td>9.475 <br> (5,15%)</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Pequeña</td>
-                    <td>9.475 <br> (5,15%)</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Mediana</td>
-                    <td>9.475 <br> (5,15%)</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Grande</td>
-                    <td>9.475 <br> (5,15%)</td>
-                    <td> - <br> - </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
-        </div><!-- end table total workers in big display -->
-        <!-- table total workers in medium and small display -->
-        <div class="row hide-on-large-only blue">
-          <div class="col s12">
-              <table class='bordered centered blue white-text'>
-                <thead>
-                  <tr>
-                    <th>Tamaño De Empresa</th>
-                    <th data-field="id">N° de trabajadores(% sobre total)</th>
-                  </tr>
-                </thead>
+          <div id="main">
+            <h1 class="archive-title">Panorama Regional</h1>
+            <section class="entry text-gris" style="margin-left:20px;">
+              El Panorama Regional ofrece un resumen de la situación económica y laboral de la región a partir de múltiples fuentes de información e indicadores. Se divide en 4 secciones: una sección que describe la situación económica en términos generales, una sección de empresas, una sección de trabajadores y empleo, y una sección de grupos prioritarios. 
+            </section>
+            <br/>
+            <div class="stream sectores-archive">
+              <ul class="nav nav-pills nav-justified">
+                <li class="active"><a data-toggle="pill" href="#home">General</a></li>
+                <li><a data-toggle="pill" href="#menu2">Trabajadores y empleo</a></li>
+                <li><a data-toggle="pill" href="#menu1">Empresas</a></li> 
+                <li><a data-toggle="pill" href="#menu3">Grupos prioritarios</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                  <div class="contenedor-panorama">
+                    <br/>
+                    <section class="entry text-gris" style="margin-left:20px;">
+                      En esta sección se puede encontrar información sobre la evolución de las tasas de desempleo, ocupación y participación laboral, la categoría ocupacional de los trabajadores y el aporte de cada sector económico al empleo y el producto.
+                    </section>
+                    <br/>
+                    <!--<h3>General</h3>-->
+                    <!-- Graficos -->
+                    <div>
+                      <br/>            <p class="titulo-grafico">Evolución tasas de desempleo, ocupación y participación, 2010-2016</p>
+                      <div style="margin-left:20px;" id="chart11"></div>
+                      
+                      <table class="tabla-legenda-grafico"><tr>
+                        <td>2010</td><td>2011</td><td>2012</td><td>2013</td><td>2014</td><td>2015</td><td>2016</td>
+                      </tr></table>
+                      <table class="tabla-legenda-grafico" style="margin-top:10px;">
+                        <tr>
+                          <td><div class="barra-legenda-grafico" style="background-color:#cc2a39"></div>&nbsp;Tasa de desempleo</td>
+                          <td><div class="barra-legenda-grafico" style="background-color:#E60101"></div>&nbsp;Tasa de ocupación</td>
+                          <td><div class="barra-legenda-grafico" style="background-color:#f06666"></div>&nbsp;Tasa de participación</td>
+                        </tr>
+                      </table>
+                      <div class="fuente-grafico"><p>Fuente: Elaboración propia conforme a ENE.</p></div>
+                      <div class="nota-grafico"></div>
+                      <script type="text/javascript">
+                      google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+            //google.load("visualization", "1", {packages:["corechart"]});
+            google.setOnLoadCallback(drawchart11);
 
-                <tbody>
-                  <tr>
-                    <td>Sin Ventas</td>
-                    <td>9.475 <br> (5,15%)</td>
-                  </tr>
-                  <tr>
-                    <td>Microempresa</td>
-                    <td>9.475 <br> (5,15%)</td>
-                  </tr>
-                  <tr>
-                    <td>Pequeña</td>
-                    <td>9.475 <br> (5,15%)</td>
-                  </tr>
-                  <tr>
-                    <td>Mediana</td>
-                    <td>9.475 <br> (5,15%)</td>
-                  </tr>
-                  <tr>
-                    <td>Grande</td>
-                    <td>9.475 <br> (5,15%)</td>
-                  </tr>
-                </tbody>
-              </table>
-              <br>
-              <table class='bordered centered blue white-text'>
-                <thead>
-                  <tr>
-                    <th>Tamaño De Empresa</th>
-                    <th data-field="name">Total ventas(UF)(% sobre total)</th>
-                  </tr>
-                </thead>
+            function drawchart11(){
+              var data = google.visualization.arrayToDataTable([
+                ['Año','Tasa de desempleo','Tasa de ocupación','Tasa de participación'],['2010 ene-mar',9,52.5,57.7],['2010 feb-abr',8.6,52.7,57.7],['2010 mar-may',8.800000000000001,52.7,57.8],['2010 abr-jun',8.5,53.1,58],['2010 may-jul',8.300000000000001,53.4,58.3],['2010 jun-ago',8.300000000000001,53.6,58.5],['2010 jul-sep',8,54.2,58.9],['2010 ago-oct',7.6,54.4,58.9],['2010 sep-nov',7.1,54.8,59],['2010 oct-dic',7.1,55.1,59.3],['2010 nov-ene',7.3,55.4,59.7],['2011 dic-feb',7.3,55.3,59.7],['2011 ene-mar',7.3,55.3,59.7],['2011 feb-abr',7,55.5,59.6],['2011 mar-may',7.2,55.4,59.7],['2011 abr-jun',7.2,55.6,59.9],['2011 may-jul',7.5,55.3,59.7],['2011 jun-ago',7.4,55.4,59.8],['2011 jul-sep',7.4,55.5,59.9],['2011 ago-oct',7.2,55.4,59.8],['2011 sep-nov',7.1,55.4,59.6],['2011 oct-dic',6.6,55.8,59.7],['2011 nov-ene',6.6,55.9,59.9],['2012 dic-feb',6.4,56.2,60],['2012 ene-mar',6.6,55.9,59.9],['2012 feb-abr',6.5,55.9,59.8],['2012 mar-may',6.7,55.8,59.8],['2012 abr-jun',6.6,55.5,59.4],['2012 may-jul',6.5,55.2,59.1],['2012 jun-ago',6.4,55.1,58.9],['2012 jul-sep',6.5,55.5,59.3],['2012 ago-oct',6.6,55.6,59.5],['2012 sep-nov',6.2,55.8,59.5],['2012 oct-dic',6.1,55.9,59.5],['2012 nov-ene',6,56.2,59.7],['2013 dic-feb',6.2,56,59.7],['2013 ene-mar',6.2,55.9,59.6],['2013 feb-abr',6.4,56,59.8],['2013 mar-may',6.4,56,59.9],['2013 abr-jun',6.2,55.9,59.6],['2013 may-jul',5.7,55.7,59.1],['2013 jun-ago',5.7,55.7,59.1],['2013 jul-sep',5.7,55.7,59.1],['2013 ago-oct',5.8,55.9,59.3],['2013 sep-nov',5.7,56.1,59.5],['2013 oct-dic',5.7,56.5,59.9],['2013 nov-ene',6.1,56.5,60.2],['2014 dic-feb',6.1,56.7,60.4],['2014 ene-mar',6.5,56.2,60.1],['2014 feb-abr',6.1,56.4,60],['2014 mar-may',6.3,56,59.8],['2014 abr-jun',6.5,55.7,59.6],['2014 may-jul',6.5,55.4,59.3],['2014 jun-ago',6.7,55.2,59.2],['2014 jul-sep',6.6,55.5,59.4],['2014 ago-oct',6.4,55.7,59.6],['2014 sep-nov',6.1,56.2,59.8],['2014 oct-dic',6,56.4,60],['2014 nov-ene',6.2,56.3,60],['2015 dic-feb',6.1,56.1,59.8],['2015 ene-mar',6.1,55.9,59.6],['2015 feb-abr',6.1,55.9,59.6],['2015 mar-may',6.6,55.8,59.7],['2015 abr-jun',6.5,55.7,59.6],['2015 may-jul',6.6,55.6,59.5],['2015 jun-ago',6.5,55.6,59.4],['2015 jul-sep',6.4,55.8,59.7],['2015 ago-oct',6.3,55.7,59.5],['2015 sep-nov',6.1,56,59.6],['2015 oct-dic',5.8,56.4,59.8],['2015 nov-ene',5.8,56.5,60],['2016 dic-feb',5.9,56.2,59.7],['2016 ene-mar',6.3,55.7,59.4],['2016 feb-abr',6.4,55.8,59.6],['2016 mar-may',6.8,55.6,59.6],['2016 abr-jun',6.9,55.3,59.4],['2016 may-jul',7.1,55.2,59.5],['2016 jun-ago',6.9,55.3,59.3],['2016 jul-sep',6.8,55.4,59.4],['2016 ago-oct',6.4,55.6,59.4],['2016 sep-nov',6.2,55.9,59.6],['2016 oct-dic',6.1,55.9,59.5],                ]);
 
-                <tbody>
-                  <tr>
-                    <td>Sin Ventas</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Microempresa</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Pequeña</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Mediana</td>
-                    <td> - <br> - </td>
-                  </tr>
-                  <tr>
-                    <td>Grande</td>
-                    <td> - <br> - </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
-        </div><!-- end table total workers in medium and small display -->
-        <p class='white-text'>Fuente: Servicio de Impuestos Internos 2010-2014.</p>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
- <!-- div young boys -->
-<div class="row">
-  <div class="col s12">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header">
-         <div class="row">
-          <div class="col s4">
-            <br>
-            <img class='responsive-img' src="{% static 'gui/img/ninis.png' %}">
-          </div>
-          <div class="col s8">
-            <div class="row">
-              <div class="col s12">
-                <h5 class='grey-text text-darken-3'>Jóvenes</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <p class='grey-text text-darken-3'>En esta sección encontrará información respecto de la situación de los jóvenes en el mercado laboral (individuos de 15 a 29 años), con especial énfasis en los “nini”, que se define como los jóvenes que no estudian ni trabajan.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collapsible-body white">
-        <div class="row">
-          <div class="col s12">
-            <ul class='grey-text text-darken-3'>
-              <li class="collection-item"><i class="tiny material-icons">adjust</i> El 59% de los jóvenes varones se encuentran ocupados, siendo esta cifra del 41% para las mujeres.</li>
-              <li><i class="tiny material-icons">adjust</i> Los jóvenes ocupados en la región poseen en su mayoría una formación media científico-humanista completa 23%.</li>
-              <li><i class="tiny material-icons">adjust</i> La población “nini” es del 6% a nivel regional, superando en un punto porcentual al promedio nacional. El 74% de los Nini son mujeres, 26% hombres (CASEN, 2013).</li>
-              <li><i class="tiny material-icons">adjust</i> El 43,5% de los “nini” tienen entre 25 y 29 años.</li>
-              <li><i class="tiny material-icons">adjust</i> Las principales razones de inactividad para los “nini” en la región son: quehaceres del hogar (afectando al 29%) y no tener con quién dejar a los niños (28%).</li>
-            </ul>
-          </div>
-        </div>
-        <div class='row'>
-          <div class="col s12">
-            <p class='grey-text text-darken-3'><strong>Distribución de Ninis según género</strong>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <img class='responsive-img' src="{% static 'gui/img/dist_ninis.png' %}">
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
-<!-- div download -->
-    <div class="row"><div class="col s12">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li class='blue'>
-        <div class="collapsible-header blue">
-         <div class="row">
-          <div class="col s4">
-            <br>
-          </div>
-          <div class="col s8">
-            <div class="row">
-              <div class="col s12">
-                <h5 class='white-text'>Descargar</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                {% if user.is_authenticated %}
-                  <a class="btn-floating btn-large waves-effect waves-light green tooltipped" data-tooltip="Agregar Documento" data-position="top" href="{% url 'gui:newReport' %}"><i class="material-icons">add</i></a>
-                {% endif %}
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <p class='white-text'>Descargar informes en formato pdf</p>
-              </div>
+var options={
+  legend: { position: 'none', 'alignment':'center' },
+  hAxis: {textPosition: 'none',showTextEvery: 0,maxTextLines:1,minTextSpacing:80,
+},
+width: 600,
+height: 250,
+seriesType: 'lines',
+vAxes: {
+  0:{title:'Tasa de desocupación (%)',viewWindowMode:'explicit',viewWindow:{min:0},
+  textStyle: {
+    color: 'black', 
+    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+    fontSize: 13},},
+    1:{title:'Tasa de ocupación y participación (%)',
+    textStyle: {
+      color: 'black', 
+      fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+      fontSize: 13},},
+      2:{},
+    },
+    series: {
+      0:{targetAxisIndex:0,visibleLegend:'true',lineWidth:2},
+      1:{targetAxisIndex:1,visibleLegend:'true',lineWidth:2},
+      2:{targetAxisIndex:1,visibleLegend:'true',lineWidth:2},
+    },
+    colors: ['#cc2a39','#E60101','#f06666'],
+    chartArea: {width: '80%', height:'85%',},
+  }
+  var chart = new google.visualization.ComboChart(document.getElementById('chart11'));
+  chart.draw(data, options);
+} 
+</script>
+<br/><br/>        <p class="titulo-grafico">Distribución (%) ocupados según categoría ocupacional, 2010-2016.</p>
+<div style="margin-left:20px;" id="chart14"></div>
+<table class="tabla-legenda-grafico"><tr>
+  <td>2010</td><td>2011</td><td>2012</td><td>2013</td><td>2014</td><td>2015</td><td>2016</td>
+</tr></table>
+<table class="tabla-legenda-grafico" style="margin-top:10px; text-align:left">
+  <tr>
+    <td><div class="barra-legenda-grafico" style="background-color:#6F6F9A"></div>&nbsp;Cuenta propia</td>
+    <td><div class="barra-legenda-grafico" style="background-color:#cc2a39"></div>&nbsp;Asalariado contrato definido</td>
+  </tr>
+  <tr>
+    <td><div class="barra-legenda-grafico" style="background-color:#FF4C4C"></div>&nbsp;Asalariado contrato indefinido</td>
+    <td><div class="barra-legenda-grafico" style="background-color:#377bb5"></div>&nbsp;Asalariddo sin contrato</td>
+  </tr>
+</table>
+<div class="fuente-grafico"><p>Fuente: Elaboración propia conforme a ENE.</p></div>
+<div class="nota-grafico"><p>Nota: No se incluye proporción de empleadores, familiar no remunerado y los que no saben en el gráfico. Por esta razón, suma de las categorías no es 100. </p></div> 
+<script type="text/javascript">
+google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+google.setOnLoadCallback(drawchart14);
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collapsible-body">
-        <div class='row'>
-          <div class="col s12" id='download'>
-            <a href="{% static 'gui/docs/InformeRegional.pdf' %}">Descargar el pdf con el detalle del informe regional.</a><br>
-            <a href="{% static 'gui/docs/Boletin-OLAB-29-09.pdf' %}">Descargar pdf con el boletín trimestre Abril - Junio 2016</a><br>
-            <a href="{% static 'gui/docs/Boletin-2-OLAB-julio_septiembre-2016.pdf' %}">Descargar pdf con el boletín trimestre Julio - Septiembre 2016</a>
-            {% if reports %}
-            {% for r in reports %}
-              <a href="/media/{{r.fileReport}}">Descargar {{r.title}}</a>
-              {% if user.is_authenticated %}
-              <a href="{% url 'gui:deleteReport' r.pk %}"><span class="new badge red" data-badge-caption="Eliminar"></span></a>
-              {% endif %}
-            {% endfor %}
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-  </div></div>
-</div><!-- end div left side -->
+function drawchart14(){
+  var data = google.visualization.arrayToDataTable([
+    ['Año','Cuenta propia','Asalariado contrato definido','Asalariado contrato indefinido','Asalariado sin contrato'],['2010 ene-mar',19.2,16,44.2,14.9],['2010 feb-abr',19.5,15.5,44.1,14.8],['2010 mar-may',19.7,15,44.6,14.4],['2010 abr-jun',20.1,14.9,44.5,14.1],['2010 may-jul',20.3,14.7,45,13.7],['2010 jun-ago',20.8,14.7,44.7,13.6],['2010 jul-sep',21.2,14.5,44.4,13.6],['2010 ago-oct',21.2,14.4,44.4,13.7],['2010 sep-nov',20.9,14.6,44.1,14],['2010 oct-dic',20.8,15.2,44.1,13.8],['2010 nov-ene',20.2,15.4,44.3,13.8],['2011 dic-feb',19.8,15.6,44.3,14],['2011 ene-mar',19.6,15.7,44.5,13.9],['2011 feb-abr',20.3,15.9,44.1,13.5],['2011 mar-may',20.8,15.7,44.4,13.1],['2011 abr-jun',21.3,15.3,44.4,12.9],['2011 may-jul',21.1,15.2,44.9,12.9],['2011 jun-ago',21.2,15.3,45,12.7],['2011 jul-sep',21.1,15.4,44.8,12.8],['2011 ago-oct',20.9,15.7,44.6,13],['2011 sep-nov',20.5,16,44.6,13],['2011 oct-dic',19.6,16.7,44.8,13.3],['2011 nov-ene',19.2,16.9,44.8,13.6],['2012 dic-feb',19,17,45.1,13.4],['2012 ene-mar',19.3,16.8,45.6,12.8],['2012 feb-abr',19.6,16.8,45.9,12.3],['2012 mar-may',19.6,16.5,46.2,12.3],['2012 abr-jun',19.7,16.2,46.5,12.3],['2012 may-jul',19.7,16,46.6,12.4],['2012 jun-ago',20.1,16,46.7,12.1],['2012 jul-sep',20.3,15.9,46.7,11.9],['2012 ago-oct',20.4,15.7,46.8,11.7],['2012 sep-nov',19.9,15.9,46.6,12],['2012 oct-dic',19.2,16.4,46.4,12.2],['2012 nov-ene',18.8,16.9,46.4,12.3],['2013 dic-feb',18.6,17.3,46.4,12.3],['2013 ene-mar',19,17.4,46,12.1],['2013 feb-abr',19.2,16.9,46.3,11.9],['2013 mar-may',19.5,16.2,46.7,11.9],['2013 abr-jun',19.8,15.8,47.3,11.5],['2013 may-jul',20,15.9,47.5,11.1],['2013 jun-ago',20.2,16,47.5,10.6],['2013 jul-sep',20.4,15.7,47.8,10.4],['2013 ago-oct',20.4,15.8,47.6,10.5],['2013 sep-nov',20.3,16,47.4,10.6],['2013 oct-dic',19.9,16.4,46.6,11.3],['2013 nov-ene',19.7,16.3,46.6,11.6],['2014 dic-feb',19.8,16.1,46.7,11.7],['2014 ene-mar',20,16.1,46.6,11.7],['2014 feb-abr',20.5,16.1,46.2,11.6],['2014 mar-may',20.7,15.9,46.1,11.7],['2014 abr-jun',20.7,15.8,46.5,11.5],['2014 may-jul',20.4,15.7,47.2,11.1],['2014 jun-ago',20.2,15.7,47.6,10.9],['2014 jul-sep',20.4,15.5,47.8,10.8],['2014 ago-oct',20.6,15.2,47.6,10.9],['2014 sep-nov',20.7,15.8,46.9,11],['2014 oct-dic',20.3,16.3,46.6,11.5],['2014 nov-ene',19.5,16.4,46.7,11.8],['2015 dic-feb',19.3,16.2,46.9,12.1],['2015 ene-mar',19.2,16.3,46.9,12],['2015 feb-abr',19.8,16.2,46.6,12],['2015 mar-may',20.2,16.1,46.5,11.8],['2015 abr-jun',20.4,15.8,46.9,11.5],['2015 may-jul',20.3,15.7,47.3,11.2],['2015 jun-ago',20.6,15.5,47.5,11],['2015 jul-sep',20.9,15.7,47.4,10.9],['2015 ago-oct',20.8,15.7,47.5,10.9],['2015 sep-nov',20.9,15.7,47.2,10.8],['2015 oct-dic',20.7,15.7,47.2,11.2],['2015 nov-ene',20.5,16.1,47,11.3],['2016 dic-feb',20.1,16.4,47.1,11.5],['2016 ene-mar',20.4,16.2,47,11.2],['2016 feb-abr',20.6,16.2,46.8,11.1],['2016 mar-may',21.2,15.7,47,10.9],['2016 abr-jun',21.3,15.5,47.2,10.9],['2016 may-jul',21.6,15,47.1,11.1],['2016 jun-ago',21.5,15.1,47.1,10.9],['2016 jul-sep',21.6,15.1,47.1,10.8],['2016 ago-oct',21.9,15.1,46.9,10.7],['2016 sep-nov',21.7,15,47.1,10.8],['2016 oct-dic',21.4,15,46.9,11.2],                ]);
 
+var options = {
+  legend: { position: 'none','alignment':'center'},
+  width: 600,
+  height: 250,
+  vAxis:{textStyle: {
+    color: 'black', 
+    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+    fontSize: 13},
+    viewWindowMode:'explicit',
+    viewWindow:{max:50,min:10}},
+    hAxis: {textPosition: 'none',showTextEvery: 12, 
+    minTextSpacing:120,
+    textStyle: {color: 'black', 
+    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+    fontSize: 14,
+    fontWidth: 'normal'},
+  },
+  lineWidth: 3,
+  chartArea: { left: 50, width: '90%', height:'90%'},
+  colors: ['#6F6F9A','#cc2a39','#FF4C4C','#377bb5'],
+                            //backgroundColor: '#A9A9A9'
+                        }
+                        var chart = new google.visualization.LineChart(document.getElementById('chart14'));
+                        chart.draw(data, options);
+                    } 
+                    </script>
+                    <br/><br/>        <p class="titulo-grafico">Distribución (%) PIB nominal y ocupados según rama de actividad económica, 2015.</p>
+                    <div style="margin-left:20px;" id="chart18"></div>
+                    <div class="fuente-grafico"><p>Fuente: Elaboración propia conforme a ENE y Banco Central.</p></div>
+                    <div class="nota-grafico"></div> 
 
-<!-- div right side of page -->
-<div class="col s12 m12 l4">
-  <div class="row">
-    <div class="col s12">
-      <DIV CLASS='CARD-PANEL TEAL WHITE'>
-        <SPAN CLASS='RED-TEXT'><strong>PARTICIPACIÓN % EN EL PIB Y EN EL EMPLEO POR SECTOR ECONÓMICO</strong></SPAN>
-      </DIV>
-    </div>
-    <div class="col s12">
-      <DIV CLASS='card-panel teal WHITE'>
-        <a href="#modal1">
-        <img class="responsive-img" src="{% static 'gui/img/participacion_pib.png' %}" id='imgMap'>
-        </a>
-      </DIV>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-      <DIV CLASS='CARD-PANEL TEAL WHITE'>
-        <SPAN CLASS='RED-TEXT'><strong>GRADO DE CONCENTRACIÓN ECONÓMICA REGIONAL, MEDIDO A TRAVÉS DEL ÍNDICE DE HERFINDAHL-HIRSCHMANN</strong></SPAN>
-      </DIV>
-    </div>
-    <a href="#modal2">
-    <div class="col s12"><img class="responsive-img" src="{% static 'gui/img/indicador-oficial.jpg' %}" id='sil'>
-    </a>
-    </div>
-  </div>
-</div><!-- end div right side of page -->
-</div><!-- end principal row -->
+                    <script type="text/javascript">
+                    google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+                    google.setOnLoadCallback(drawchart18);
 
-<!-- Modal Structure -->
-  <div id="modal1" class="modal noselect">
-    <div class="modal-content">
-      <img class='responsive-img' src="{% static 'gui/img/participacion_pib.png' %}">
-    </div>
-  </div>
-<!-- Modal Structure -->
-  <div id="modal2" class="modal noselect">
-    <div class="modal-content">
-      <img class='responsive-img' src="{% static 'gui/img/indicador-oficial.jpg' %}">
-    </div>
-  </div>
+                    function drawchart18(){
+                      var data = google.visualization.arrayToDataTable([
+                        ['Sector económico','PIB','Ocupados'],['Silvoagropecuario',2.6,8.6],['Pesca',0.4,0.7],['Minería',12.9,2.8],['Industria Manufacturera',10.9,11.1],['Electricidad, Gas y Agua',3.8,0.8],['Construcción',7.6,8.6],['Comercio',10.4,19.8],['Hoteles y Restaurantes',1.6,3.8],['Transporte y Comunicaciones',8.199999999999999,7.4],['Intermediación Financiera',7,2.1],['Actividades Inmobiliarias, Empresariales y de Alquiler',18.3,6.3],['Servicios Sociales y Personales',11.9,22],['Administración Pública',4.5,5.8],                    ]);
+                      var options = {
+                        legend: { position: 'right',
+                        textStyle: {
+                          color: 'black', 
+                          fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                          fontSize: 13},},
+                          width: 600,
+                          height: 400,
+                          vAxis:{textStyle: {
+                            color: 'black', 
+                            fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                            fontSize: 13},
+                          },
+                          hAxis: {},
+                          chartArea: { left: 220,width: '40%',top:20,height:'90%'},
+                          colors: ['#cc2a39','#377bb5'],
+                        };
+                        var chart = new google.visualization.BarChart(document.getElementById('chart18'));
+                        chart.draw(data, options);
+                      }
+                      </script>
+                      <br/>                         </div>
+                      <!-- Tablas -->
+                      <div>
+                        <div class='titulo-tabla'><p>Evolución ocupados (miles de personas) por sector económico, 2010-2016. Promedio anual. </p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector económico</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th><th>2015</th><th>2016</th></tr></thead><tbody><tr><td>Servicios Sociales y Personales</td><td>1.500</td><td>1.592</td><td>1.650</td><td>1.676</td><td>1.757</td><td>1.766</td><td>1.776</td></tr><tr><td>Comercio</td><td>1.508</td><td>1.558</td><td>1.500</td><td>1.581</td><td>1.587</td><td>1.591</td><td>1.626</td></tr><tr><td>Industria Manufacturera</td><td>803</td><td>860</td><td>881</td><td>882</td><td>898</td><td>895</td><td>893</td></tr><tr><td>Construcción</td><td>572</td><td>608</td><td>629</td><td>675</td><td>663</td><td>689</td><td>708</td></tr><tr><td>Silvoagropecuario</td><td>711</td><td>719</td><td>708</td><td>682</td><td>687</td><td>693</td><td>704</td></tr><tr><td>Transporte y Comunicaciones</td><td>523</td><td>542</td><td>558</td><td>573</td><td>576</td><td>598</td><td>609</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>445</td><td>493</td><td>481</td><td>491</td><td>502</td><td>509</td><td>518</td></tr><tr><td>Administración Pública</td><td>391</td><td>401</td><td>442</td><td>421</td><td>442</td><td>465</td><td>444</td></tr><tr><td>Hoteles y Restaurantes</td><td>242</td><td>260</td><td>281</td><td>279</td><td>275</td><td>309</td><td>341</td></tr><tr><td>Minería</td><td>203</td><td>220</td><td>251</td><td>249</td><td>237</td><td>226</td><td>201</td></tr><tr><td>Intermediación Financiera</td><td>128</td><td>123</td><td>136</td><td>168</td><td>164</td><td>168</td><td>165</td></tr><tr><td>Pesca</td><td>45</td><td>49</td><td>53</td><td>56</td><td>56</td><td>60</td><td>66</td></tr><tr><td>Electricidad, Gas y Agua</td><td>59</td><td>61</td><td>56</td><td>53</td><td>59</td><td>60</td><td>65</td></tr><tr><td>Total</td><td>7.131</td><td>7.487</td><td>7.626</td><td>7.786</td><td>7.903</td><td>8.028</td><td>8.115</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> Nota: El sector de Servicios Sociales y Personales agrupa a los sectores de Enseñanza; Servicios Sociales y de Salud; Otras Actividades de Servicios Comunitarios, Sociales y Personales (como la eliminación de residuos y las actividades de esparcimiento); y las Actividades de Hogares Privados como Empleadores (principalmente, personal doméstico). <br/></div><br/>                            </div>
+                      </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                      <div class="contenedor-panorama">
+                        <br/>
+                        <section class="entry text-gris" style="margin-left:20px;">
+                          Esta sección presenta información sobre las empresas de acuerdo a su tamaño por número de trabajadores. Se puede observar el número de empresas por tamaño y el porcentaje de empleo que absorben según nivel educacional de los trabajadores, sector económico y región. 
+                        </section>
+                        <br/>
+                        <!--<h3>Empresas</h3>-->
+                        <!-- Graficos -->
+                        <div>
+                          <br/>        <p class="titulo-grafico">Distribución de ventas, empresas y trabajadores según rama de actividad económica, 2015</p>
+                          <div style="margin-left:20px;" id="chart29"></div>
+                          <table class="tabla-legenda-grafico">
+                            <tr>
+                              <td><div class="barra-legenda-grafico" style="background-color:#6F6F9A; height:10px;"></div>&nbsp;Ventas (%)</td>
+                              <td><div class="barra-legenda-grafico" style="background-color:#cc2a39; height:10px;"></div>&nbsp;Empresas (%)</td>
+                              <td><div class="barra-legenda-grafico" style="background-color:#FF4C4C; height:10px;"></div>&nbsp;Trabajadores (%)</td>
+                            </tr>
+                          </table>
+                          <div class="fuente-grafico"><p>Fuente: Elaboración propia conforme a SII. </p></div>
+                          <div class="nota-grafico"></div> 
+
+                          <script type="text/javascript">
+                          google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+                          google.setOnLoadCallback(drawchart29);
+
+                          function drawchart29(){
+                            var data = google.visualization.arrayToDataTable([
+                              ['Sector económico','Ventas (%)','Empresas (%)','Trabajadores (%)'],['Silvoagropecuario',5.399999999999991,10.10000000000001,11.3],['Pesca',1.3,0.5,1],['Minería',7.8,0.5,1.3],['Industria Manufacturera',18,8.699999999999999,12.8],['Electricidad, Gas y Agua',5.2,0.4,0.8],['Construcción',5.6,7.7,16],['Comercio',20.2,32.8,16.1],['Hoteles y Restaurantes',0.8,4.8,3.6],['Transporte y Comunicaciones',4.9,10,5.6],['Intermediación Financiera',23.3,5.4,2.9],['Actividades Inmobiliarias, Empresariales y de Alquiler',5.1,11.9,12.9],['Servicios Sociales y Personales',2.2,7.1,11.2],['Administración Pública',0.2,0.1,4.5],                    ]);
+                            var options = {
+                              legend: { position: 'none',
+                              textStyle: {
+                                color: 'black', 
+                                fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                fontSize: 13},},
+                                width: 600,
+                                height: 400,
+                                vAxis:{textStyle: {
+                                  color: 'black', 
+                                  fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                  fontSize: 13},
+                                },
+                                hAxis: {},
+                                chartArea: { left: 220,width: '40%',top:20,height:'90%'},
+                                colors: ['#6F6F9A','#cc2a39','#FF4C4C','#377bb5'],
+                              };
+                              var chart = new google.visualization.BarChart(document.getElementById('chart29'));
+                              chart.draw(data, options);
+                            }
+                            </script>
+                            <br/>                        </div>
+                            <!-- Tablas -->
+                            <div>
+                              <div class='titulo-tabla'><p>Número de empresas (SII) y ocupados (ENE) según tamaño de empresa, incluyendo emprendimientos unipersonales, 2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tamaño empresa</th><th>N° de empresas</th><th>%</th><th>N° de trabajadores</th><th>%</th></tr></thead><tbody><tr><td>Unipersonal</td><td>-</td><td>-</td><td>1.370.116</td><td>17</td></tr><tr><td>Microempresa</td><td>988.167</td><td>92</td><td>1.579.683</td><td>20</td></tr><tr><td>Pequeña</td><td>62.955</td><td>6</td><td>1.135.349</td><td>14</td></tr><tr><td>Mediana</td><td>16.730</td><td>2</td><td>911.490</td><td>11</td></tr><tr><td>Grande</td><td>6.188</td><td>1</td><td>2.719.241</td><td>34</td></tr><tr><td>Ns/nr</td><td>-</td><td>-</td><td>311.907</td><td>4</td></tr><tr><td>Total</td><td>1.074.040</td><td>100</td><td>8.027.786</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE y SII. <br/> Nota 1: El tamaño de empresas se define a partir del número de trabajadores. Unipersonal: trabajadores por cuenta propia que trabajan solos. Microempresa, entre 1 y 9 trabajadores; Pequeña, entre 10 y 49 trabajadores; Mediana, entre 50 y 199 trabajadores; Grande, más de 200 trabajadores.<br/>Nota 2: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados según tamaño de empresa por sector económico, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector Económico</th><th>Unipersonal </th><th>Microempresa</th><th>Pequeña</th><th>Mediana</th><th>Grande</th><th>Ns/nr</th><th>Total</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>23</td><td>30</td><td>24</td><td>14</td><td>9</td><td>0</td><td>100</td></tr><tr><td>Pesca</td><td>30</td><td>32</td><td>14</td><td>9</td><td>15</td><td>0</td><td>100</td></tr><tr><td>Minería</td><td>1</td><td>4</td><td>10</td><td>16</td><td>70</td><td>0</td><td>100</td></tr><tr><td>Industria Manufacturera</td><td>18</td><td>20</td><td>16</td><td>15</td><td>32</td><td>0</td><td>100</td></tr><tr><td>Electricidad, Gas y Agua</td><td>0</td><td>12</td><td>19</td><td>18</td><td>51</td><td>0</td><td>100</td></tr><tr><td>Construcción</td><td>23</td><td>23</td><td>18</td><td>19</td><td>18</td><td>0</td><td>100</td></tr><tr><td>Comercio</td><td>27</td><td>28</td><td>11</td><td>7</td><td>27</td><td>0</td><td>100</td></tr><tr><td>Hoteles y Restaurantes</td><td>13</td><td>40</td><td>27</td><td>7</td><td>13</td><td>0</td><td>100</td></tr><tr><td>Transporte y Comunicaciones</td><td>22</td><td>21</td><td>14</td><td>12</td><td>32</td><td>0</td><td>100</td></tr><tr><td>Intermediación Financiera</td><td>3</td><td>3</td><td>4</td><td>8</td><td>82</td><td>0</td><td>100</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>21</td><td>23</td><td>20</td><td>15</td><td>20</td><td>0</td><td>100</td></tr><tr><td>Servicios Sociales y Personales</td><td>12</td><td>10</td><td>12</td><td>11</td><td>39</td><td>17</td><td>100</td></tr><tr><td>Administración Pública</td><td>0</td><td>1</td><td>4</td><td>8</td><td>86</td><td>0</td><td>100</td></tr><tr><td>Nacional</td><td>18</td><td>20</td><td>14</td><td>12</td><td>33</td><td>4</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE 2016.<br/> Nota 1: El tamaño de empresas se define a partir del número de trabajadores. Unipersonal: trabajadores por cuenta propia que trabajan solos. Microempresa, entre 1 y 9 trabajadores; Pequeña, entre 10 y 49 trabajadores; Mediana, entre 50 y 199 trabajadores; Grande, más de 200 trabajadores.<br/>Nota 2: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por región según tamaño de empresa, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Región</th><th>Unipersonal </th><th>Microempresa</th><th>Pequeña</th><th>Mediana</th><th>Grande</th><th>Ns/nr</th><th>Total</th></tr></thead><tbody><tr><td>Arica y Parinacota</td><td>22</td><td>26</td><td>10</td><td>9</td><td>31</td><td>3</td><td>100</td></tr><tr><td>Tarapacá</td><td>23</td><td>22</td><td>14</td><td>8</td><td>32</td><td>2</td><td>100</td></tr><tr><td>Antofagasta</td><td>15</td><td>16</td><td>11</td><td>10</td><td>46</td><td>2</td><td>100</td></tr><tr><td>Atacama</td><td>15</td><td>21</td><td>11</td><td>11</td><td>41</td><td>2</td><td>100</td></tr><tr><td>Coquimbo</td><td>20</td><td>25</td><td>14</td><td>11</td><td>28</td><td>3</td><td>100</td></tr><tr><td>Valparaíso</td><td>15</td><td>22</td><td>17</td><td>11</td><td>32</td><td>4</td><td>100</td></tr><tr><td>Región Metropolitana</td><td>18</td><td>17</td><td>14</td><td>13</td><td>34</td><td>4</td><td>100</td></tr><tr><td>Maule</td><td>17</td><td>25</td><td>15</td><td>12</td><td>28</td><td>4</td><td>100</td></tr><tr><td>Biobío</td><td>15</td><td>20</td><td>15</td><td>12</td><td>34</td><td>4</td><td>100</td></tr><tr><td>La Araucanía</td><td>25</td><td>23</td><td>12</td><td>9</td><td>28</td><td>4</td><td>100</td></tr><tr><td>Los Ríos</td><td>21</td><td>27</td><td>13</td><td>6</td><td>28</td><td>5</td><td>100</td></tr><tr><td>Los Lagos</td><td>25</td><td>21</td><td>13</td><td>8</td><td>29</td><td>3</td><td>100</td></tr><tr><td>Aysén del General Carlos Ibáñez del Campo</td><td>17</td><td>24</td><td>11</td><td>8</td><td>38</td><td>3</td><td>100</td></tr><tr><td>Magallanes y la Antártica Chilena</td><td>12</td><td>23</td><td>14</td><td>10</td><td>39</td><td>3</td><td>100</td></tr><tr><td>Nacional</td><td>18</td><td>20</td><td>14</td><td>12</td><td>33</td><td>4</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE 2016.<br/> Nota 1: El tamaño de empresas se define a partir del número de trabajadores. Unipersonal: trabajadores por cuenta propia que trabajan solos. Microempresa, entre 1 y 9 trabajadores; Pequeña, entre 10 y 49 trabajadores; Mediana, entre 50 y 199 trabajadores; Grande, más de 200 trabajadores.<br/>Nota 2: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por nivel educacional según tamaño de empresa, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tamaño empresa</th><th>Básica incompleta o menos</th><th>Básica</th><th>Media</th><th>Técnica</th><th>Profesional</th><th>Postgrado</th><th>Total</th></tr></thead><tbody><tr><td>Unipersonal</td><td>32</td><td>24</td><td>15</td><td>13</td><td>9</td><td>8</td><td>18</td></tr><tr><td>Microempresa</td><td>27</td><td>25</td><td>20</td><td>15</td><td>11</td><td>12</td><td>20</td></tr><tr><td>Pequeña</td><td>13</td><td>15</td><td>15</td><td>13</td><td>14</td><td>10</td><td>14</td></tr><tr><td>Mediana</td><td>9</td><td>11</td><td>12</td><td>12</td><td>14</td><td>11</td><td>12</td></tr><tr><td>Grande</td><td>11</td><td>17</td><td>36</td><td>45</td><td>51</td><td>59</td><td>33</td></tr><tr><td>Ns/nr</td><td>8</td><td>7</td><td>3</td><td>1</td><td>0</td><td>0</td><td>4</td></tr><tr><td>Nacional</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE 2016.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" incluye a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: El tamaño de empresas se define a partir del número de trabajadores. Unipersonal: trabajadores por cuenta propia que trabajan solos. Microempresa, entre 1 y 9 trabajadores; Pequeña, entre 10 y 49 trabajadores; Mediana, entre 50 y 199 trabajadores; Grande, más de 200 trabajadores.<br/>Nota 3: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/>                            </div>
+                            </div>
+                          </div>
+                          <div id="menu2" class="tab-pane fade">
+                            <div class="contenedor-panorama">
+                              <br/>
+                              <section class="entry text-gris" style="margin-left:20px;">
+                                Se presenta información sobre las características de los trabajadores (como edad, escolaridad y sexo, entre otras) y las condiciones laborales en que se desempeñan (ingresos y categoría ocupacional) según región, sector económico y ocupación. 
+                              </section>
+                              <br/>
+                              <!--<h3>Trabajadores</h3>-->
+                              <!-- Graficos -->
+                              <div>
+                              </div>
+                              <!-- Tablas -->
+                              <div>
+                                <div class='titulo-tabla'><p>Características generales de los ocupados, 2010-2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Indicador</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th><th>2015</th><th>2016</th></tr></thead><tbody><tr><td>Edad promedio</td><td>42</td><td>42</td><td>43</td><td>43</td><td>43</td><td>43</td><td>44</td></tr><tr><td>Escolaridad promedio</td><td>11,3</td><td>11,4</td><td>10,5</td><td>11,6</td><td>11,7</td><td>11,8</td><td>11,8</td></tr><tr><td>Educación superior completa (%)</td><td>21</td><td>22</td><td>22</td><td>23</td><td>24</td><td>26</td><td>26</td></tr><tr><td>Mujeres (%)</td><td>39</td><td>40</td><td>40</td><td>40</td><td>41</td><td>41</td><td>41</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> Nota: Educación superior completa incluye educación técnica y profesional.<br/></div><br/><div class='titulo-tabla'><p>Distribución ocupados y desocupados según nivel educacional (%), 2010 y 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nivel educacional</th><th>2010 Ocupados</th><th>2016 Ocupados</th><th>2010 Desocupados</th><th>2016 Desocupados</th><th>2016 Ocupados</th></tr></thead><tbody><tr><td>Básica incompleta o menos</td><td>13</td><td>11</td><td>10</td><td>7</td></tr><tr><td>Básica</td><td>24</td><td>21</td><td>26</td><td>19</td></tr><tr><td>Media</td><td>41</td><td>42</td><td>49</td><td>49</td></tr><tr><td>Técnica</td><td>7</td><td>10</td><td>6</td><td>10</td></tr><tr><td>Profesional</td><td>13</td><td>15</td><td>9</td><td>13</td></tr><tr><td>Postgrado</td><td>1</td><td>2</td><td>0</td><td>1</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Promedio de años de escolaridad de ocupados según región, 2010 y 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Región </th><th>2010</th><th>2016</th></tr></thead><tbody><tr><td>Arica y Parinacota</td><td>11,1</td><td>11,8</td></tr><tr><td>Tarapacá</td><td>11,5</td><td>11,8</td></tr><tr><td>Antofagasta</td><td>12,2</td><td>12,7</td></tr><tr><td>Atacama</td><td>11,3</td><td>11,5</td></tr><tr><td>Coquimbo</td><td>10,9</td><td>11,5</td></tr><tr><td>Valparaíso</td><td>11,4</td><td>12,3</td></tr><tr><td>Región Metropolitana</td><td>12</td><td>12,3</td></tr><tr><td>Maule</td><td>9,8</td><td>10,4</td></tr><tr><td>Biobío</td><td>10,8</td><td>11,4</td></tr><tr><td>La Araucanía</td><td>10,3</td><td>11</td></tr><tr><td>Los Ríos</td><td>10,5</td><td>11,2</td></tr><tr><td>Los Lagos</td><td>10,4</td><td>11</td></tr><tr><td>Aysén del General Carlos Ibáñez del Campo</td><td>10,5</td><td>11,3</td></tr><tr><td>Magallanes y la Antártica Chilena</td><td>11,9</td><td>12,4</td></tr><tr><td>Nacional</td><td>11,3</td><td>11,8</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> </div><br/><div class='titulo-tabla'><p>Promedio de ingresos ocupación principal según región, 2010 y 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Región</th><th>2010</th><th>2015</th></tr></thead><tbody><tr><td>Arica y Parinacota</td><td>347.771</td><td>428.045</td></tr><tr><td>Tarapacá</td><td>441.099</td><td>582.367</td></tr><tr><td>Antofagasta</td><td>537.041</td><td>684.686</td></tr><tr><td>Atacama</td><td>431.135</td><td>538.430</td></tr><tr><td>Coquimbo</td><td>389.189</td><td>433.283</td></tr><tr><td>Valparaíso</td><td>354.404</td><td>478.403</td></tr><tr><td>Región Metropolitana</td><td>489.144</td><td>578.122</td></tr><tr><td>Maule</td><td>254.492</td><td>391.774</td></tr><tr><td>Biobío</td><td>324.755</td><td>430.409</td></tr><tr><td>La Araucanía</td><td>284.530</td><td>377.650</td></tr><tr><td>Los Ríos</td><td>313.857</td><td>399.759</td></tr><tr><td>Los Lagos</td><td>337.441</td><td>487.486</td></tr><tr><td>Aysén del General Carlos Ibáñez del Campo</td><td>473.983</td><td>597.638</td></tr><tr><td>Magallanes y la Antártica Chilena</td><td>668.878</td><td>741.827</td></tr><tr><td>Nacional</td><td>410.781</td><td>511.873</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ESI.<br/> Nota: Ingresos líquidos en pesos del año 2015.<br/></div><br/><div class='titulo-tabla'><p>Promedio de años de escolaridad de ocupados según sector económico, 2010 y 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector Económico</th><th>2010</th><th>2016</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>7,8</td><td>8,2</td></tr><tr><td>Pesca</td><td>9,3</td><td>9,2</td></tr><tr><td>Minería</td><td>12,1</td><td>12,9</td></tr><tr><td>Industria Manufacturera</td><td>11,1</td><td>11,5</td></tr><tr><td>Electricidad, Gas y Agua</td><td>12,1</td><td>12,5</td></tr><tr><td>Construcción</td><td>10,1</td><td>10,6</td></tr><tr><td>Comercio</td><td>11,2</td><td>11,5</td></tr><tr><td>Hoteles y Restaurantes</td><td>11,2</td><td>11,6</td></tr><tr><td>Transporte y Comunicaciones</td><td>11,5</td><td>11,7</td></tr><tr><td>Intermediación financiera</td><td>14,3</td><td>14,7</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>13,6</td><td>13,9</td></tr><tr><td>Servicios Sociales y Personales</td><td>12,2</td><td>12,9</td></tr><tr><td>Administracion Pública</td><td>12,7</td><td>13,3</td></tr><tr><td>Nacional</td><td>11,3</td><td>11,8</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> </div><br/><div class='titulo-tabla'><p>Promedio de ingresos ocupación principal según sector económico, 2010 y 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector Económico</th><th>2010</th><th>2015</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>230.222</td><td>316.581</td></tr><tr><td>Pesca</td><td>327.006</td><td>450.390</td></tr><tr><td>Minería</td><td>805.866</td><td>961.367</td></tr><tr><td>Industria Manufacturera</td><td>393.237</td><td>485.692</td></tr><tr><td>Electricidad, Gas y Agua</td><td>455.999</td><td>649.222</td></tr><tr><td>Construcción</td><td>374.269</td><td>504.666</td></tr><tr><td>Comercio</td><td>326.797</td><td>392.638</td></tr><tr><td>Hoteles y Restaurantes</td><td>332.346</td><td>398.315</td></tr><tr><td>Transporte y Comunicaciones</td><td>436.481</td><td>532.365</td></tr><tr><td>Intermediación financiera</td><td>896.621</td><td>938.311</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>690.098</td><td>713.557</td></tr><tr><td>Servicios Sociales y Personales</td><td>385.893</td><td>489.707</td></tr><tr><td>Administracion Pública</td><td>621.804</td><td>790.468</td></tr><tr><td>Nacional</td><td>410.781</td><td>511.873</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ESI.<br/> Nota: Ingresos líquidos en pesos del año 2015.<br/></div><br/><div class='titulo-tabla'><p>Promedio de años de escolaridad de ocupados según ocupación, 2010 y 2016</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tipo de ocupación</th><th>2010</th><th>2016</th></tr></thead><tbody><tr><td>Miembros poder ejecutivo, cuerpos legislativos y personal directivo de empresas y Adm. Pública</td><td>15</td><td>15,3</td></tr><tr><td>Profesionales científicos e intelectuales</td><td>16,7</td><td>16,9</td></tr><tr><td>Técnicos y profesionales de nivel medio</td><td>13,9</td><td>14,3</td></tr><tr><td>Empleados de oficina</td><td>12,5</td><td>12,8</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>11,1</td><td>11,2</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>7,3</td><td>7,7</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>10,2</td><td>10,6</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>10,6</td><td>10,9</td></tr><tr><td>Trabajadores no calificados</td><td>9</td><td>9,5</td></tr><tr><td>Otros no identificados</td><td>12,7</td><td>13,3</td></tr><tr><td>Nacional</td><td>11,3</td><td>11,8</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> </div><br/><div class='titulo-tabla'><p>Promedio de ingresos ocupación principal según ocupación, 2010 y 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tipo de ocupación</th><th>2010</th><th>2015</th></tr></thead><tbody><tr><td>Miembros poder ejecutivo, cuerpos legislativos y personal directivo de empresas y Adm. Pública</td><td>1.560.050</td><td>1.852.709</td></tr><tr><td>Profesionales científicos e intelectuales</td><td>1.027.018</td><td>1.157.814</td></tr><tr><td>Técnicos y profesionales de nivel medio</td><td>595.575</td><td>659.545</td></tr><tr><td>Empleados de oficina</td><td>362.025</td><td>422.575</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>293.426</td><td>315.909</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>233.487</td><td>280.771</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>291.368</td><td>364.321</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>374.147</td><td>452.223</td></tr><tr><td>Trabajadores no calificados</td><td>178.057</td><td>252.763</td></tr><tr><td>Otros no identificados</td><td>753.347</td><td>888.751</td></tr><tr><td>Nacional</td><td>410.781</td><td>511.873</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ESI.<br/> Nota: Ingresos líquidos en pesos del año 2015.<br/></div><br/><div class='titulo-tabla'><p>Conmutación por región, 2010 y 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Región</th><th>2010 Salen de la región</th><th>2010 Entran en la región</th><th>2016 Salen de la región</th><th>2016 Entran en la región</th></tr></thead><tbody><tr><td>Arica y Parinacota</td><td>5.277</td><td>334ᵃ</td><td>4.233</td><td>1.913ᵃ</td></tr><tr><td>Tarapacá</td><td>2.827ᵃ</td><td>7.320</td><td>5.386ᵃ</td><td>7.132</td></tr><tr><td>Antofagasta</td><td>2.301ᵃ</td><td>41.019</td><td>881ᵃ</td><td>58.165</td></tr><tr><td>Atacama</td><td>6.834</td><td>11.557</td><td>5.101</td><td>15.936</td></tr><tr><td>Coquimbo</td><td>20.648</td><td>9.525</td><td>25.874</td><td>11.390</td></tr><tr><td>Valparaíso</td><td>33.777</td><td>19.991</td><td>47.095</td><td>19.759</td></tr><tr><td>Región Metropolitana</td><td>49.505</td><td>52.142</td><td>47.035</td><td>67.897</td></tr><tr><td>Maule</td><td>10.085</td><td>9.676</td><td>14.600</td><td>9.468ᵃ</td></tr><tr><td>Biobío</td><td>27.000</td><td>9.888</td><td>40.681</td><td>7.625ᵃ</td></tr><tr><td>La Araucanía</td><td>14.273</td><td>5.035ᵃ</td><td>15.780</td><td>7.504ᵃ</td></tr><tr><td>Los Ríos</td><td>2.870ᵃ</td><td>5.455ᵃ</td><td>4.632ᵃ</td><td>4.391ᵃ</td></tr><tr><td>Los Lagos</td><td>2.711ᵃ</td><td>7.050</td><td>4.286ᵃ</td><td>8.953ᵃ</td></tr><tr><td>Aysén del General Carlos Ibáñez del Campo</td><td>296ᵃ</td><td>1.563ᵃ</td><td>37ᵃ</td><td>2.834ᵃ</td></tr><tr><td>Magallanes y la Antártica Chilena</td><td>360ᵃ</td><td>1.437ᵃ</td><td>117ᵃ</td><td>1.587ᵃ</td></tr><tr><td>Total</td><td>197.938</td><td>197.938</td><td>238.383</td><td>238.383</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> Nota: ᵃ significa que el estadístico no es confiable. <br/></div><br/><div class='titulo-tabla'><p>Conmutación según sector económico, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector económico</th><th>Número</th><th>% </th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>15.914</td><td>7</td></tr><tr><td>Pesca</td><td>4.161</td><td>2</td></tr><tr><td>Minería</td><td>66.170</td><td>28</td></tr><tr><td>Industria Manufacturera</td><td>15.029</td><td>6</td></tr><tr><td>Electricidad, Gas y Agua</td><td>7.607</td><td>3</td></tr><tr><td>Construcción</td><td>49.129</td><td>21</td></tr><tr><td>Comercio</td><td>14.746</td><td>6</td></tr><tr><td>Hoteles y Restaurantes</td><td>4.609</td><td>2</td></tr><tr><td>Transporte y Comunicaciones</td><td>21.179</td><td>9</td></tr><tr><td>Intermediación financiera</td><td>2.871</td><td>1</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>12.407</td><td>5</td></tr><tr><td>Servicios Sociales y Personales</td><td>15.837</td><td>7</td></tr><tr><td>Administracion Pública</td><td>8.725</td><td>4</td></tr><tr><td>Nacional</td><td>238.384</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> Nota: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/>                            </div>
+                              </div>
+                            </div>
+                            <div id="menu3" class="tab-pane fade">
+                              <div class="contenedor-panorama">
+                                <br/>
+                                <section class="entry text-gris" style="margin-left:20px;">
+                                  El Panorama Nacional considera el análisis de cinco grupos que enfrentan distintas barreras a la hora de insertarse en el mundo del trabajo con iguales oportunidades y condiciones: mujeres, personas en situación de discapacidad, jóvenes, pueblos indígenas e inmigrantes. 
+                                </section>
+                                <br/>
+                                <!--<h3>Grupos Prioritarios</h3>-->
+                                <br/>
+                                <ul class="nav nav-pills nav-justified">
+                                  <li class="active"><a style="height:70px!important;" data-toggle="pill" href="#submenu1">Mujeres</a></li>
+                                  <li><a style="height:70px!important;" data-toggle="pill" href="#submenu2">Jóvenes</a></li>
+                                  <li><a style="height:70px!important;" data-toggle="pill" href="#submenu3">Personas con situación de discapacidad</a></li>
+                                  <li><a style="height:70px!important;" data-toggle="pill" href="#submenu4">Pueblos indígenas</a></li>
+                                  <li><a style="height:70px!important;" data-toggle="pill" href="#submenu5">Migrantes</a></li>
+                                </ul>
+                                
+                              </div>
+                              <div class="tab-content">
+                                <div id="submenu1" class="tab-pane fade in active">
+                                  <div class="contenedor-panorama">
+                                    <!--<h4>Mujeres</h4>-->
+                                    <!-- Graficos -->
+                                    <div>
+                                    </div>
+                                    <!-- Tablas  -->
+                                    <div>
+                                      <div class='titulo-tabla'><p>Tasas de desempleo, ocupación y participación según género, 2010-2016</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Género</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th><th>2015</th><th>2016</th></tr></thead><tbody><tr><td>Tasa de desempleo mujeres</td><td>9,6</td><td>8,7</td><td>7,9</td><td>6,9</td><td>6,9</td><td>6,8</td><td>7</td></tr><tr><td>Tasa de desempleo hombres</td><td>7,2</td><td>6,1</td><td>5,4</td><td>5,3</td><td>6</td><td>5,8</td><td>6,1</td></tr><tr><td>Tasa de ocupación mujeres</td><td>41</td><td>43,2</td><td>43,8</td><td>44,4</td><td>45,1</td><td>44,9</td><td>44,7</td></tr><tr><td>Tasa de ocupación hombres</td><td>66,9</td><td>68,3</td><td>68</td><td>68</td><td>67,3</td><td>67,4</td><td>66,9</td></tr><tr><td>Tasa de participación mujeres</td><td>45,3</td><td>47,3</td><td>47,6</td><td>47,7</td><td>48,4</td><td>48,2</td><td>48</td></tr><tr><td>Tasa de participación hombres</td><td>72,1</td><td>72,7</td><td>71,9</td><td>71,8</td><td>71,6</td><td>71,5</td><td>71,3</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> </div><br/><div class='titulo-tabla'><p>Ingresos de la ocupación principal según género y nivel educacional, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nivel educacional</th><th>Hombre</th><th>Mujer</th><th>Total</th></tr></thead><tbody><tr><td>Básica incompleta o sin estudios</td><td>261.910</td><td>173.299</td><td>227.680</td></tr><tr><td>Básica </td><td>349.088</td><td>213.910</td><td>297.677</td></tr><tr><td>Media</td><td>480.534</td><td>310.500</td><td>405.390</td></tr><tr><td>Técnico nivel superior</td><td>677.674</td><td>466.478</td><td>566.637</td></tr><tr><td>Profesional</td><td>1.307.142</td><td>828.548</td><td>1.068.277</td></tr><tr><td>Postgrado</td><td>2.100.876</td><td>1.297.148</td><td>1.764.123</td></tr><tr><td>Total</td><td>591.973</td><td>410.144</td><td>511.873</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ESI.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: No incluye a Familiar no Remunerado.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por género según sector económico, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector económico</th><th>Hombre</th><th>Mujer</th><th>Total</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>11</td><td>5</td><td>9</td></tr><tr><td>Pesca</td><td>1</td><td>0</td><td>1</td></tr><tr><td>Minería</td><td>4</td><td>1</td><td>3</td></tr><tr><td>Industria Manufacturera</td><td>12</td><td>9</td><td>11</td></tr><tr><td>Electricidad, Gas y Agua</td><td>1</td><td>0</td><td>1</td></tr><tr><td>Construcción</td><td>14</td><td>1</td><td>9</td></tr><tr><td>Comercio</td><td>18</td><td>23</td><td>20</td></tr><tr><td>Hoteles y Restaurantes</td><td>3</td><td>6</td><td>4</td></tr><tr><td>Transporte y Comunicaciones</td><td>11</td><td>3</td><td>8</td></tr><tr><td>Intermediación financiera</td><td>2</td><td>3</td><td>2</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>6</td><td>6</td><td>6</td></tr><tr><td>Servicios Sociales y Personales</td><td>11</td><td>38</td><td>22</td></tr><tr><td>Administracion Pública</td><td>6</td><td>5</td><td>6</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE 2016.<br/> </div><br/><div class='titulo-tabla'><p>Distribución de ocupados por género según ocupación, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Ocupación</th><th>Hombre</th><th>Mujer</th><th>Total</th></tr></thead><tbody><tr><td>Miembros poder ejecutivo, cuerpos legislativos y personal directivo de empresas y Adm. Pública</td><td>3</td><td>2</td><td>2</td></tr><tr><td>Profesionales científicos e intelectuales</td><td>10</td><td>13</td><td>12</td></tr><tr><td>Técnicos y profesionales de nivel medio</td><td>10</td><td>12</td><td>11</td></tr><tr><td>Empleados de oficina</td><td>6</td><td>14</td><td>9</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>9</td><td>24</td><td>15</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>6</td><td>1</td><td>4</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>20</td><td>6</td><td>14</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>14</td><td>2</td><td>9</td></tr><tr><td>Trabajadores no calificados</td><td>22</td><td>27</td><td>24</td></tr><tr><td>Otros no identificados</td><td>1</td><td>0</td><td>1</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE 2016.<br/> </div><br/>                            </div>
+                                    </div>
+                                  </div>
+                                  <div id="submenu2" class="tab-pane fade">
+                                    <div class="contenedor-panorama">
+                                      <!--<h4>Jovenes</h4>-->
+                                      <!-- Graficos -->
+                                      <div>
+                                      </div>
+                                      <!-- Tablas -->
+                                      <div>
+                                        <div class='titulo-tabla'><p>Tasas de desempleo, ocupación y participación jóvenes y adultos, 2010-2016</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Edad</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th><th>2015</th><th>2016</th></tr></thead><tbody><tr><td>Tasa de desempleo jóvenes</td><td>15,4</td><td>14,4</td><td>13,1</td><td>12,7</td><td>13,1</td><td>12,8</td><td>12,9</td></tr><tr><td>Tasa de desempleo adultos</td><td>5,7</td><td>4,8</td><td>4,4</td><td>3,9</td><td>4,4</td><td>4,2</td><td>4,6</td></tr><tr><td>Tasa de ocupación jóvenes</td><td>41</td><td>42,2</td><td>41,6</td><td>41,6</td><td>41,5</td><td>42,1</td><td>41,6</td></tr><tr><td>Tasa de ocupación adultos</td><td>59,3</td><td>61,2</td><td>61,5</td><td>61,9</td><td>61,9</td><td>61,6</td><td>61</td></tr><tr><td>Tasa de participación jóvenes</td><td>48,5</td><td>49,3</td><td>47,9</td><td>47,7</td><td>47,8</td><td>48,2</td><td>47,7</td></tr><tr><td>Tasa de participación adultos</td><td>62,8</td><td>64,2</td><td>64,3</td><td>64,4</td><td>64,7</td><td>64,3</td><td>64</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE.<br/> </div><br/><div class='titulo-tabla'><p>Ingresos de la ocupación principal jóvenes y adultos según nivel educacional, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nivel educacional</th><th>Entre 15 y 29 años</th><th>30 años o más</th><th>Total</th></tr></thead><tbody><tr><td>Básica incompleta o sin estudios</td><td>242.765</td><td>227.133</td><td>227.680</td></tr><tr><td>Básica </td><td>266.020</td><td>303.124</td><td>297.677</td></tr><tr><td>Media</td><td>312.252</td><td>440.888</td><td>405.390</td></tr><tr><td>Técnico nivel superior</td><td>414.721</td><td>607.357</td><td>566.637</td></tr><tr><td>Profesional</td><td>639.405</td><td>1.167.118</td><td>1.068.277</td></tr><tr><td>Postgrado</td><td>765.495ᵃ</td><td>1.814.228</td><td>1.764.123</td></tr><tr><td>Total</td><td>365.268</td><td>548.733</td><td>511.873</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ESI 2015.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: No incluye a Familiar no Remunerado.<br/>Nota 3: ᵃ significa que el estadístico no es confiable. <br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados jóvenes y adultos según sector económico, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector económico</th><th>Entre 15 y 29 años</th><th>30 años o más</th><th>Total</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>6</td><td>9</td><td>9</td></tr><tr><td>Pesca</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Minería</td><td>2</td><td>3</td><td>3</td></tr><tr><td>Industria Manufacturera</td><td>11</td><td>11</td><td>11</td></tr><tr><td>Electricidad, Gas y Agua</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Construcción</td><td>9</td><td>9</td><td>9</td></tr><tr><td>Comercio</td><td>25</td><td>19</td><td>20</td></tr><tr><td>Hoteles y Restaurantes</td><td>7</td><td>3</td><td>4</td></tr><tr><td>Transporte y Comunicaciones</td><td>7</td><td>8</td><td>8</td></tr><tr><td>Intermediación financiera</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>7</td><td>6</td><td>6</td></tr><tr><td>Servicios Sociales y Personales</td><td>19</td><td>23</td><td>22</td></tr><tr><td>Administracion Pública</td><td>4</td><td>6</td><td>6</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE 2016.<br/> </div><br/><div class='titulo-tabla'><p>Distribución de ocupados jóvenes y adultos según ocupación, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Ocupación</th><th>Entre 15 y 29 años</th><th>30 años o más</th><th>Total</th></tr></thead><tbody><tr><td>Miembros poder ejecutivo, cuerpos legislativos y personal directivo de empresas y Adm. Pública</td><td>0</td><td>3</td><td>2</td></tr><tr><td>Profesionales, científicos e intelectuales</td><td>10</td><td>12</td><td>12</td></tr><tr><td>Técnicos profesionales de nivel medio</td><td>13</td><td>10</td><td>11</td></tr><tr><td>Empleados de oficina</td><td>12</td><td>9</td><td>9</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>18</td><td>14</td><td>15</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>2</td><td>4</td><td>4</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>13</td><td>14</td><td>14</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>6</td><td>10</td><td>9</td></tr><tr><td>Trabajadores no calificados</td><td>24</td><td>24</td><td>24</td></tr><tr><td>Otros no identificados</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a ENE 2016.<br/> </div><br/>                            </div>
+                                      </div>
+                                    </div>
+                                    <div id="submenu3" class="tab-pane fade">
+                                      <div class="contenedor-panorama">
+                                        <!--<h4>Personas con situacion de Discapacidad</h4>-->
+                                        <!-- Graficos -->
+                                        <div>
+                                        </div>
+                                        <!-- Tablas -->
+                                        <div>
+                                          <div class='titulo-tabla'><p>Tasas de desempleo, ocupación y participación según condición de discapacidad, personas entre 15 y 60 años, 2013-2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Situación discapacidad</th><th>2013</th><th>2015</th></tr></thead><tbody><tr><td>Tasa de desempleo personas con discapacidad</td><td>8,5</td><td>8,9</td></tr><tr><td>Tasa de desempleo personas sin discapacidad</td><td>49,7</td><td>51</td></tr><tr><td>Tasa de ocupación personas con discapacidad</td><td>54,4</td><td>55,9</td></tr><tr><td>Tasa de ocupación personas sin discapacidad</td><td>7,3</td><td>7,8</td></tr><tr><td>Tasa de participación personas con discapacidad</td><td>61,4</td><td>62,2</td></tr><tr><td>Tasa de participación personas sin discapacidad</td><td>66,3</td><td>67,5</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN.<br/> Nota 1: Cifras se acotan a población entre 15 y 60 años para que la mayor prevalencia de la discapacidad en la población de la tercera edad no sesgue las cifras.<br/>Nota 2: El indicador de discapacidad utilizado incluye a las personas que experimentan dificultades en la realización de actividades de la vida diaria debido a su estado de salud.<br/></div><br/><div class='titulo-tabla'><p>Ingresos de la ocupación principal según condición de discapacidad y nivel educacional, personas entre 15 y 60 años, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nivel educacional</th><th>Con discapacidad</th><th>Sin discapacidad</th><th>Total</th></tr></thead><tbody><tr><td>Básica incompleta o sin estudios</td><td>192.848</td><td>243.589</td><td>237.064</td></tr><tr><td>Básica </td><td>256.666</td><td>284.772</td><td>282.138</td></tr><tr><td>Media</td><td>341.163</td><td>362.323</td><td>360.739</td></tr><tr><td>Técnico nivel superior</td><td>509.787</td><td>522.673</td><td>521.738</td></tr><tr><td>Profesional</td><td>914.570</td><td>980.401</td><td>975.580</td></tr><tr><td>Postgrado</td><td>1.823.926</td><td>1.772.603</td><td>1.778.640</td></tr><tr><td>Total</td><td>426.474</td><td>468.414</td><td>464.924</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> Nota 1: Cifras se acotan a población entre 15 y 60 años para que la mayor prevalencia de la discapacidad en la población de la tercera edad no sesgue las cifras.<br/>Nota 2: El indicador de discapacidad utilizado incluye a las personas que experimentan dificultades en la realización de actividades de la vida diaria debido a su estado de salud.<br/>Nota 3: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 4: No incluye a Familiar no Remunerado.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por condición de discapacidad según sector económico, personas entre 15 y 60 años, 2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector Económico</th><th>Con discapacidad</th><th>Sin discapacidad</th><th>Total</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>7</td><td>8</td><td>8</td></tr><tr><td>Pesca</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Minería</td><td>2</td><td>3</td><td>3</td></tr><tr><td>Industria Manufacturera</td><td>10</td><td>10</td><td>10</td></tr><tr><td>Electricidad, Gas y Agua</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Construcción</td><td>8</td><td>10</td><td>9</td></tr><tr><td>Comercio</td><td>21</td><td>19</td><td>19</td></tr><tr><td>Hoteles y Restaurantes</td><td>6</td><td>5</td><td>5</td></tr><tr><td>Transporte y Comunicaciones</td><td>6</td><td>8</td><td>7</td></tr><tr><td>Intermediación financiera</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>6</td><td>7</td><td>7</td></tr><tr><td>Servicios Sociales y Personales</td><td>27</td><td>23</td><td>23</td></tr><tr><td>Administracion Pública</td><td>5</td><td>5</td><td>5</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> Nota 1: Cifras se acotan a población entre 15 y 60 años para que la mayor prevalencia de la discapacidad en la población de la tercera edad no sesgue las cifras.<br/>Nota 2: El indicador de discapacidad utilizado incluye a las personas que experimentan dificultades en la realización de actividades de la vida diaria debido a su estado de salud.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por condición de discapacidad según ocupación, personas entre 15 y 60 años, 2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Ocupación</th><th>Con discapacidad</th><th>Sin discapacidad</th><th>Total</th></tr></thead><tbody><tr><td>Fuerzas armadas</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Miembros poder ejecutivo, cuerpos legislativos y personal directivo de empresas y Adm. Pública</td><td>5</td><td>5</td><td>5</td></tr><tr><td>Profesionales, científicos e intelectuales</td><td>12</td><td>12</td><td>12</td></tr><tr><td>Técnicos profesionales de nivel medio</td><td>8</td><td>10</td><td>10</td></tr><tr><td>Empleados de oficina</td><td>10</td><td>10</td><td>10</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>18</td><td>17</td><td>17</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>4</td><td>4</td><td>4</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>12</td><td>14</td><td>14</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>7</td><td>9</td><td>9</td></tr><tr><td>Trabajadores no calificados</td><td>24</td><td>19</td><td>20</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> Nota 1: Cifras se acotan a población entre 15 y 60 años para que la mayor prevalencia de la discapacidad en la población de la tercera edad no sesgue las cifras.<br/>Nota 2: El indicador de discapacidad utilizado incluye a las personas que experimentan dificultades en la realización de actividades de la vida diaria debido a su estado de salud.<br/></div><br/>                            </div>
+                                        </div>
+                                      </div>
+                                      <div id="submenu4" class="tab-pane fade">
+                                        <div class="contenedor-panorama">
+                                          <!--<h4>Pueblos Indigenas</h4>-->
+                                          <!-- Graficos -->
+                                          <div>
+                                          </div>
+                                          <!-- Tablas -->
+                                          <div>
+                                            <div class='titulo-tabla'><p>Tasas de desempleo, ocupación y participación según pertenencia a pueblo indígena, 2009-2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Pertenencia a pueblo indígena</th><th>2009</th><th>2011</th><th>2013</th><th>2015</th></tr></thead><tbody><tr><td>Tasa de desempleo indígena</td><td>10,8</td><td>10,4</td><td>8</td><td>8,3</td></tr><tr><td>Tasa de desempleo no indígena</td><td>10,2</td><td>7,5</td><td>6,9</td><td>7,4</td></tr><tr><td>Tasa de ocupación indígena</td><td>49,2</td><td>50,1</td><td>51,5</td><td>52,5</td></tr><tr><td>Tasa de ocupación no indígena</td><td>50,1</td><td>51,9</td><td>53,4</td><td>54,1</td></tr><tr><td>Tasa de participación indígena</td><td>55,2</td><td>55,9</td><td>55,9</td><td>57,3</td></tr><tr><td>Tasa de participación no indígena</td><td>55,8</td><td>56,1</td><td>57,3</td><td>58,4</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN.<br/> </div><br/><div class='titulo-tabla'><p>Ingresos de la ocupación principal según pertenencia a pueblo indígena y nivel educacional, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nivel educacional</th><th>Indígena</th><th>No indígena</th><th>Total</th></tr></thead><tbody><tr><td>Básica incompleta o sin estudios</td><td>211.188</td><td>236.212</td><td>233.144</td></tr><tr><td>Básica </td><td>264.950</td><td>282.388</td><td>280.675</td></tr><tr><td>Media</td><td>327.127</td><td>366.419</td><td>363.241</td></tr><tr><td>Técnico nivel superior</td><td>446.566</td><td>526.799</td><td>522.150</td></tr><tr><td>Profesional</td><td>754.858</td><td>1.002.472</td><td>992.074</td></tr><tr><td>Postgrado</td><td>1.653.607ᵃ</td><td>1.831.051</td><td>1.826.656</td></tr><tr><td>Total</td><td>340.202</td><td>472.526</td><td>461.951</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: No incluye a Familiar no Remunerado.<br/>Nota 3: ᵃ significa que el estadístico no es confiable. <br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por pertenencia a pueblo indígena según sector económico, 2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector Económico</th><th>Indígena</th><th>No indígena</th><th>Total</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>13</td><td>8</td><td>9</td></tr><tr><td>Pesca</td><td>2</td><td>1</td><td>1</td></tr><tr><td>Minería</td><td>2</td><td>3</td><td>3</td></tr><tr><td>Industria Manufacturera</td><td>10</td><td>10</td><td>10</td></tr><tr><td>Electricidad, Gas y Agua</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Construcción</td><td>10</td><td>9</td><td>9</td></tr><tr><td>Comercio</td><td>20</td><td>19</td><td>19</td></tr><tr><td>Hoteles y Restaurantes</td><td>5</td><td>5</td><td>5</td></tr><tr><td>Transporte y Comunicaciones</td><td>6</td><td>8</td><td>8</td></tr><tr><td>Intermediación financiera</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>4</td><td>7</td><td>7</td></tr><tr><td>Servicios Sociales y Personales</td><td>22</td><td>23</td><td>23</td></tr><tr><td>Administracion Pública</td><td>4</td><td>5</td><td>5</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> </div><br/><div class='titulo-tabla'><p>Distribución de ocupados por pertenencia a pueblo indígena según ocupación, 2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Ocupación</th><th>Indígena</th><th>No indígena</th><th>Total</th></tr></thead><tbody><tr><td>Fuerzas armadas</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Miembros poder ejecutivo, cuerpos legislativos y personal directivo de empresas y Adm. Pública</td><td>4</td><td>5</td><td>5</td></tr><tr><td>Profesionales, científicos e intelectuales</td><td>6</td><td>12</td><td>12</td></tr><tr><td>Técnicos profesionales de nivel medio</td><td>7</td><td>10</td><td>9</td></tr><tr><td>Empleados de oficina</td><td>8</td><td>10</td><td>9</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>16</td><td>16</td><td>16</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>10</td><td>4</td><td>5</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>16</td><td>14</td><td>14</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>8</td><td>9</td><td>9</td></tr><tr><td>Trabajadores no calificados</td><td>24</td><td>20</td><td>20</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> </div><br/>                            </div>
+                                          </div>
+                                        </div>
+                                        <div id="submenu5" class="tab-pane fade">
+                                          <div class="contenedor-panorama">
+                                            <!--<h4>Migrantes</h4>-->
+                                            <!-- Graficos -->
+                                            <div>
+                                            </div>
+                                            <!-- Tablas -->
+                                            <div>
+                                              <div class='titulo-tabla'><p>Tasas de desempleo, ocupación y participación según nacionalidad, 2011-2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nacionalidad</th><th>2011</th><th>2013</th><th>2015</th></tr></thead><tbody><tr><td>Tasa de desempleo inmigrante</td><td>3,5</td><td>3,6</td><td>5,4</td></tr><tr><td>Tasa de desempleo no inmigrante</td><td>7,8</td><td>7,1</td><td>7,5</td></tr><tr><td>Tasa de ocupación inmigrante</td><td>72,3</td><td>74,2</td><td>73,8</td></tr><tr><td>Tasa de ocupación no inmigrante</td><td>51,5</td><td>52,9</td><td>53,5</td></tr><tr><td>Tasa de participación inmigrante</td><td>74,9</td><td>77</td><td>78</td></tr><tr><td>Tasa de participación no inmigrante</td><td>55,9</td><td>56,9</td><td>57,9</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN.<br/> </div><br/><div class='titulo-tabla'><p>Ingresos de la ocupación principal por nacionalidad según nivel educacional, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nivel educacional</th><th>Inmigrante</th><th>No inmigrante</th><th>Total</th></tr></thead><tbody><tr><td>Básica incompleta o sin estudios</td><td>305.455</td><td>231.614</td><td>233.144</td></tr><tr><td>Básica </td><td>328.246</td><td>279.617</td><td>280.675</td></tr><tr><td>Media</td><td>370.681</td><td>362.973</td><td>363.241</td></tr><tr><td>Técnico nivel superior</td><td>450.933</td><td>524.653</td><td>522.150</td></tr><tr><td>Profesional</td><td>1.119.237</td><td>987.787</td><td>992.074</td></tr><tr><td>Postgrado</td><td>1.815.435</td><td>1.828.290</td><td>1.826.656</td></tr><tr><td>Total</td><td>541.041</td><td>459.294</td><td>461.951</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: No incluye a Familiar no Remunerado.<br/>Nota 3: ᵃ significa que el estadístico no es confiable. <br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por nacionalidad según sector económico, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Sector económico</th><th>Inmigrante</th><th>No inmigrante</th><th>Total</th></tr></thead><tbody><tr><td>Silvoagropecuario</td><td>2</td><td>9</td><td>9</td></tr><tr><td>Pesca</td><td>0</td><td>1</td><td>1</td></tr><tr><td>Minería</td><td>1</td><td>3</td><td>3</td></tr><tr><td>Industria Manufacturera</td><td>9</td><td>10</td><td>10</td></tr><tr><td>Electricidad, Gas y Agua</td><td>0</td><td>1</td><td>1</td></tr><tr><td>Construcción</td><td>12</td><td>9</td><td>9</td></tr><tr><td>Comercio</td><td>21</td><td>19</td><td>19</td></tr><tr><td>Hoteles y Restaurantes</td><td>13</td><td>4</td><td>5</td></tr><tr><td>Transporte y Comunicaciones</td><td>4</td><td>8</td><td>8</td></tr><tr><td>Intermediación financiera</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Actividades Inmobiliarias, Empresariales y de Alquiler</td><td>7</td><td>7</td><td>7</td></tr><tr><td>Servicios Sociales y Personales</td><td>27</td><td>23</td><td>23</td></tr><tr><td>Administracion Pública</td><td>2</td><td>5</td><td>5</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> </div><br/><div class='titulo-tabla'><p>Distribución de ocupados por nacionalidad según ocupación, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Ocupación</th><th>Inmigrante</th><th>No inmigrante</th><th>Total</th></tr></thead><tbody><tr><td>Fuerzas armadas</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Miembros poder ejecutivo, cuerpos legislativos y personal directivo de empresas y Adm. Pública</td><td>6</td><td>5</td><td>5</td></tr><tr><td>Profesionales, científicos e intelectuales</td><td>11</td><td>12</td><td>12</td></tr><tr><td>Técnicos profesionales de nivel medio</td><td>8</td><td>10</td><td>9</td></tr><tr><td>Empleados de oficina</td><td>7</td><td>9</td><td>9</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>20</td><td>16</td><td>16</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>2</td><td>5</td><td>5</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>17</td><td>14</td><td>14</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>4</td><td>9</td><td>9</td></tr><tr><td>Trabajadores no calificados</td><td>26</td><td>20</td><td>20</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia conforme a CASEN 2015.<br/> </div><br/>                            </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>  
+                                  </div>
+                                </div>
+                                <!-- Sidebar -->
+                                <div id="sidebar">
+                                  <br/><br/><br/>
+                                  <section class="map-container map-primary">
+                                    <div id="owl-mapaspanorama" class="owl-carousel sombra">
+                                      <div class="item">
+                                        <a class="figure" href="http://observatorionacional.cl/wp-content/uploads/2017/03/mapa_panoramanacional3x.png"
+                                        alt="Porcentaje de ocupados que se emplea en empresas de 1 a 9 trabajadores." 
+                                        data-lightbox="mapa-home">
+                                        <img width="320" src="http://observatorionacional.cl/wp-content/uploads/2017/03/mapa_panoramanacional1x.png" />
+                                        <span class="lightbox-trigger"><i class="fa fa-plus"></i></span>
+                                      </a>
+                                    </div>
+                                    <div class="item">
+                                      <a class="figure" href="http://observatorionacional.cl/wp-content/uploads/2017/03/mapa_panoramanacional23x.png"
+                                      alt="Cantidad neta de trabajadores que entra o sale de la región en busca de empleo (miles de personas)." 
+                                      data-lightbox="mapa-home">
+                                      <img width="320" src="http://observatorionacional.cl/wp-content/uploads/2017/03/mapa_panoramanacional21x.png" />
+                                      <span class="lightbox-trigger"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                  </div>
+                                  <div class="item">
+                                    <a class="figure" href="http://observatorionacional.cl/wp-content/uploads/2017/03/mapa_panoramanacional33x.png"
+                                    alt="Porcentaje de trabajadores asalariados sin contrato." 
+                                    data-lightbox="mapa-home">
+                                    <img width="320" src="http://observatorionacional.cl/wp-content/uploads/2017/03/mapa_panoramanacional31x.png" />
+                                    <span class="lightbox-trigger"><i class="fa fa-plus"></i></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </section>
+                            <div class="clearfix"></div>
+                          </div>
 
 {% endblock content%}

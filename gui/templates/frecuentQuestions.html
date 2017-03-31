@@ -1,0 +1,50 @@
+{% extends 'base_about.html' %}
+{% load static %}
+
+{% block title %}
+Preguntas Frecuentes | Observatorio Laboral Aysen
+{% endblock title %}
+
+{% block head %}
+<script src="{% static 'gui/js/about.js' %}"></script>
+{% endblock head %}
+
+{% block content_about %}
+<div id="main">
+
+	<div id="breadcrumbs">
+		<ul>
+			<li><a href="{% url 'gui:home' %}">Inicio</a></li>
+			<li class="sep">/</li>
+			<li>Preguntas Frecuentes »</li>
+		</ul>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="post">
+
+		<div class="fontsize">
+			<ul>
+				<li class="small"><a data-size="10">a</a></li>
+				<li class="medium current"><a data-size="15">a</a></li>
+				<li class="large"><a data-size="20">a</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="texto">
+
+			<h3 class="title">Preguntas Frecuentes</h3>
+			<div class="contenido">
+				<p><strong>¿Qué es una ocupación?</strong><br />
+					Usamos el concepto de la Clasificación Internacional Uniforme de Ocupaciones de la OIT, la cual es una herramienta para organizar los empleos en una serie de grupos definidos claramente en función de las tareas que comporta cada empleo.</p>
+					<p><strong>¿Cómo se obtiene la información de las ocupaciones?</strong><br />
+						Analizamos las 100 ocupaciones más ejercidas en el país basándonos en la CASEN (Encuesta de Caracterización Socioeconómica Nacional). </p>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+		{% endblock content_about %}
