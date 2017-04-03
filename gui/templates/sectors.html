@@ -1,22 +1,167 @@
-{% extends 'base_home.html' %}
+{% extends 'base.html' %}
 {% load static %}
-{% block title %}Sectores - Observatorio Aysen{% endblock title%}
+{% block title %}Sectores | Observatorio Laboral Aysen{% endblock title%}
 
 {% block head %}
 <script src="{% static 'gui/js/sectors.js' %}"></script>
 {% endblock head %}
 
-{% block content_home %}
-<br>
-<div class="row">
-  <div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="#"> Sectores >></a></div>
-  <div class="col s3"></div>  
-</div>
-<div class="row">
-	<div class="col s12">
-	<h4>Sectores</h4>
-	<p>Actualmente se están priorizando los sectores de la región y pronto se elaborarán reportes de los sectores priorizados.</p>
-	</div>
-</div>
+{% block content %}
+            
+<div id="content">
+          <div class="wrap">
+            <div id="main">
+              <div id="breadcrumbs">
+                <ul>
+                  <li><a href="{% url 'gui:home' %}">Inicio</a></li>
+                  <li class="sep">/</li>
+                  <li>Sectores Productivos »</li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <h1 class="archive-title">Sectores Productivos</h1>
+              <div class="stream sectores-archive">
+                <div class="post tarjeta sectores">
+                  <a href="/index.php/sectores?id=1">
+                    <!--<img src="/wp-content/uploads/2017/03/agricultura.png" class="img-responsive wp-post-image"/>-->
+                    <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/agricultura.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                  </a>
+                  <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                    <h2><a href="{% url 'gui:detailSector' 1 %}">Silvoagropecuario</a></h2>
+                    Este sector distingue entre dos actividades básicas: la producción de productos de la agricultura (cultivos en general) y la producción de productos de la ganadería (cría de animales).                        </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="post tarjeta sectores">
+                    <a href="{% url 'gui:detailSector' 1 %}">
+                      <!--<img src="/wp-content/uploads/2017/03/comercio.png" class="img-responsive wp-post-image"/>-->
+                      <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/comercio.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                    </a>
+                    <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                      <h2><a href="{% url 'gui:detailSector' 1 %}">Comercio</a></h2>
+                      El sector Comercio abarca las actividades vinculadas tanto al comercio minorista como mayorista, además de la venta, mantención y reparación de vehículos automotores y motocicletas.                         </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="post tarjeta sectores">
+                      <a href="{% url 'gui:detailSector' 1 %}">
+                        <!--<img src="/wp-content/uploads/2017/03/construccion.png" class="img-responsive wp-post-image"/>-->
+                        <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/construccion.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                      </a>
+                      <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                        <h2><a href="{% url 'gui:detailSector' 1 %}">Construcción</a></h2>
+                        El sector Construcción comprende la edificación de viviendas y obras de ingeniería civil, incluyendo todas aquellas actividades que rodean el proceso de construcción. Así, por ejemplo, las actividades de demolición, acondicionamiento y terminación de edificios también forman parte de este sector. También el alquiler de equipos (sean estos de construcción o demolición), siempre y cuando este alquiler incluya a los operarios.                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="post tarjeta sectores">
+                        <a href="{% url 'gui:detailSector' 1 %}">
+                          <!--<img src="/wp-content/uploads/2017/03/hoteles.png" class="img-responsive wp-post-image"/>-->
+                          <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/hoteles.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                        </a>
+                        <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                          <h2><a href="{% url 'gui:detailSector' 1 %}">Hoteles y Restoranes</a></h2>
+                          El sector Hoteles y Restoranes agrupa las actividades de hoteles, campamentos y otros tipos de hospedaje temporal, junto con las actividades vinculadas a restoranes, bares y cantinas.                         </div>
+                          <div class="clearfix"></div>
+                        </div>
+                        <div class="post tarjeta sectores">
+                          <a href="{% url 'gui:detailSector' 1 %}">
+                            <!--<img src="/wp-content/uploads/2017/03/industria.png" class="img-responsive wp-post-image"/>-->
+                            <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/industria.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                          </a>
+                          <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                            <h2><a href="{% url 'gui:detailSector' 1 %}">Industria Manufacturera</a></h2>
+                            El sector de industria manufacturera se compone de los subsectores de alimentos, bebidas y tabaco; celulosa, papel e imprentas; maderas y muebles; minerales no metálicos y metálica básica; química, petróleo, caucho y plástico; productos metálicos, máquinas y equipos; textil, prendas de vestir y cueros.                        </div>
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="post tarjeta sectores">
+                            <a href="{% url 'gui:detailSector' 1 %}">
+                              <!--<img src="/wp-content/uploads/2017/03/mineria.png" class="img-responsive wp-post-image"/>-->
+                              <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/mineria.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                            </a>
+                            <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                              <h2><a href="{% url 'gui:detailSector' 1 %}">Minería</a></h2>
+                              El sector Minería abarca principalmente la extracción de carbón, lignito, turba, petróleo, gas y minerales metalíferos, entre otras actividades.                        </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="post tarjeta sectores">
+                              <a href="{% url 'gui:detailSector' 1 %}">
+                                <!--<img src="/wp-content/uploads/2017/03/pesca.png" class="img-responsive wp-post-image"/>-->
+                                <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/pesca.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                              </a>
+                              <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                                <h2><a href="{% url 'gui:detailSector' 1 %}">Pesca</a></h2>
+                                Se entiende por pesca la utilización de los recursos pesqueros marinos o de agua dulce, con el fin de capturar o recolectar peces, crustáceos, moluscos y otros productos marinos (por ejemplo, perlas, esponjas, entre otros). También incluye las actividades de piscifactoria y acuicultura que producen productos similares. Abarca las actividades que normalmente se integran en el proceso de producción por cuenta propia (por ejemplo, el cultivo de ostras para la producción de perlas).                        </div>
+                                <div class="clearfix"></div>
+                              </div>
+                              <div class="post tarjeta sectores">
+                                <a href="{% url 'gui:detailSector' 1 %}">
+                                  <!--<img src="/wp-content/uploads/2017/03/transporte.png" class="img-responsive wp-post-image"/>-->
+                                  <img  src="http://observatorionacional.cl/wp-content/uploads/2017/03/transporte.png" class="img-responsive wp-post-image" style="width:90px; margin:20px;"/>
+                                </a>
+                                <div class="sect-text" style="font-family: 'gobCL', Tahoma, Verdana, Segoe, sans-serif;">
+                                  <h2><a href="{% url 'gui:detailSector' 1 %}">Transporte, Almacenamiento y Comunicaciones</a></h2>
+                                  El sector de Transporte, Almacenamiento y Telecomunicaciones comprende actividades de transporte regular y no regular de pasajeros y de carga; actividades auxiliares, como servicios de terminal y de estacionamiento, de manipulación y almacenamiento de la carga, entre otros; actividades de correo y telecomunicaciones; y alquiler de equipo de transporte con conductor u operario.                        </div>
+                                  <div class="clearfix"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Sidebar -->
+                            <div id="sidebar">
+                              <section class="map-container map-primary" style="margin-top:60px;">
+                                <div class="dropdown">
+                                  <button id="obsregionalbutton" class="dropbtn" type="button">
+                                    Mostrar mapa sector:
+                                  </button>
+                                  <ul class="dropdown-content">
+                                    <li>
+                                      <a class="items-obsregional" id="sector1" href="#">Silvoagropecuario</a>
+                                    </li>
+                                    <li>
+                                      <a class="items-obsregional" id="sector2" href="#">Comercio</a>
+                                    </li>
+                                    <li>
+                                      <a class="items-obsregional" id="sector3" href="#">Construcción</a>
+                                    </li>
+                                    <li>
+                                      <a class="items-obsregional" id="sector4" href="#">Hoteles y Restoranes</a>
+                                    </li>
+                                    <li>
+                                      <a class="items-obsregional" id="sector5" href="#">Industria Manufacturera</a>
+                                    </li>
+                                    <li>
+                                      <a class="items-obsregional" id="sector6" href="#">Mineria</a>
+                                    </li>
+                                    <li>
+                                      <a class="items-obsregional" id="sector7" href="#">Pesca</a>
+                                    </li>
+                                    <li>
+                                      <a class="items-obsregional" id="sector8" href="#">Transporte y Comunicaciones</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </section>
+                              <div id="seleccion-mapa-sectorial">
+                                
+                                <a class="figure mapa sombra" id="figimgsector" href="http://observatorionacional.cl/wp-content/uploads/2017/03/Mapa-Sector-Comercio3x.png" data-lightbox="mapa-home">
+                                  <img width="320" id="imagensectores" src="http://observatorionacional.cl/wp-content/uploads/2017/03/Mapa-Sector-Comercio3x.png" />
+                                  <span class="lightbox-trigger"><i class="fa fa-plus"></i></span>
+                                </a>
+                                <img class="mapa" id="master-mapa" src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/maps/mapassectores_master2.png" style="margin-top:120px" width="150" usemap="#mapas-sectores" alt="" />
+                                
+                                <map name="mapas-sectores" id="mapas-sectores">
+                                  <area id="sector-mineria" alt="" title="Mineria" href="" shape="rect" coords="0,0,150,50" />
+                                  <area id="sector-comercio" alt="" title="Comercio, Restaurantes y Hoteles" href="" shape="rect" coords="0,57,150,109"/>
+                                  <area id="sector-servicios" alt="" title="Servicios sociales y personales" href="" shape="rect" coords="0,115,150,170"/>
+                                  <area id="sector-agricultura" alt="" title="Agricultura, Ganadería, Caza y Silvicultura" href="" shape="rect" coords="0,174,150,222"/>
+                                  <area id="sector-construccion" alt="" title="Construcción" href="" shape="rect" coords="0,232,148,282"/>
+                                  <area id="sector-industria" alt="" title="Industria manufacturera" href="" shape="rect" coords="0,290,148,341"/>
+                                  <area id="sector-administracion" alt="" title="Administración publica" href="" shape="rect" coords="0,350,150,400"/>
+                                  <area id="sector-pesca" alt="" title="Pesca" href="" shape="rect" coords="0,408,148,454"/>
+                                </map>
+                              </div>
+                            </section>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
 
-{% endblock content_home %}
+{% endblock content %}

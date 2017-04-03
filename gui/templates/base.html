@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>{% block title %}{% endblock %}</title>
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link href="{% static 'gui/css/googleapis.css' %}" rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -142,7 +142,7 @@
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://observatorionacional.cl/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://observatorionacional.cl/wp-includes/wlwmanifest.xml" /> 
     <meta name="generator" content="WordPress 4.5.7" />
-
+    {% block head %}{% endblock %}
   </head>
   <body class="home blog page page-id-29 page-template page-template-page-quienessomoscustom2 page-template-page-quienessomoscustom2-php">
 
@@ -169,7 +169,8 @@
                 </ul>
               </li>
               <li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="{% url 'gui:panorama' %}">Panorama Regional</a></li>
-              <li id="menu-item-646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-646"><a href="http://observatorionacional.cl/sectores/">Sectores Productivos</a>
+              <li id="menu-item-646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-646"><a href="{% url 'gui:sectors' %}">Sectores Productivos</a>
+                <!--
                 <ul class="sub-menu">
                   <li id="menu-item-647" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-647"><a href="http://observatorionacional.cl/sectores/?id=1">Silvoagropecuario</a></li>
                   <li id="menu-item-648" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-648"><a href="http://observatorionacional.cl/sectores/?id=2">Comercio</a></li>
@@ -180,10 +181,11 @@
                   <li id="menu-item-653" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-653"><a href="http://observatorionacional.cl/sectores/?id=7">Pesca</a></li>
                   <li id="menu-item-654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-654"><a href="http://observatorionacional.cl/sectores/?id=8">Transporte, Almacenamiento y Comunicaciones</a></li>
                 </ul>
+              -->
               </li>
-              <li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="http://observatorionacional.cl/ocupaciones/">Ocupaciones</a></li>
-              <li id="menu-item-655" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-655"><a href="http://observatorionacional.cl/category/noticias/">Noticias</a></li>
-              <li id="menu-item-642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-642"><a href="http://observatorionacional.cl/descargas/">Descargas</a></li>
+              <li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="{% url 'gui:activities' %}">Ocupaciones</a></li>
+              <li id="menu-item-655" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-655"><a href="{% url 'gui:news' %}">Noticias</a></li>
+              <li id="menu-item-642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-642"><a href="{% url 'gui:downloads' %}">Descargas</a></li>
             </ul>            </nav>
           </div>
         </div>
@@ -208,7 +210,7 @@
 
             <nav id="menu-principal">
               <!-- Menu Principal -->
-              <ul id="menu-main-menu" class="menu-main"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-639 current-menu-item "><a href="{% url 'gui:about' %}">Quiénes Somos</a>
+              <ul id="menu-main-menu" class="menu-main"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-639 " id='about'><a href="{% url 'gui:about' %}">Quiénes Somos</a>
                 <ul class="sub-menu">
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641"><a href="{% url 'gui:advice' %}">Consejo Asesor</a></li>
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="{% url 'gui:technicalCommitte' %}">Comité Técnico</a></li>
@@ -216,8 +218,9 @@
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="{% url 'gui:frecuentQuestions' %}">Preguntas Frecuentes</a></li>
                 </ul>
               </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="{% url 'gui:panorama' %}">Panorama Regional</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-646"><a href="http://observatorionacional.cl/sectores/">Sectores Productivos</a>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645" id='panorama'><a href="{% url 'gui:panorama' %}">Panorama Regional</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-646" id='sectors'><a href="{% url 'gui:sectors' %}">Sectores Productivos</a>
+                <!--
                 <ul class="sub-menu">
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-647"><a href="http://observatorionacional.cl/sectores/?id=1">Silvoagropecuario</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-648"><a href="http://observatorionacional.cl/sectores/?id=2">Comercio</a></li>
@@ -228,10 +231,11 @@
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-653"><a href="http://observatorionacional.cl/sectores/?id=7">Pesca</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-654"><a href="http://observatorionacional.cl/sectores/?id=8">Transporte, Almacenamiento y Comunicaciones</a></li>
                 </ul>
+              -->
               </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="http://observatorionacional.cl/ocupaciones/">Ocupaciones</a></li>
-              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-655"><a href="http://observatorionacional.cl/category/noticias/">Noticias</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-642"><a href="http://observatorionacional.cl/descargas/">Descargas</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644" id='activities'><a href="{% url 'gui:activities' %}">Ocupaciones</a></li>
+              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-655" id='news'><a href="{% url 'gui:news' %}">Noticias</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-642" id='downloadsLi'><a href="{% url 'gui:downloads' %}">Descargas</a></li>
             </ul>            </nav>
 
 
@@ -275,13 +279,13 @@
                 </div>
                 
                 <div class="right text-right">
-          <!--
-<figure>
-            <a href="http://www.mintrab.gob.cl/" title="Ministerio del Trabajo y Previsión Social">
-            <img src="http://observatorionacional.cl/wp-content/uploads/2016/03/ministerio-trabajo.jpg" alt="Gobierno de Chile - Ministerio del Trabajo">
+         
+          <figure>
+            <a href="http://www.uach.cl/" title="Universidad Austral de Chile">
+            <img src="{% static 'gui/img/logou.png' %}" alt="Universidad Austral de Chile">
             </a>
           </figure>
-        -->
+        
         <figure>
           <a href="http://www.iadb.org/es/paises/chile/chile-y-el-bid,1090.html" title="Banco Interamericano de Desarrollo">
             <img src="http://observatorionacional.cl/wp-content/uploads/2016/04/bid.png" alt="Banco Interamericano de Desarrollo">

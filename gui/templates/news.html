@@ -1,10 +1,142 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Noticias - Observatorio Aysen{% endblock title%}
+{% block title %}Noticias | Observatorio Laboral Aysen{% endblock title%}
 
 {% block head %}<script src="{% static 'gui/js/news.js' %}"></script>{% endblock head %}
 
 {% block content %}
+
+  
+<div id="content">
+
+     <div class="wrap">
+            <div id="main">
+              <div id="breadcrumbs">
+                <ul>
+                  <li><a href="{% url 'gui:home' %}">Inicio</a></li>
+                  <li class="sep">/</li>
+                  <li>Noticias »</li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+    <div class="wrap">
+
+      <div id="main-wide" class="archive">
+
+        <div class="stream ">
+          <br><br>
+          <h5>Noticias</h5>
+        
+          
+          <div class="tarjeta-container">
+          	{% if news %}
+			{% for n in news %}
+            <div class="post tarjeta">
+              <div class="pic">
+                <a href="{% url 'gui:detailNew' 1 %}">
+                  <img width="320" height="210" src="/media/{{n.imagen}}" class="attachment-320x210 size-320x210 wp-post-image" alt="noticia_29032017" />                </a>
+              </div>
+              <div class="texto">
+                <span class="meta">{{n.created_at}}</span>
+                <h4 class="title"><a href="{% url 'gui:detailNew' 1 %}">{{n.title}}</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            {% endfor %}
+			{% endif %}
+                      <div class="post tarjeta">
+              <div class="pic">
+                <a href="{% url 'gui:detailNew' 1 %}">
+                  <img width="320" height="210" src="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_20170322-320x210.jpg" class="attachment-320x210 size-320x210 wp-post-image" alt="noticia_20170322" />                </a>
+              </div>
+              <div class="texto">
+                <span class="meta">22 de Marzo de 2017 </span>
+                <h4 class="title"><a href="{% url 'gui:detailNew' 1 %}">Observatorios Laborales se reúnen en jornada de capacitación</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+                      <div class="post tarjeta">
+              <div class="pic">
+                <a href="{% url 'gui:detailNew' 1 %}">
+                  <img width="320" height="210" src="http://observatorionacional.cl/wp-content/uploads/2017/03/IMG_0852-002-320x210.jpg" class="attachment-320x210 size-320x210 wp-post-image" alt="IMG_0852 (002)" />                </a>
+              </div>
+              <div class="texto">
+                <span class="meta">21 de Marzo de 2017 </span>
+                <h4 class="title"><a href="{% url 'gui:detailNew' 1 %}">OTIC SOFOFA y Pontificia Universidad Católica de Valparaíso se reúnen para firmar convenio de Observatorio Laboral de la Región de Valparaíso.</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+                      <div class="post tarjeta">
+              <div class="pic">
+                <a href="{% url 'gui:detailNew' 1 %}">
+                  <img width="320" height="210" src="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_marzo_2017-320x210.jpg" class="attachment-320x210 size-320x210 wp-post-image" alt="noticia_marzo_2017" />                </a>
+              </div>
+              <div class="texto">
+                <span class="meta">20 de Marzo de 2017 </span>
+                <h4 class="title"><a href="{% url 'gui:detailNew' 1 %}">Se reúne consejo asesor del Observatorio Laboral Nacional</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+                      <div class="post tarjeta">
+              <div class="pic">
+                <a href="{% url 'gui:detailNew' 1 %}">
+                  <img width="320" height="210" src="http://observatorionacional.cl/wp-content/uploads/2017/01/2017-01-18-PHOTO-00000053width-320x210.jpg" class="attachment-320x210 size-320x210 wp-post-image" alt="2017-01-18-PHOTO-00000053width" />                </a>
+              </div>
+              <div class="texto">
+                <span class="meta">25 de Enero de 2017 </span>
+                <h4 class="title"><a href="{% url 'gui:detailNew' 1 %}">Comité Técnico del Observatorio Laboral sostiene reunión mensual</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+                      <div class="post tarjeta">
+              <div class="pic">
+                <a href="{% url 'gui:detailNew' 1 %}">
+                  <img width="320" height="210" src="http://observatorionacional.cl/wp-content/uploads/2016/12/IMG_8711-320x210.jpg" class="attachment-320x210 size-320x210 wp-post-image" alt="img_8711" />                </a>
+              </div>
+              <div class="texto">
+                <span class="meta">28 de Diciembre de 2016 </span>
+                <h4 class="title"><a href="{% url 'gui:detailNew' 1 %}">Observatorio Regional de Coquimbo recibe capacitación del Observatorio Nacional</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+                      <div class="post tarjeta">
+              <div class="pic">
+                <a href="{% url 'gui:detailNew' 1 %}">
+                  <img width="320" height="210" src="http://observatorionacional.cl/wp-content/uploads/2016/12/IMG_0580-320x210.jpg" class="attachment-320x210 size-320x210 wp-post-image" alt="Observatorio Regional de Ñuble recibe capacitación del Observatorio Nacional" />                </a>
+              </div>
+              <div class="texto">
+                <span class="meta">22 de Diciembre de 2016 </span>
+                <h4 class="title"><a href="{% url 'gui:detailNew' 1 %}">Observatorio Regional de Ñuble recibe capacitación del Observatorio Nacional</a></h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+                      
+                  
+                              </div>
+
+        </div>
+
+        <!-- Paginador 
+        <div class="wp-pagenavi">
+          <span class='page-numbers current'>1</span>
+<a class='page-numbers' href='http://observatorionacional.cl/category/noticias/page/2/'>2</a>
+<a class="next page-numbers" href="http://observatorionacional.cl/category/noticias/page/2/">Siguiente &raquo;</a>        </div>
+
+      </div>-->
+
+      <!-- Sidebar -->
+
+      
+      <div class="clearfix"></div>
+
+    </div>
+
+  </div>
+
+<!--
+
 <br>
 <div class="row">
 	<div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="#"> Noticias >></a></div>
@@ -67,5 +199,5 @@
 	{% endfor %}
 	{% endif %}
 </div>
-
+-->
 {% endblock content %}

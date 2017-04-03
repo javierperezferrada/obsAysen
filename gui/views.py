@@ -16,10 +16,13 @@ def panorama(request):
 def sectors(request):
 	return render(request,'sectors.html')
 
+def detailSector(request, pk):
+	return render(request,'detailSector.html')
+
 def activities(request):
 	return render(request,'activities.html')
 
-def detailActivitie(request):
+def detailActivitie(request, pk):
 	return render(request,'detailActivitie.html')
 
 def advice(request):
@@ -37,8 +40,11 @@ def frecuentQuestions(request):
 def about(request):
 	return render(request,'about.html')
 
-def test(request):
-	return render(request,'test.html')
+def downloads(request):
+	return render(request,'downloads.html')
+
+def detailNew(request, pk):
+	return render(request,'detailNew.html')
 
 #@login_required(login_url='/login/')
 def news(request):

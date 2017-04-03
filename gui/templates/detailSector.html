@@ -1,0 +1,386 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Detalle | Observatorio Laboral Aysen{% endblock title%}
+
+{% block head %}<script src="{% static 'gui/js/sectors.js' %}"></script>{% endblock head %}
+
+{% block content %}
+
+<div id="content">
+    <div class="wrap" >
+    <div id="main">
+            <div class="post post-sectores" >
+        <div class="sector-header clearfix" style="background:#CE2734;">
+            <figure>
+             <img width="240" height="300" style="margin-top:20px;" 
+                            src="{% static 'gui/img/agricultura.png' %}" class="img-responsive wp-post-image" alt="" />
+                       <!-- <img width="100" style="margin-top:20px; margin-left:10px;" src="http://localhost/observatorio/wp-content/uploads/2017/03/agricultura.png"  alt="" />-->
+                    </figure>
+          <div class="sector-header-title">
+                <h3 style="color:white; margin-top:20px; margin-left:20px;">Silvoagropecuario</h3>        
+                <img src="{% static 'gui/img/agricultura_header2x.png' %}" alt="">
+<!--                        <img src="http://localhost/observatorio/wp-content/uploads/2017/03/agricultura_header2x.png" alt="">-->
+          </div>
+        </div>
+            </br>
+                <div>
+                    <div>
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="active" ><a style="height:50px!important;" data-toggle="tab" href="#home">Vision global y macroeconomia</a></li>
+                            <li><a style="height:50px!important;" data-toggle="pill" href="#menu1">Empresas</a></li>
+                            <li><a style="height:50px!important;" data-toggle="pill" href="#menu2">Actividades del sector</a></li>
+                            <li><a style="height:50px!important;" data-toggle="pill" href="#menu3">Trabajadores</a></li>
+                            <li><a style="height:50px!important;" data-toggle="pill" href="#menu4">Empleo</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                <div class="contenedor-panorama">
+                                <br/>
+                                <section class="entry text-gris" style="margin-left:20px;">
+                                    Esta sección presenta información sobre la evolución que ha tenido el producto y el empleo del sector.
+                                </section>
+                                <br/>
+                                <br/>        <p class="titulo-grafico">PIB sector (desestacionalizado), trimestres 2008-2016.</p>
+        <div style="margin-left:20px;" id="chart111"></div>
+        <table class="tabla-legenda-grafico" style="margin-left:80px;"><tr>
+                <td>2008</td><td>2009</td><td>2010</td><td>2011</td><td>2012</td><td>2013</td><td>2014</td><td>2015</td><td>2016</td>
+                </tr></table>
+            <table class="tabla-legenda-grafico">
+                <tr>
+                    <td><div class="barra-legenda-grafico" style="background-color:#6F6F9A"></div>&nbsp;PIB sector</td>
+                    <td><div class="barra-legenda-grafico" style="background-color:#cc2a39"></div>&nbsp;Tendencia PIB sector</td>
+                </tr>
+            </table>
+        <div class="fuente-grafico">Fuente: Elaboración propia en base a Banco Central, 2008-2016.<br/>Nota: Volumen a precios del año anterior encadenado, desestacionalizado, referencia 2008 (millones de pesos encadenados).</div>
+        <!--    <div class="nota-grafico">Nota: Volumen a precios del año anterior encadenado, desestacionalizado, referencia 2008 (millones de pesos encadenados).</div> -->
+        <script type="text/javascript">
+            google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+            google.setOnLoadCallback(drawchart111);
+
+            function drawchart111(){
+                var data = google.visualization.arrayToDataTable([
+                ['Año Trimestre','PIB sector','Tendencia PIB sector'],['2008 ene-mar',699586,661947],['2008 abr-jun',679541,663167],['2008 jul-sep',649272,664387],['2008 oct-dic',683045,665607],['2009 ene-mar',644808,666827],['2009 abr-jun',617819,668047],['2009 jul-sep',680129,669267],['2009 oct-dic',651405,670487],['2010 ene-mar',620848,671707],['2010 abr-jun',645898,672927],['2010 jul-sep',670885,674147],['2010 oct-dic',663034,675367],['2011 ene-mar',737851,676587],['2011 abr-jun',713563,677807],['2011 jul-sep',693828,679027],['2011 oct-dic',728567,680247],['2012 ene-mar',686896,681467],['2012 abr-jun',703576,682687],['2012 jul-sep',656302,683907],['2012 oct-dic',674213,685127],['2013 ene-mar',694796,686347],['2013 abr-jun',710561,687567],['2013 jul-sep',703600,688787],['2013 oct-dic',682289,690007],['2014 ene-mar',668714,691227],['2014 abr-jun',632887,692447],['2014 jul-sep',660264,693667],['2014 oct-dic',700008,694887],['2015 ene-mar',692437,696107],['2015 abr-jun',700649,697327],['2015 jul-sep',740225,698547],['2015 oct-dic',676537,699767],['2016 ene-mar',719633,700987],['2016 abr-jun',706960,702207],                ]);
+
+                var options = {
+                    legend: { position: 'none','alignment':'center'},
+                    width: 600,
+                    height: 250,
+                    vAxis:{textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},
+                          viewWindowMode:'explicit',
+                           viewWindow:{min:0}},
+                    hAxis: {textPosition: 'none',showTextEvery: 12, 
+                            minTextSpacing:120,
+                            textStyle: {color: 'black', 
+                                        fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                        fontSize: 14,
+                                        fontWidth: 'normal'},
+                            },
+                            lineWidth: 3,
+                            chartArea: { left: 80, width: '90%', height:'90%'},
+                            colors: ['#6F6F9A','#cc2a39','#FF4C4C','#377bb5'],
+                            //backgroundColor: '#A9A9A9'
+                }
+                var chart = new google.visualization.LineChart(document.getElementById('chart111'));
+                chart.draw(data, options);
+            } 
+        </script>
+    <br/><br/>        <p class="titulo-grafico">Porcentaje de cesantía nacional y porcentaje de cesantía del sector, 2010-2016.</p>
+        <div style="margin-left:20px;" id="chart113"></div>
+        <table class="tabla-legenda-grafico" style="margin-left:70px;"><tr>
+                <td>2010</td><td>2011</td><td>2012</td><td>2013</td><td>2014</td><td>2015</td><td>2016</td>
+                </tr></table>
+            <table class="tabla-legenda-grafico">
+                <tr>
+                    <td><div class="barra-legenda-grafico" style="background-color:#6F6F9A"></div>&nbsp;Sector</td>
+                    <td><div class="barra-legenda-grafico" style="background-color:#cc2a39"></div>&nbsp;Nacional</td>
+                </tr>
+            </table>
+        <div class="fuente-grafico">Fuente: Elaboración propia en base a ENE 2010-2016. <br/>Nota: Se calcula considerando el sector donde se desempeñó la población cesante en su último trabajo. </div>
+        <!--    <div class="nota-grafico">Nota: Se calcula considerando el sector donde se desempeñó la población cesante en su último trabajo. </div> -->
+        <script type="text/javascript">
+            google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+            google.setOnLoadCallback(drawchart113);
+
+            function drawchart113(){
+                var data = google.visualization.arrayToDataTable([
+                ['Año Trimestre','Sector','Nacional'],['2010 ene-mar',5.1,7.9],['2010 feb-abr',5.7,7.6],['2010 mar-may',6.5,7.9],['2010 abr-jun',7.7,7.6],['2010 may-jul',8.2,7.5],['2010 jun-ago',8,7.5],['2010 jul-sep',6.7,7.2],['2010 ago-oct',5.6,6.8],['2010 sep-nov',4.6,6.2],['2010 oct-dic',4.1,6.1],['2010 nov-ene',3.8,6.2],['2011 dec-feb',3.6,6.2],['2011 ene-mar',3.6,6.4],['2011 feb-abr',4.3,6.3],['2011 mar-may',6,6.5],['2011 abr-jun',7.4,6.4],['2011 may-jul',8.1,6.7],['2011 jun-ago',7.2,6.6],['2011 jul-sep',7.1,6.7],['2011 ago-oct',6.6,6.6],['2011 sep-nov',6,6.3],['2011 oct-dic',4.3,5.5],['2011 nov-ene',3.3,5.4],['2012 dec-feb',3.4,5.2],['2012 ene-mar',3.6,5.7],['2012 feb-abr',4.9,5.8],['2012 mar-may',6,6.1],['2012 abr-jun',7.3,6],['2012 may-jul',7.4,6],['2012 jun-ago',6.6,5.9],['2012 jul-sep',5.8,6],['2012 ago-oct',5.4,6],['2012 sep-nov',4.6,5.6],['2012 oct-dic',3.9,5.3],['2012 nov-ene',3.5,5],['2013 dec-feb',3.1,5.3],['2013 ene-mar',3.3,5.4],['2013 feb-abr',3.7,5.8],['2013 mar-may',4.5,5.8],['2013 abr-jun',5.1,5.6],['2013 may-jul',5.2,5.2],['2013 jun-ago',5,5.3],['2013 jul-sep',5,5.3],['2013 ago-oct',5.1,5.3],['2013 sep-nov',4.9,5.2],['2013 oct-dic',4.2,5],['2013 nov-ene',4.1,5.1],['2014 dec-feb',3.8,5.2],['2014 ene-mar',3.9,5.6],['2014 feb-abr',3.7,5.5],['2014 mar-may',4.6,5.7],['2014 abr-jun',5.1,5.9],['2014 may-jul',5.4,6],['2014 jun-ago',4.9,6.2],['2014 jul-sep',5.2,6.2],['2014 ago-oct',5.3,5.9],['2014 sep-nov',5.1,5.6],['2014 oct-dic',4.1,5.4],['2014 nov-ene',3.7,5.4],['2015 dec-feb',3.6,5.4],['2015 ene-mar',4,5.5],['2015 feb-abr',4.5,5.5],['2015 mar-may',5,5.9],['2015 abr-jun',5.8,5.9],['2015 may-jul',6.1,6],['2015 jun-ago',5.6,6],['2015 jul-sep',5,5.9],['2015 ago-oct',4.9,5.9],['2015 sep-nov',4.9,5.6],['2015 oct-dic',3.9,5.2],['2015 nov-ene',3.2,5.1],['2016 dec-feb',2.9,5.2],['2016 ene-mar',3,5.6],['2016 feb-abr',3.3,5.8],['2016 mar-may',4.1,6.3],['2016 abr-jun',5.1,6.3],['2016 may-jul',5.7,6.6],['2016 jun-ago',5.1,6.4],['2016 jul-sep',4.9,6.3],['2016 ago-oct',4.5,6],['2016 sep-nov',4.4,5.7],['2016 oct-dic',4.3,5.5],                ]);
+
+                var options = {
+                    legend: { position: 'none','alignment':'center'},
+                    width: 600,
+                    height: 250,
+                    vAxis:{textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},
+                          viewWindowMode:'explicit',
+                           viewWindow:{min:0}},
+                    hAxis: {textPosition: 'none',showTextEvery: 12, 
+                            minTextSpacing:120,
+                            textStyle: {color: 'black', 
+                                        fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                        fontSize: 14,
+                                        fontWidth: 'normal'},
+                            },
+                            lineWidth: 3,
+                            chartArea: { left: 80, width: '90%', height:'90%'},
+                            colors: ['#6F6F9A','#cc2a39','#FF4C4C','#377bb5'],
+                            //backgroundColor: '#A9A9A9'
+                }
+                var chart = new google.visualization.LineChart(document.getElementById('chart113'));
+                chart.draw(data, options);
+            } 
+        </script>
+    <br/><br/>        <p class="titulo-grafico">Participación del sector en el PIB y en el empleo regional, 2014. Por región de trabajo. </p>
+        <div style="margin-left:20px;" id="chart116"></div>
+        <div class="fuente-grafico">Fuente: Elaboración propia en base a Banco Central 2014 y ENE 2014.<br/>Nota: PIB a precios corrientes. </div>
+        <!--    <div class="nota-grafico">Nota: PIB a precios corrientes. </div> -->
+
+        <script type="text/javascript">
+                google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+                google.setOnLoadCallback(drawchart116);
+
+                function drawchart116(){
+                    var data = google.visualization.arrayToDataTable([
+                        ['Región','Participación del PIB del sector en la región','Participación del empleo del sector en la región'],['Arica y Parinacota',4,11.6],['Tarapacá',0.1,4.8],['Antofagasta',0,0.5],['Atacama',3.4,5],['Coquimbo',5.7,13.3],['Valparaíso',3.7,7.7],['Metropolitana',0.8,2.4],['Maule',12.7,25.6],['Biobío',5.2,11.5],['La Araucanía',8.3,21],['Los Ríos',11.2,17.4],['Los Lagos',7,12],['Aysén ',1.3,7.8],['Magallanes',1.7,6.3],                    ]);
+                    var options = {
+                        legend: { position: 'right',
+                                textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},},
+                        width: 600,
+                        height: 400,
+                        vAxis:{textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},
+                              },
+                        hAxis: {},
+                        chartArea: { left: 100,width: '60%',top:20,height:'90%'},
+                        colors: ['#cc2a39','#377bb5'],
+                    };
+                    var chart = new google.visualization.BarChart(document.getElementById('chart116'));
+                    chart.draw(data, options);
+                }
+            </script>
+        <br/><br/>        <p class="titulo-grafico">Evolución ocupados del sector, 2010-2016 (miles de personas).</p>
+        <div style="margin-left:20px;" id="chart117"></div>
+        <table class="tabla-legenda-grafico" style="margin-left:70px;"><tr>
+                <td>2010</td><td>2011</td><td>2012</td><td>2013</td><td>2014</td><td>2015</td><td>2016</td>
+                </tr></table>
+            <table class="tabla-legenda-grafico">
+                <tr>
+                    <td><div class="barra-legenda-grafico" style="background-color:#6F6F9A"></div>&nbsp;Sector</td>
+                                        
+                    
+                </tr>
+            </table>
+        <div class="fuente-grafico">Fuente: Elaboración propia en base a ENE 2010-2016.<br/></div>
+        <!--    <div class="nota-grafico"></div> -->
+        <script type="text/javascript">
+            google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+            google.setOnLoadCallback(drawchart117);
+
+            function drawchart117(){
+                var data = google.visualization.arrayToDataTable([
+                ['Año Trimestre','Sector'],['2010 ene-mar',764],['2010 feb-abr',734],['2010 mar-may',696],['2010 abr-jun',651],['2010 may-jul',630],['2010 jun-ago',637],['2010 jul-sep',654],['2010 ago-oct',674],['2010 sep-nov',715],['2010 oct-dic',777],['2010 nov-ene',811],['2011 dec-feb',829],['2011 ene-mar',808],['2011 feb-abr',778],['2011 mar-may',714],['2011 abr-jun',676],['2011 may-jul',654],['2011 jun-ago',655],['2011 jul-sep',658],['2011 ago-oct',670],['2011 sep-nov',696],['2011 oct-dic',735],['2011 nov-ene',772],['2012 dec-feb',785],['2012 ene-mar',770],['2012 feb-abr',736],['2012 mar-may',694],['2012 abr-jun',650],['2012 may-jul',633],['2012 jun-ago',645],['2012 jul-sep',667],['2012 ago-oct',692],['2012 sep-nov',709],['2012 oct-dic',745],['2012 nov-ene',782],['2013 dec-feb',797],['2013 ene-mar',782],['2013 feb-abr',744],['2013 mar-may',682],['2013 abr-jun',650],['2013 may-jul',625],['2013 jun-ago',633],['2013 jul-sep',619],['2013 ago-oct',616],['2013 sep-nov',635],['2013 oct-dic',675],['2013 nov-ene',716],['2014 dec-feb',741],['2014 ene-mar',729],['2014 feb-abr',712],['2014 mar-may',682],['2014 abr-jun',651],['2014 may-jul',630],['2014 jun-ago',632],['2014 jul-sep',634],['2014 ago-oct',650],['2014 sep-nov',681],['2014 oct-dic',732],['2014 nov-ene',754],['2015 dec-feb',759],['2015 ene-mar',745],['2015 feb-abr',723],['2015 mar-may',683],['2015 abr-jun',652],['2015 may-jul',638],['2015 jun-ago',647],['2015 jul-sep',652],['2015 ago-oct',659],['2015 sep-nov',676],['2015 oct-dic',723],['2015 nov-ene',755],['2016 dec-feb',778],['2016 ene-mar',766],['2016 feb-abr',740],['2016 mar-may',694],['2016 abr-jun',657],['2016 may-jul',636],['2016 jun-ago',640],['2016 jul-sep',648],['2016 ago-oct',672],['2016 sep-nov',701],['2016 oct-dic',743],                ]);
+
+                var options = {
+                    legend: { position: 'none','alignment':'center'},
+                    width: 600,
+                    height: 250,
+                    vAxis:{textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},
+                          viewWindowMode:'explicit',
+                           viewWindow:{min:0}},
+                    hAxis: {textPosition: 'none',showTextEvery: 12, 
+                            minTextSpacing:120,
+                            textStyle: {color: 'black', 
+                                        fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                        fontSize: 14,
+                                        fontWidth: 'normal'},
+                            },
+                            lineWidth: 3,
+                            chartArea: { left: 80, width: '90%', height:'90%'},
+                            colors: ['#6F6F9A','#cc2a39','#FF4C4C','#377bb5'],
+                            //backgroundColor: '#A9A9A9'
+                }
+                var chart = new google.visualization.LineChart(document.getElementById('chart117'));
+                chart.draw(data, options);
+            } 
+        </script>
+    <br/><br/>        <p class="titulo-grafico">Distribución ocupados según categoría ocupacional (%), 2010-2016</p>
+        <div style="margin-left:20px;" id="chart119"></div>
+        <table class="tabla-legenda-grafico"><tr>
+                <td>2010</td><td>2011</td><td>2012</td><td>2013</td><td>2014</td><td>2015</td><td>2016</td>
+                </tr></table>
+            <table class="tabla-legenda-grafico" style="margin-top:10px; text-align:left">
+                <tr>
+                    <td><div class="barra-legenda-grafico" style="background-color:#6F6F9A"></div>&nbsp;Cuenta Propia</td>
+                    <td><div class="barra-legenda-grafico" style="background-color:#cc2a39"></div>&nbsp;Asalariado sin contrato</td>
+                </tr>
+                <tr>
+                    <td><div class="barra-legenda-grafico" style="background-color:#FF4C4C"></div>&nbsp;Asalariado con contrato definido</td>
+                    <td><div class="barra-legenda-grafico" style="background-color:#377bb5"></div>&nbsp;Asalariado con contrato indefinido</td>
+                </tr>
+            </table>
+        <div class="fuente-grafico">Fuente: Elaboración propia en base a ENE 2010-2016.</div>
+            <div class="nota-grafico">Nota: No se incluye proporción de empleadores, familiar no remunerado y nsnr en el gráfico. Por esta razón, suma de las categorías no es 100. </div> 
+        <script type="text/javascript">
+            google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+            google.setOnLoadCallback(drawchart119);
+
+            function drawchart119(){
+                var data = google.visualization.arrayToDataTable([
+                ['Año Trimestre','Cuenta Propia','Asalariado sin contrato','Asalariado con contrato definido','Asalariado con contrato indefinido'],['2010 ene-mar',21.9,24.6,22.7,24],['2010 feb-abr',22.9,24.1,21.5,24.6],['2010 mar-may',24.5,22.8,19.5,25.6],['2010 abr-jun',26.7,20.7,17.9,27],['2010 may-jul',28.1,17.9,17.2,28.3],['2010 jun-ago',28.3,17.2,18.2,27.9],['2010 jul-sep',28.4,16.9,19,27.2],['2010 ago-oct',28.2,17.5,19.8,25.8],['2010 sep-nov',27.5,17.6,21.2,24.8],['2010 oct-dic',25.5,19.2,23.3,23.5],['2010 nov-ene',23.6,21.1,23.7,23],['2011 dec-feb',23,22.9,24.2,21.8],['2011 ene-mar',24,22.6,23.8,21.6],['2011 feb-abr',25.7,21.8,22.9,22.3],['2011 mar-may',27.1,19.9,21.1,24.4],['2011 abr-jun',28.3,18.4,18.6,27.3],['2011 may-jul',28.2,17.9,18,28.1],['2011 jun-ago',28.2,17.9,19,27.6],['2011 jul-sep',27.5,17.8,20.1,26.9],['2011 ago-oct',27.5,17.5,21.3,26.6],['2011 sep-nov',27.1,18.5,21.9,25.6],['2011 oct-dic',24.8,20.6,23.8,24.1],['2011 nov-ene',23,22.4,25.1,23],['2012 dec-feb',23.3,23,24.9,22.1],['2012 ene-mar',25,21.3,24.8,22.9],['2012 feb-abr',27.3,19.8,23.3,23.6],['2012 mar-may',27.7,18.6,21.5,25.9],['2012 abr-jun',28.3,17.6,19.2,28.1],['2012 may-jul',28.7,16.2,18.5,29.8],['2012 jun-ago',28.8,16,18.9,29.6],['2012 jul-sep',29.2,16.1,19.7,28.2],['2012 ago-oct',29,16.3,19.5,28],['2012 sep-nov',28.8,16.6,20.9,26.6],['2012 oct-dic',26.5,18.2,23.6,25],['2012 nov-ene',25.1,19.7,25.2,23.5],['2013 dec-feb',24.8,20.5,25.4,23.2],['2013 ene-mar',25.4,19.1,25.1,23.6],['2013 feb-abr',27,18.6,23.8,23.9],['2013 mar-may',28.6,17.6,22.1,24.7],['2013 abr-jun',30.1,17.3,19.9,26.1],['2013 may-jul',30.4,15.8,19.7,27.2],['2013 jun-ago',30.7,15.1,20.4,26.9],['2013 jul-sep',31.4,14.5,19.4,27.6],['2013 ago-oct',31.3,15.1,18.2,28],['2013 sep-nov',30.4,15.4,19.3,27.7],['2013 oct-dic',28.7,17.3,21,26.1],['2013 nov-ene',27.4,18.5,23,24.7],['2014 dec-feb',27,18.8,23.1,24.4],['2014 ene-mar',27.6,18.8,22.4,24.2],['2014 feb-abr',27.8,18,22.3,24.8],['2014 mar-may',29.3,17.1,20.1,26.6],['2014 abr-jun',29.7,16.3,18.7,28.5],['2014 may-jul',30.2,14.6,17.9,30.3],['2014 jun-ago',29.8,14.1,18.8,30.3],['2014 jul-sep',30.5,13.8,18.4,30.3],['2014 ago-oct',31.7,13.9,18.7,29],['2014 sep-nov',30.5,14.8,19.7,28.2],['2014 oct-dic',28.4,17.4,21,26.4],['2014 nov-ene',25.4,19.1,22.9,25.5],['2015 dec-feb',24,20.7,22.6,25.3],['2015 ene-mar',24.5,19.8,22.9,26.1],['2015 feb-abr',25.5,19.3,21.6,26.4],['2015 mar-may',27.1,18,20.2,27.5],['2015 abr-jun',28.5,17,18.5,27.9],['2015 may-jul',30,15.3,17.8,28.7],['2015 jun-ago',30.6,14.1,18.7,28.8],['2015 jul-sep',31.6,13.3,19.4,28.4],['2015 ago-oct',31.4,14.1,18.9,29.1],['2015 sep-nov',30.4,15.4,18.9,28.3],['2015 oct-dic',28,18.6,20.2,26.3],['2015 nov-ene',26,20.2,22.3,24.8],['2016 dec-feb',25.6,20.4,23.4,23.9],['2016 ene-mar',26.5,19,23.2,23.7],['2016 feb-abr',27.9,17.4,22.3,24.8],['2016 mar-may',29.3,16.4,20.5,26.6],['2016 abr-jun',30.1,16,19.5,27.4],['2016 may-jul',30.9,15.9,19.2,27.2],['2016 jun-ago',31,15.5,19.6,27.5],['2016 jul-sep',31.3,15.6,19.1,27.5],['2016 ago-oct',31.6,15.5,19.3,27.1],['2016 sep-nov',30.7,16.6,20.1,26],['2016 oct-dic',28.3,17.9,22,24.9],                ]);
+
+                var options = {
+                    legend: { position: 'none','alignment':'center'},
+                    width: 600,
+                    height: 250,
+                    vAxis:{textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},
+                          viewWindowMode:'explicit',
+                           viewWindow:{min:0}},
+                    hAxis: {textPosition: 'none',showTextEvery: 12, 
+                            minTextSpacing:120,
+                            textStyle: {color: 'black', 
+                                        fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                        fontSize: 14,
+                                        fontWidth: 'normal'},
+                            },
+                            lineWidth: 3,
+                            chartArea: { left: 50, width: '90%', height:'90%'},
+                            colors: ['#6F6F9A','#cc2a39','#FF4C4C','#377bb5'],
+                            //backgroundColor: '#A9A9A9'
+                }
+                var chart = new google.visualization.LineChart(document.getElementById('chart119'));
+                chart.draw(data, options);
+            } 
+        </script>
+        <br/>                                    
+                            </div>   
+                            </div>
+                            <div id="menu1" class="tab-pane fade">
+                                <div class="contenedor-panorama">
+                                <br/>
+                                <section class="entry text-gris" style="margin-left:20px;">
+                                    Esta sección presenta información sobre las empresas del sector de acuerdo a su tamaño por número de trabajadores. Se puede observar el número de empresas por tamaño y el porcentaje de empleo que absorben, así como la distribución de los trabajadores según nivel educacional y categoría ocupacional por tamaño de empresa. 
+                                </section>
+                                <br/>
+                                <div>
+                            <div class='titulo-tabla'><p>Número de empresas (SII) y ocupados (ENE) según tamaño de empresa, incluyendo emprendimientos unipersonales, 2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tamaño de empresas </th><th>N° Empresas Sector</th><th>% Empresas Sector</th><th>N° Ocupados Sector</th><th>% Ocupados Sector</th><th>N° Empresas Nacional</th><th>% Empresas Nacional</th><th>N° Ocupados Nacional</th><th>% Ocupados Nacional</th></tr></thead><tbody><tr><td>Unipersonal</td><td>-</td><td>-</td><td>159.318</td><td>23</td><td>-</td><td>-</td><td>1.370.116</td><td>17</td></tr><tr><td>Microempresas</td><td>99.337</td><td>91</td><td>207.102</td><td>30</td><td>988.167</td><td>92</td><td>1.579.683</td><td>20</td></tr><tr><td>Pequeña</td><td>6.756</td><td>6</td><td>163.610</td><td>24</td><td>62.955</td><td>6</td><td>1.135.349</td><td>14</td></tr><tr><td>Mediana</td><td>2.556</td><td>2</td><td>92.360</td><td>13</td><td>16.730</td><td>2</td><td>911.490</td><td>11</td></tr><tr><td>Grande</td><td>877</td><td>1</td><td>70.426</td><td>10</td><td>6.188</td><td>1</td><td>2.719.241</td><td>34</td></tr><tr><td>nr/nr</td><td>-</td><td>-</td><td>0</td><td>0</td><td>-</td><td>-</td><td>311.907</td><td>4</td></tr><tr><td>Total</td><td>109.526</td><td>100</td><td>692.816</td><td>100</td><td>1.074.040</td><td>100</td><td>8.027.786</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a SII 2015 y ENE 2015.<br/> Nota 1: El número de empresas contempla las empresas sin información de ventas (el SII no puede estimarlas en base a las declaraciones de impuestos, formulario 22 y 29), que para el año 2015 representaron un 18% del total de empresas del sector.<br/>Nota 2: El tamaño de empresas se define a partir del número de trabajadores. Unipersonal: trabajadores por cuenta propia que trabajan solos. Microempresa, entre 1 y 9 trabajadores; Pequeña, entre 10 y 49 trabajadores; Mediana, entre 50 y 199 trabajadores; Grande, más de 200 trabajadores.<br/>Nota 3: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por tamaño de empresa según nivel educacional (%), 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tamaño de empresa</th><th>Básica incompleta o menos</th><th>Básica</th><th>Media</th><th>Técnica</th><th>Profesional</th><th>Postgrado</th><th>ns/nr</th><th>Total</th></tr></thead><tbody><tr><td>Unipersonal</td><td>50</td><td>32</td><td>15</td><td>2</td><td>1</td><td>0</td><td>0</td><td>100</td></tr><tr><td>Microempresas</td><td>41</td><td>33</td><td>20</td><td>2</td><td>3</td><td>0</td><td>0</td><td>100</td></tr><tr><td>Pequeña</td><td>31</td><td>38</td><td>26</td><td>2</td><td>3</td><td>0</td><td>0</td><td>100</td></tr><tr><td>Mediana</td><td>26</td><td>39</td><td>31</td><td>2</td><td>2</td><td>0</td><td>0</td><td>100</td></tr><tr><td>Grande</td><td>23</td><td>30</td><td>36</td><td>4</td><td>7</td><td>0</td><td>0</td><td>100</td></tr><tr><td>Total</td><td>37</td><td>35</td><td>23</td><td>2</td><td>3</td><td>0</td><td>0</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2016.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" incluye a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: El tamaño de empresas se define a partir del número de trabajadores. Unipersonal: trabajadores por cuenta propia que trabajan solos. Microempresa, entre 1 y 9 trabajadores; Pequeña, entre 10 y 49 trabajadores; Mediana, entre 50 y 199 trabajadores; Grande, más de 200 trabajadores.<br/>Nota 3: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por tamaño de empresa según categoría ocupacional, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tamaño de empresa</th><th>Empleadores</th><th>Cuenta Propia</th><th>Asalariado sin contrato</th><th>Asalariado con contrato definido</th><th>Asalariado con contrato indefinido</th><th>Familiares no Remunerados</th><th>Total</th></tr></thead><tbody><tr><td>Unipersonal</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td></tr><tr><td>Microempresas</td><td>12</td><td>18</td><td>29</td><td>6</td><td>26</td><td>10</td><td>100</td></tr><tr><td>Pequeña</td><td>2</td><td>0</td><td>28</td><td>33</td><td>36</td><td>0</td><td>100</td></tr><tr><td>Mediana</td><td>0</td><td>0</td><td>10</td><td>51</td><td>38</td><td>0</td><td>100</td></tr><tr><td>Grande</td><td>0</td><td>0</td><td>6</td><td>48</td><td>46</td><td>0</td><td>100</td></tr><tr><td>Total</td><td>4</td><td>29</td><td>17</td><td>21</td><td>26</td><td>3</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2016.<br/> Nota 1: El tamaño de empresas se define a partir del número de trabajadores. Unipersonal: trabajadores por cuenta propia que trabajan solos. Microempresa, entre 1 y 9 trabajadores; Pequeña, entre 10 y 49 trabajadores; Mediana, entre 50 y 199 trabajadores; Grande, más de 200 trabajadores.<br/>Nota 2: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/>                            </div>
+                            </div>
+                            </div>
+                            <div id="menu2" class="tab-pane fade">
+                            <div class="contenedor-panorama">
+                                <br/>
+                                <section class="entry text-gris" style="margin-left:20px;">
+                                    Esta sección presenta información del Servicio de Impuestos Internos sobre el número de empresas, ventas y trabajadores dependientes formales de los principales subsectores que componen el subsector. Adicionalmente, se presentan los principales ciclos productivos del sector. 
+                                </section>
+                                <br/>
+                                <br/><p class='titulo-grafico'>Ciclo productivo Lácteos</p><a class='figure' href='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-Lacteos.png' data-lightbox='mapa-1'> 
+        <img src='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-Lacteos.png' ></a><div class='fuente-grafico'>Fuente: Elaboración propia según datos del Reporte Laboral Sectorial (2009) de la Subsecretaría del Trabajo e Inapi.</div><br/><br/><p class='titulo-grafico'>Ciclo productivo Vino</p><a class='figure' href='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-vino.png' data-lightbox='mapa-1'> 
+        <img src='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-vino.png' ></a><div class='fuente-grafico'>Fuente: Elaboración propia en base a reporte Chile Valora del sector Frutícola.</div><br/><br/><p class='titulo-grafico'>Ciclo productivo Carne</p><a class='figure' href='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-carne.png' data-lightbox='mapa-1'> 
+        <img src='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-carne.png' ></a><div class='fuente-grafico'>Fuente: Elaboración propia según datos del Reporte Laboral Sectorial (2009) de la Subsecretaría del Trabajo.</div><br/><br/><p class='titulo-grafico'>Ciclo productivo Forestal</p><a class='figure' href='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-Forestal.png' data-lightbox='mapa-1'> 
+        <img src='http://observatorionacional.cl/wp-content/uploads/2017/03/Ciclo-productivo-Forestal.png' ></a><div class='fuente-grafico'>Fuente: Elaboración propia en base a reporte Chile Valora del sector Forestal</div><br/>                                
+                                
+                                <br/>        <p class="titulo-grafico">Distribución de empresas, ventas (UF) y trabajadores dependientes informados por subsector (%), 2015.</p>
+        <div style="margin-left:20px;" id="chart131"></div>
+        <table class="tabla-legenda-grafico">
+            <tr>
+                <td><div class="barra-legenda-grafico" style="background-color:#6F6F9A; height:10px;"></div>&nbsp;% Empresas</td>
+                <td><div class="barra-legenda-grafico" style="background-color:#cc2a39; height:10px;"></div>&nbsp;Ventas (UF)</td>
+                <td><div class="barra-legenda-grafico" style="background-color:#FF4C4C; height:10px;"></div>&nbsp;% Trabajadores dependientes</td>
+            </tr>
+        </table>
+        <div class="fuente-grafico">Fuente: Elaboración propia conforme a SII 2015.<br/>Nota: El número de empresas contempla las empresas sin información de ventas (el SII no puede estimarlas en base a las declaraciones de impuestos, formulario 22 y 29), que para el año 2015 representaron un 18% del total de empresas del sector. </div>
+        <!--    <div class="nota-grafico">Nota: El número de empresas contempla las empresas sin información de ventas (el SII no puede estimarlas en base a las declaraciones de impuestos, formulario 22 y 29), que para el año 2015 representaron un 18% del total de empresas del sector. </div> -->
+        <script type="text/javascript">
+            google.load('visualization', '1', {'packages':['corechart'], 'language': 'es'});
+            google.setOnLoadCallback(drawchart131);
+
+            function drawchart131(){
+                var data = google.visualization.arrayToDataTable([
+                ['Subsector','% Empresas','Ventas (UF)','% Trabajadores dependientes'],['Cultivos en general',65.6,45.9,58.9],['Cría de animales',13.8,11.5,6],['Cultivo agrícola en combinación con cría de animales',5.9,6.4,4],['Actividades de servicios agrícolas y ganaderos',8.8,8.4,21.4],['Caza ordinaria y mediante trampas',0,0,0],['Silvicultura. extracción de madera y actividades de servicios conexas',6,27.8,9.7],                ]);
+                var options = {
+                        legend: { position: 'none',
+                                textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},},
+                        width: 600,
+                        height: 400,
+                        vAxis:{textStyle: {
+                                    color: 'black', 
+                                    fontName: '"gobCL", Tahoma, Verdana, Segoe, sans-serif', 
+                                    fontSize: 13},
+                              },
+                        hAxis: {},
+                        chartArea: { left: 200,width: '60%',top:20,height:'90%'},
+                        colors: ['#6F6F9A','#cc2a39','#FF4C4C','#377bb5'],
+                    };
+                var chart = new google.visualization.BarChart(document.getElementById('chart131'));
+                chart.draw(data, options);
+            } 
+        </script>
+    <br/>                                    
+                            </div>
+                            </div>
+                            <div id="menu3" class="tab-pane fade">
+                                <div class="contenedor-panorama">
+                                <br/>
+                                <section class="entry text-gris" style="margin-left:20px;">
+                                    Se presenta información sobre las características de los trabajadores del sector (como edad, escolaridad y sexo, entre otras).
+                                </section>
+                                <br/>
+                                <div>
+                            <div class='titulo-tabla'><p>Características generales de los ocupados del sector, 2015 y 2016</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Características</th><th>Sector</th><th>Nacional</th></tr></thead><tbody><tr><td>Edad Promedio</td><td>48</td><td>44</td></tr><tr><td>Escolaridad Promedio</td><td>8,2</td><td>11,8</td></tr><tr><td>Ingreso mensual ocupación principal ($)</td><td>316.581</td><td>511.873</td></tr><tr><td>Educación superior completa (%)</td><td>5</td><td>26</td></tr><tr><td>Mujeres (%)</td><td>22</td><td>41</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2016 y ESI 2015.<br/> Nota: Educación superior completa incluye educación técnica y profesional.<br/></div><br/><div class='titulo-tabla'><p>Ocupados por tramo de edad y sexo, 2010 y 2016</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Tramo edad</th><th>Hombres 2010</th><th>Mujeres 2010</th><th>Total 2010</th><th>Hombres 2016</th><th>Mujeres 2016</th><th>Total 2016</th></tr></thead><tbody><tr><td>Entre 15 y 24</td><td>12</td><td>12</td><td>12</td><td>8</td><td>10</td><td>8</td></tr><tr><td>Entre 25 y 34</td><td>14</td><td>20</td><td>15</td><td>12</td><td>19</td><td>13</td></tr><tr><td>Entre 35 y 44</td><td>22</td><td>25</td><td>23</td><td>17</td><td>22</td><td>18</td></tr><tr><td>Entre 45 y 54</td><td>24</td><td>25</td><td>25</td><td>25</td><td>25</td><td>25</td></tr><tr><td>Entre 55 y 64</td><td>16</td><td>12</td><td>16</td><td>23</td><td>16</td><td>21</td></tr><tr><td>65 y más</td><td>11</td><td>5</td><td>10</td><td>15</td><td>8</td><td>14</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2010 y 2016.<br/> Nota: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Ocupados según nivel educacional, 2010 y 2016</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Nivel educacional</th><th>Sector 2010</th><th>Sector 2016</th><th>Nacional 2010</th><th>Nacional 2016</th></tr></thead><tbody><tr><td>Básica incompleta o menos</td><td>41</td><td>37</td><td>13</td><td>11</td></tr><tr><td>Básica</td><td>35</td><td>35</td><td>24</td><td>21</td></tr><tr><td>Media</td><td>20</td><td>23</td><td>41</td><td>42</td></tr><tr><td>Técnica</td><td>2</td><td>2</td><td>7</td><td>10</td></tr><tr><td>Profesional</td><td>2</td><td>3</td><td>13</td><td>15</td></tr><tr><td>Postgrado</td><td>0</td><td>0</td><td>1</td><td>2</td></tr><tr><td>ns/nr</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2010 y 2016.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" incluye a las personas con educación superior incompleta y "Profesional" a los con postgrado incompleto.<br/>Nota 2: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/>                            </div>
+                            </div>
+                            </div>
+                            <div id="menu4" class="tab-pane fade">
+                                <div class="contenedor-panorama">
+                                <br/>
+                                <section class="entry text-gris" style="margin-left:20px;">
+                                    Se presenta información sobre las características del empleo del sector en términos de ingresos, categoría ocupacionales, seguridad social y principales ocupaciones.
+                                </section>
+                                <br/>
+                                <div>
+                            <div class='titulo-tabla'><p>Ocupados según categoría ocupacional y tipo de contrato, 2010 y 2016</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Año</th><th>Empleador</th><th>Cuenta Propia</th><th>Asalariado sin contrato</th><th>Asalariado con contrato definido</th><th>Asalariado con contrato indefinido</th><th>Familiar no Remunerado</th><th>Total</th></tr></thead><tbody><tr><td>2010 Sector</td><td>5</td><td>25</td><td>21</td><td>21</td><td>25</td><td>3</td><td>100</td></tr><tr><td>2016 Sector</td><td>4</td><td>29</td><td>17</td><td>21</td><td>26</td><td>3</td><td>100</td></tr><tr><td>2010 Nacional</td><td>5</td><td>20</td><td>14</td><td>15</td><td>44</td><td>2</td><td>100</td></tr><tr><td>2016 Nacional</td><td>4</td><td>21</td><td>11</td><td>16</td><td>47</td><td>1</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2010 y 2016.<br/> Nota: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Ingresos de la ocupación principal según categoría ocupacional y tipo de contrato, 2010 y 2015</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Año</th><th>Empleador</th><th>Cuenta Propia</th><th>Asalariado sin contrato</th><th>Asalariado con contrato definido</th><th>Asalariado con contrato indefinido</th><th>Total</th></tr></thead><tbody><tr><td>2010 Sector</td><td>832.200</td><td>162.448</td><td>106.807</td><td>166.002</td><td>320.742</td><td>230.222</td></tr><tr><td>2015 Sector</td><td>1.003.989</td><td>162.239</td><td>221.249</td><td>270.784</td><td>422.699</td><td>316.581</td></tr><tr><td>2010 Nacional</td><td>1.020.813</td><td>249.329</td><td>161.126</td><td>317.718</td><td>533.794</td><td>410.781</td></tr><tr><td>2015 Nacional</td><td>1.176.832</td><td>276.903</td><td>225.727</td><td>464.427</td><td>623.327</td><td>511.873</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ESI 2010 y 2015.<br/> Nota: Ingresos mensuales líquidos en pesos del año 2015.<br/></div><br/><div class='titulo-tabla'><p>Indicadores de seguridad social de trabajadores dependientes, 2010 y 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Indicadores</th><th>Sector 2010</th><th>Sector 2016</th><th>Nacional 2010</th><th>Nacional 2016</th></tr></thead><tbody><tr><td>% de trabajadores con vacaciones pagadas</td><td>42</td><td>45</td><td>67</td><td>72</td></tr><tr><td>% de trabajadores con días pagados por enfermedad</td><td>59</td><td>64</td><td>75</td><td>79</td></tr><tr><td>% de trabajadores con cotización previsional o de pensión</td><td>67</td><td>71</td><td>77</td><td>81</td></tr><tr><td>% de trabajadores con cotización por previsión de salud</td><td>67</td><td>71</td><td>77</td><td>81</td></tr><tr><td>% de trabajadores con cotización por seguro de desempleo</td><td>57</td><td>67</td><td>68</td><td>75</td></tr><tr><td>% de trabajadores con permiso por maternidad o paternidad</td><td>44</td><td>56</td><td>61</td><td>71</td></tr><tr><td>% de trabajadores con servicio de guarderías infantiles</td><td>4</td><td>4</td><td>18</td><td>22</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2010 y 2016.<br/> </div><br/><div class='titulo-tabla'><p>Ingresos de la ocupación principal según nivel educacional, 2010 y 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Año</th><th>Básica incompleta o menos</th><th>Básica </th><th>Media</th><th>Técnica</th><th>Profesional</th><th>Postgrado</th><th>Total</th></tr></thead><tbody><tr><td>2010 Sector</td><td>154.882</td><td>204.384</td><td>287.790</td><td>439.478</td><td>898.442</td><td>1.778.754ᵃ</td><td>230.222</td></tr><tr><td>2015 Sector</td><td>208.605</td><td>254.240</td><td>366.065</td><td>716.488</td><td>1.370.265</td><td>1.958.054ᵃ</td><td>316.581</td></tr><tr><td>2010 Nacional</td><td>170.682</td><td>231.550</td><td>353.789</td><td>510.954</td><td>1.024.619</td><td>1.775.926</td><td>410.781</td></tr><tr><td>2015 Nacional</td><td>227.680</td><td>297.677</td><td>405.390</td><td>566.637</td><td>1.068.277</td><td>1.764.123</td><td>511.873</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ESI 2010 y 2015.<br/> Nota 1: El nivel educacional corresponde al último ciclo completado. Es decir, "Básica" incluye a las personas con media incompleta, "Media" incluye a las personas con educación superior incompleta y "Profesional" a las personas con postgrado incompleto.<br/>Nota 2: Ingresos líquidos mensuales en pesos del año 2015.<br/>Nota 3: ᵃ significa que el estadístico no es confiable.<br/></div><br/><div class='titulo-tabla'><p>Distribución de ocupados por tipo de ocupación, 2010 y 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Gran grupo de ocupación (CIUO 88 - 1 dígito)</th><th>Sector 2010</th><th>Sector 2016</th><th>Nacional 2010</th><th>Nacional 2016</th></tr></thead><tbody><tr><td>Miembros del poder ejecutivo y de los cuerpos legislativos y personal directivo de la administración pública y de empresas</td><td>1</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Profesionales científicos e intelectuales</td><td>1</td><td>1</td><td>10</td><td>12</td></tr><tr><td>Técnicos y profesionales de nivel medio</td><td>2</td><td>2</td><td>11</td><td>11</td></tr><tr><td>Empleados de oficina</td><td>2</td><td>2</td><td>9</td><td>9</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>1</td><td>1</td><td>16</td><td>15</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>29</td><td>33</td><td>4</td><td>4</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>1</td><td>1</td><td>15</td><td>14</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>5</td><td>5</td><td>9</td><td>9</td></tr><tr><td>Trabajadores no calificados</td><td>59</td><td>54</td><td>25</td><td>24</td></tr><tr><td>Otros no identificados</td><td>0</td><td>0</td><td>1</td><td>1</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>100</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ENE 2010 y 2016.<br/> Nota: Las distribuciones porcentuales no siempre suman 100 ya que cifras están redondeadas.<br/></div><br/><div class='titulo-tabla'><p>Características generales por tipo de ocupación, 2016.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Gran grupo de ocupación (CIUO 88 - 1 dígito)</th><th>Edad promedio</th><th>Escolaridad promedio</th><th>Ingresos ocupación principal promedio</th><th>Mujeres (%)</th><th>Capacitados (%)</th></tr></thead><tbody><tr><td>Miembros del poder ejecutivo y de los cuerpos legislativos y personal directivo de la administración pública y de empresas</td><td>53ᵃ</td><td>13,8ᵃ</td><td>2.320.769ᵃ</td><td>10ᵃ</td><td>16</td></tr><tr><td>Profesionales científicos e intelectuales</td><td>41</td><td>16,8</td><td>1.325.668</td><td>24</td><td>35</td></tr><tr><td>Técnicos y profesionales de nivel medio</td><td>44</td><td>13</td><td>705.293</td><td>26</td><td>35</td></tr><tr><td>Empleados de oficina</td><td>38</td><td>12,4</td><td>388.907</td><td>60</td><td>18</td></tr><tr><td>Trabajadores de los servicios y vendedores de comercios y mercados</td><td>45ᵃ</td><td>9,7ᵃ</td><td>233.213ᵃ</td><td>53ᵃ</td><td>17</td></tr><tr><td>Agricultores y trabajadores calificados agropecuarios y pesqueros</td><td>54</td><td>7,5</td><td>272.315</td><td>17</td><td>7</td></tr><tr><td>Oficiales, operarios y artesanos de artes mecánicas y de otros oficios</td><td>45</td><td>9,5</td><td>399.503ᵃ</td><td>7</td><td>10</td></tr><tr><td>Operadores de instalaciones y máquinas y montadores</td><td>46</td><td>8,9</td><td>334.600</td><td>1</td><td>14</td></tr><tr><td>Trabajadores no calificados</td><td>45</td><td>7,8</td><td>258.646</td><td>26</td><td>6</td></tr><tr><td>Total</td><td>48</td><td>8,2</td><td>316.581</td><td>22</td><td>9</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a ESI 2015 y ENE 2016<br/> Nota: ᵃ significa que el estadístico no es confiable.<br/></div><br/><div class='titulo-tabla'><p>Características generales de las principales ocupaciones ejercidas en el sector, 2015.</p></div><table class='table table-striped tabla-sectores'><thead><tr><th>Grupo primario de ocupación (CIUO 88 - 4 dígitos)</th><th>Edad promedio</th><th>Escolaridad promedio</th><th>Ingresos ocupación principal promedio</th><th>Mujeres (%)</th><th>Capacitados (%)</th></tr></thead><tbody><tr><td>Trabajadores calificados de cultivos extensivos</td><td>48</td><td>8,1</td><td>285.644</td><td>20</td><td>7</td></tr><tr><td>Trabajadores calificados de plantación de árboles</td><td>44</td><td>8,1</td><td>222.600</td><td>37</td><td>7</td></tr><tr><td>Trabajadores calificados de huertas e invernaderos</td><td>49</td><td>8,3</td><td>233.286</td><td>28</td><td>7</td></tr><tr><td>Criadores de ganado y productores de leche y sus derivados</td><td>51</td><td>7,8</td><td>313.913</td><td>7</td><td>8</td></tr><tr><td>Trabajadores calificados de animales domésticos</td><td>48</td><td>8,4</td><td>301.029</td><td>8</td><td>10</td></tr><tr><td>Taladores y otros trabajadores forestales</td><td>45</td><td>8,2</td><td>251.400</td><td>6</td><td>10</td></tr><tr><td>Trabajadores agropecuarios y pesqueros de subsistencia</td><td>53</td><td>7,5</td><td>209.664</td><td>24</td><td>4</td></tr><tr><td>Operarios de maquinaria agrícola y forestal motorizada</td><td>45</td><td>8,4</td><td>290.961</td><td>1</td><td>12</td></tr><tr><td>Porteros y guardianes y afines</td><td>50</td><td>7,8</td><td>285.041</td><td>4</td><td>7</td></tr><tr><td>Obreros agropecuarios</td><td>43</td><td>8,3</td><td>234.162</td><td>33</td><td>6</td></tr></tbody></table><div class='fuente-grafico'>Fuente: Elaboración propia en base a Casen 2015.<br/> </div><br/>                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <div class="clearfix"></div>
+            </div>
+        </div>
+      <!-- Sidebar --> 
+      <div id="sidebar">
+                <div class="sidebar-box">
+                                <section class="map-container">
+                <a class="figure" href="http://observatorionacional.cl/wp-content/uploads/2017/03/Mapa-Sector-Agropecuario-silvicola3x.png" alt="Mapa Silvoagropecuario" 
+                   data-lightbox="mapa-1" data-title="Mapa Silvoagropecuario">
+                    <img src="http://observatorionacional.cl/wp-content/uploads/2017/03/Mapa-Sector-Agropecuario-silvicola3x.png" alt="Mapa Silvoagropecuario">
+                    <span class="lightbox-trigger"><i class="fa fa-plus"></i></span>
+                </a>  
+                </section>
+                </div>
+      </div> 
+            
+      <div class="clearfix"></div>
+
+    </div>
+
+  </div>
+  <div class="clearfix"></div>
+
+  {% endblock content %}

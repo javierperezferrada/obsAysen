@@ -5,6 +5,10 @@
 Observatorio Laboral Aysen
 {% endblock title %}
 
+{% block head %}
+<script src="{% static 'gui/js/about.js' %}"></script>
+{% endblock head %}
+
 {% block content %}
 <div id="content">
           <div class="wrap">
@@ -16,6 +20,7 @@ Observatorio Laboral Aysen
                 </section>
               </div>
               <div class="stream">
+                <!--
                 <h4 class='subtitulo-seccion'>Aquí puedes buscar:</h4>
 
                 <form method="POST" action="">
@@ -26,6 +31,7 @@ Observatorio Laboral Aysen
                       </tr>
                     </table>
                   </form>
+                -->
                 </br>
                 <h4 class='subtitulo-seccion'>Las 10 ocupaciones con mayor ingreso</h4><div class='table-responsive bg-white'><table class='table home-ocupaciones-table'><tr><th>Ocupación</th><th>Ingreso promedio</th><th>Años de escolaridad</th>
                 <th>% Mujeres</th><th>% Capacitados</th><th></th><th></th></tr><tr><td class='derecha'>Médicos</td><td>2.373.088</td><td>18,8</td>

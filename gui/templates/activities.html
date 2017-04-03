@@ -5,40 +5,110 @@
 {% block head %}<script src="{% static 'gui/js/activities.js' %}"></script>{% endblock head %}
 
 {% block content %}
-<br>
-<div class="row">
-  <div class="col s12"><a href="{% url 'gui:home' %}">Inicio /</a><a href="#"> Ocupaciones >></a></div>
-  <div class="col s3"></div>  
-</div>
+<div id="content">
+  <div class="wrap">
+            <div id="main">
+              <div id="breadcrumbs">
+                <ul>
+                  <li><a href="{% url 'gui:home' %}">Inicio</a></li>
+                  <li class="sep">/</li>
+                  <li>Ocupaciones »</li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        <div class="wrap">
 
-<div class="row noselect">
-	<div class="col s12 white">
-		<div class="row">
-			<div class="col s4"><img class='responsive-img' src="{% static 'gui/img/general.png' %}"></div>
-			<div class="col s8"><h4 class='grey-text text-darken-3'>Las ocupaciones más ejercidas</h4></div>
-		</div>
-		<div class="row">
-			<div class="col s12 m12 l6">
-				<div class="collection activities">
-			        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Conductores de automóviles, taxis y camionetas <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Empleados de control de abastecimientos inventarios<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Mecánicos y ajustadores de vehículos de motors <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Porteros y guardianes y afines <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Soldadores y oxicortadores <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-			      </div>
-			</div>
-			<div class="col s12 m12 l6">
-		      <div class="collection activities">
-		        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Conductores de camiones pesados <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Limpiadores de oficinas, hoteles y otros establecimientos <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Personal doméstico<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Secretarios<i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		        <a href="{% url 'gui:detailActivitie' %}" class="collection-item grey-text text-darken-3">Vendedores y demostradores de tiendas y almacenes <i class="material-icons secondary-content tiny grey-text text-darken-3">send</i></a>
-		      </div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
+          <div id="main" class="main-wide">
+            <div class="post">
+              <!-- TITULO -->
+              <div class="row display-flex">
+                <figure class="post-figure col-xs-4">
+                  <img src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/ocupaciones/general.png" alt="Observatorio Laboral - Ocupaciones">
+                </figure>
+                <h2 class="title-outside col-xs-8">Las ocupaciones más ejercidas</h2>
+              </div>
+              <br/>
+              <div class="ocupaciones-content">
+                <center>    
+                  <div>
+                  	<!--
+                    <form action="" method="post" autocomplete="off" >
+                      <div class="col-md-8"><input name="nombreocu" type="text" class="form-control" placeholder="Ingresar nombre de ocupacion..." required/></div>
+                      <div class="col-md-4"><button name="btnBuscarOcu" type="submit" class="form-control btn-primary">Buscar</button></div>
+                    </form>
+                -->
+                  </div>
+                </center>
+              </div>
+              <br/> <br/><br/>
+              <div class="ocupaciones-content">
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Abogados y abogadas                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Agentes de seguros                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Agentes de servicios financieros                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Agentes inmobiliarios                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" style='font-size:12.5px;'> 
+                  <span>
+                    Agricultores (as) y trabajadores (as) calificados de huertas, invernaderos, viveros y jardines                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" style='font-size:12.5px;'> 
+                  <span>
+                    Agricultores y agricultoras, trabajadores(as) calificadas de plantaciones de árboles y arbustos                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" style='font-size:12.5px;'> 
+                  <span>
+                    Agricultores y agricultoras; trabajadores y trabajadoras calificadas de cultivos extensivos                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Albañiles                                 <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Analistas de gestión y organización                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Arquitectos(as), urbanistas e ingenieros(as) de tránsito                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" style='font-size:12.5px;'> 
+                  <span>
+                    Asistentes administrativos de registros financieros, de costos y salarios                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                <a href="{% url 'gui:detailActivitie' 1 %}" class="col-xs-12 col-md-6 lista-ocupaciones" > 
+                  <span>
+                    Asistentes de contabilidad                                <i class="fa fa-caret-right pull-right"></i>
+                  </span>
+                </a>      
+                
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 {% endblock content%}

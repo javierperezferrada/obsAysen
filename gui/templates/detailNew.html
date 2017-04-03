@@ -1,0 +1,69 @@
+{% extends 'base_about.html' %}
+{% load static %}
+{% block title %}Descargas | Observatorio Laboral Aysen{% endblock title%}
+
+{% block head %}
+<script src="{% static 'gui/js/news.js' %}"></script>
+{% endblock head %}
+
+{% block content_about %}
+
+
+
+
+<div id="main">
+
+  <div id="breadcrumbs">
+    <ul>
+      <li><a href="{% url 'gui:home' %}">Inicio</a></li>
+      <li class="sep">/</li>
+      <li><a href="{% url 'gui:news' %}">Noticias »</a></li>
+
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="post">
+
+
+    <div class="pic">
+      <img width="660" height="396" src="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_marzo_2017-660x396.jpg" class="attachment-660x9999 size-660x9999 wp-post-image" alt="noticia_marzo_2017" srcset="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_marzo_2017-660x396.jpg 660w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_marzo_2017-300x180.jpg 300w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_marzo_2017-768x461.jpg 768w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_marzo_2017-1024x615.jpg 1024w" sizes="(max-width: 660px) 100vw, 660px" />            </div>
+
+      <div class="clearfix"></div>
+
+      <div class="social">
+        <ul>
+          <li>
+            <div class="fb-like" data-href="http://observatorionacional.cl/se-reune-consejo-asesor-del-observatorio-laboral-nacional/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+          </li>
+          <li>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="gobiernodechile" data-lang="es" data-url="http://observatorionacional.cl/se-reune-consejo-asesor-del-observatorio-laboral-nacional/">Twittear</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="fontsize">
+        <ul>
+          <li class="small"><a data-size="10">a</a></li>
+          <li class="medium current"><a data-size="14">a</a></li>
+          <li class="large"><a data-size="20">a</a></li>
+        </ul>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="texto">
+        <span class="meta">20 de Marzo de 2017 </span>
+        <h3 class="title">Se reúne consejo asesor del Observatorio Laboral Nacional</h3>
+        <div class="contenido">
+          <p>En el marco de las proyecciones para el 2017 se reunió el consejo asesor del Observatorio Laboral Nacional con la Ministra del Trabajo y Previsión Social Alejandra Krauss y el Director Nacional de Sence Pedro Goic.<br />
+            En la oportunidad se revisó la nueva web del Observatorio y el estado regional de avance.</p>
+          </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+</div>
+</div>
+
+        {% endblock content_about %}

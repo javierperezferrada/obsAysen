@@ -1,0 +1,94 @@
+{% extends 'base_about.html' %}
+{% load static %}
+{% block title %}Descargas | Observatorio Laboral Aysen{% endblock title%}
+
+{% block head %}
+<script src="{% static 'gui/js/downloads.js' %}"></script>
+{% endblock head %}
+
+{% block content_about %}
+
+
+<div id="main">
+    <div id="breadcrumbs">
+        <ul>
+          <li><a href="{% url 'gui:home' %}">Inicio</a></li>
+          <li class="sep">/</li>
+          <li>Descargas »</li>
+      </ul>
+      <div class="clearfix"></div>
+  </div>
+  <div class="post">
+      <div class="clearfix"></div>
+      <div class="texto">
+        <h3 class="title"><img src="http://observatorionacional.cl/wp-content/uploads/2016/12/icono_descarga.png" width="50px"></img> Descargas</h3>
+        <div class="post post-sectores"> 
+          <div class="contenido">
+            <div class="panel-group" id="accordion">
+                <!-- Descargas de Panorama Nacional -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Panorama Nacional</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">           
+                            <ul class='list-group'>                                        <li class="list-group-item">
+                                <a target='_blank' href='http://observatorionacional.cl/wp-content/uploads/2017/03/Reporte-Nacional.pdf'>
+                                    <span class='glyphicon glyphicon-save' aria-hidden='true'></span>
+                                    Reporte Nacional                                            </a>        
+                                </li>
+                            </ul>                                  </div>
+                        </div>
+                    </div>          
+                    <!-- Descargas de Ocupaciones -->
+                    <!-- Descargas de Sectores Productivos -->
+                    <!-- Descargas de Boletines -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Boletines</a>
+                            </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                            <div class="panel-body">    
+                                <ul class='list-group'>                                        <li class="list-group-item">
+                                    <a target='_blank' href='http://observatorionacional.cl/wp-content/uploads/2017/02/Boletín-de-Enero-2017-Observatorio-Nacional.pdf'>
+                                        <span class='glyphicon glyphicon-save' aria-hidden='true'></span>
+                                        Boletín de Enero 2017                                            </a>        
+                                    </li>
+                                </ul>                                </div>
+                            </div>
+                        </div>
+                        <!-- Descargas de Minutas -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Minutas</a>
+                                </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class='list-group'>                                        <li class="list-group-item">
+                                        <a target='_blank' href='http://observatorionacional.cl/wp-content/uploads/2016/11/20161205-Inmigrantes.pdf'>
+                                            <span class='glyphicon glyphicon-save' aria-hidden='true'></span>
+                                            Inserción laboral de los inmigrantes                                            </a>        
+                                        </li>
+                                    </ul>                                </div>
+                                </div>
+                            </div>
+                            <!-- Descargas de Otros Documentos -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content_about %}
