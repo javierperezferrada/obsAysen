@@ -29,72 +29,90 @@
     {% endfor %}
 </div>
 {% endif %}
-	<form class="col s12" method="post" enctype="multipart/form-data">
-		{% csrf_token %}
-		{% if form %}
-		<div class="row">
+	
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{% if form %}
+			<div class="row">
 			<div class="input-field col s12">
-				<input id="title" name='title' type="text" class="validate" value='{{ form.title.value }}'>
 				<label for="title">Título</label>
+				<input id="title" name='title' type="text" class="form-control input-sm chat-input" value='{{ form.title.value }}'>
+				
 			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="resumen" name='resumen' class="materialize-textarea validate">{{ form.resumen.value }}</textarea>
-				<label for="resumen">Resumen</label>
 			</div>
-		</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="resumen">Resumen</label>
+					<textarea id="resumen" name='resumen' class="form-control input-sm chat-input">{{ form.resumen.value }}</textarea>
+					
+				</div>
+			</div>
 
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="content" name='content' class="materialize-textarea validate">{{ form.content.value }}</textarea>
-				<label for="content">Contenido</label>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="content">Contenido</label>
+					<textarea id="content" name='content' class="form-control input-sm chat-input">{{ form.content.value }}</textarea>
+					
+				</div>
 			</div>
-		</div>
-		<div class="file-field input-field">
-			<div class="btn">
-				<span>Imagen</span>
-				<input type="file" name='imagen'>
+			<div class="file-field input-field">
+				<div class="btn">
+					<span>Imagen</span>
+					<input type="file" name='imagen' value='Imagen'>
+				</div>
+				<div class="file-path-wrapper">
+					<input class="form-control input-sm chat-input" type="hidden">
+				</div>
 			</div>
-			<div class="file-path-wrapper">
-				<input class="file-path validate" type="text">
+			{% else %}
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="title">Título</label>
+					<input id="title" name='title' type="text" class="form-control input-sm chat-input">
+					
+				</div>
 			</div>
-		</div>
-		{% else %}
-		<div class="row">
-			<div class="input-field col s12">
-				<input id="title" name='title' type="text" class="validate">
-				<label for="title">Título</label>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="resumen">Resumen</label>
+					<textarea id="resumen" name='resumen' class="form-control input-sm chat-input"></textarea>
+					
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="resumen" name='resumen' class="materialize-textarea validate"></textarea>
-				<label for="resumen">Resumen</label>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="content" name='content' class="materialize-textarea validate"></textarea>
-				<label for="content">Contenido</label>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="content">Contenido</label>
+					<textarea id="content" name='content' class="form-control input-sm chat-input"></textarea>
+					
+				</div>
 			</div>
-		</div>
-		<div class="file-field input-field">
-			<div class="btn">
-				<span>Imagen</span>
-				<input type="file" name='imagen'>
+			<div class="file-field input-field">
+				<div class="btn">
+					<span>Imagen</span>
+					<input type="file" name='imagen' value='imagen'>
+				</div>
+				<div class="file-path-wrapper">
+					<input class="form-control input-sm chat-input" type="hidden">
+				</div>
 			</div>
-			<div class="file-path-wrapper">
-				<input class="file-path validate" type="text">
-			</div>
-		</div>
-		{% endif %}
-		<button class="btn waves-effect waves-light" type="submit" name="action">Aceptar
-			<i class="material-icons right">send</i>
+			{% endif %}
+            
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">     
+                <button class="form-control btn-primary" type="submit" name="action">Aceptar
 		</button>
-	</form>
+            </span>
+            </div>
+        </form>
+            </div>
+        
+        </div>
+    </div>
 </div>
-
-
 {% endblock content %}

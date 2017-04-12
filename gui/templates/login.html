@@ -1,26 +1,70 @@
-{% extends 'base.html' %}
+<html>
+<head>
+	<title>Ingresar</title>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-{% block title %}Login{% endblock %}
+      <link rel="shortcut icon" type="image/x-icon" href="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/favicon.ico"  />
+      <script src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/js/Chart.bundle.js"></script>
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <style>
+      .chartGoogle{
+        width:100%;
+        min-height: 450px;
+      }
+      .post-sectores .nav-pills > .active > a, .nav-pills > .active > a:hover {
+        background-color: #CE2734 !important;
+      }
+      </style>
 
-{% block content %}
-<h2>Ingresar</h2>
-<form method="post">
-	{% csrf_token %}
-	<div class="row">
-		<div class="input-field col s6">
-			<input id="username" name='username' type="text" class="validate">
-			<label for="username">Usuario</label>
-		</div>
-		<div class="row">
-			<div class="input-field col s6">
-				<input id="password" name="password" type="password" class="validate">
-				<label for="password">Contraseña</label>
-			</div>
-		</div>
-		<button class="btn waves-effect waves-light" type="submit" name="action">Aceptar
-			<i class="material-icons right">send</i>
+      <!-- owl -->
+      <link href="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/owl-carousel/owl.carousel.css" rel="stylesheet">
+      <link href="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/owl-carousel/owl.theme.css" rel="stylesheet">
+
+      <!-- Facebook -->
+
+
+      <meta property="og:title" content="Observatorio Laboral Chile" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://observatorionacional.cl" />
+      <meta property="og:image" content="http://observatorionacional.cl/wp-content/uploads/2016/05/logo_sence.png" />
+      <meta property="og:site_name" content="Observatorio Laboral Chile">
+      <meta property="og:description" content="Gobierno de Chile">
+
+</head>
+<body>
+	<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <form method="post">
+				{% csrf_token %}
+            <h4>Ingresar</h4>
+            <input id="username" name='username' type="text" class="form-control input-sm chat-input" placeholder="usuario" />
+            </br>
+            <input id="password" name="password" type="password"  class="form-control input-sm chat-input" placeholder="contraseña" />
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">     
+                <button class="form-control btn-primary" type="submit" name="action">Aceptar
 		</button>
-	</div>
-</form>
+            </span>
+            </div>
+        </form>
+            </div>
+        
+        </div>
+    </div>
+</div>
+</body>
+</html>
 
-{% endblock %}
+<!--Pulling Awesome Font -->
+
+
+
+
+
