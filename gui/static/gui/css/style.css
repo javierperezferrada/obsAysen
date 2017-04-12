@@ -102,18 +102,19 @@ td img{
 
 
 #logo_sence {
-    height: 120px;
-left: -35%;
-position: relative;
-top: -55%;
-width: 120px;
+  padding: 10px;
+    height: 200px;
+    width: 200px;
 }
 #logo_min {
-    height: 120px;
-left: 35%;
-position: relative;
-top: -55%;
-width: 120px;
+  padding: 10px;
+    height: 200px;
+    width: 200px;
+}
+#logo_obs_aysen {
+  padding: 10px;
+    height: 200px;
+    width: 400px;
 }
 
 #thebigimage {

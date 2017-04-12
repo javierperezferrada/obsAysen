@@ -133,10 +133,11 @@ USE_TZ = True
 ip_host = socket.gethostbyname(socket.gethostname())
 if ip_host == '127.0.1.1':
     MEDIA_ROOT = u'/home/hapticus/obsAysen/media'
+    STATIC_ROOT = u'/home/hapticus/obsAysen/static'
 else:
     MEDIA_ROOT = u'/home/javierperezferrada/obsAysen/media'
+    STATIC_ROOT = u'/home/javierperezferrada/obsAysen/static'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/javierperezferrada/obsAysen/static'
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'gui:home'

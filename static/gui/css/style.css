@@ -1,22 +1,162 @@
+html{
+	font-family: "gobCL",Tahoma,Verdana,Segoe,sans-serif;
+}
+h4{
+	color:rgb(15,105,189);
+}
+h5{
+	color:rgb(15,105,189);
+}
+p{
+	line-height: 1.2em;
+	text-align: justify;
+	font-size: 1em;
+}
+
+.nav-wrapper ul li{
+	text-align: justify;
+	border-bottom: 2px solid #e6e6e6;
+	color:#e6e6e6 !important;
+}
+
 .nav-wrapper{
-	background-color: #91a5af;
+	background-color: rgb(255,255,255);
 }
 body{
-	background-color: rgb(226,226,226);
-	color: #444;
+	background-color: rgb(230,230,230);
+	color: rgb(71,81,86);
 	font-size: 16px;
 	line-height: 25px;
 	text-rendering: optimizelegibility;
 }
+
 #divHome{
 	border: 1px solid black;
 }
-#imgBanner{
-	padding-top: 60px;
-}
-#imgMap{
-	max-width: 100%;
-}
+
 .page-footer{
-	background-color: #ffffff;
+	background-color: rgb(255,255,255);
+}
+.divider{
+	background-color: rgb(118,123,139);
+}
+#principal_activities{
+	color:rgb(6,50,163);
+}
+td img{
+	width: 40px;
+}
+.franjaDerecha{
+	padding:2px;
+	padding-left: 0px;
+}
+.franjaIzquierda{
+	padding:2px;
+	padding-right: 0px;
+}
+#footerDiv{
+	padding:0px;
+}
+
+.debug{
+	border:1px solid black;
+}
+#panoramaUl{
+
+}
+#download a{
+	color: white;
+}
+.activities{
+	font-size: 0.8em;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.nodrag{
+	-moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none; /* From IE10 only */
+    user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+    -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+    user-drag: none;
+}
+.container .row {
+    margin-left: -0.4rem;
+    }
+
+#auxBreadcrumbs{
+	height: 64px;
+}
+
+
+
+
+#logo_sence {
+    height: 120px;
+left: -35%;
+position: relative;
+top: -55%;
+width: 120px;
+}
+#logo_min {
+    height: 120px;
+left: 35%;
+position: relative;
+top: -55%;
+width: 120px;
+}
+
+#thebigimage {
+	background-image: url('../img/Observatorio_Laboral_banner-02.jpg');
+	/*
+    background-image:url("{% static 'gui/img/Observatorio_Laboral_banner-02.jpg'%}");
+    
+    height:548px;
+    margin-left:auto;
+    margin-right:auto;*/
+    position:relative; /* and this has to be relative */
+    /*width:731px;*/
+} 
+
+#auxOtic{
+	height: 61px;
+}
+#auxLogo{
+	height: 32px;
+}
+#auxSence{
+	height: 32px;
+}
+
+
+.nav-wrapper ul li a{
+	border-bottom: 2px solid #e6e6e6;
+	color:#e6e6e6 !important;
+}
+
+li.active{
+	border-bottom: 2px solid #0F69B4 !important;
+	color:#0F69B4 !important;
+}
+.nav-wrapper ul li:hover {
+   color:#0F69B4 !important;
+   border-bottom: 2px solid #0F69B4;
+}
+.banner{
+	height: 250px !important;
+}
+
+.collapsible-header i {
+    float: right;
+
 }
