@@ -12,10 +12,12 @@ p{
 	text-align: justify;
 	font-size: 1em;
 }
-
+.container{
+  width: 90% !important;
+}
 .nav-wrapper ul li{
 	text-align: justify;
-	border-bottom: 2px solid #e6e6e6;
+	border-bottom: 2px solid #a7a7a7;
 	color:#e6e6e6 !important;
 }
 
@@ -103,55 +105,59 @@ td img{
 
 #logo_sence {
   padding: 10px;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 #logo_min {
   padding: 10px;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 #logo_obs_aysen {
-  padding: 10px;
-    height: 200px;
-    width: 400px;
+    //height: 200px;
 }
 
 .bannerImage1 {
 	background-image: url('../img/banner/agricola.jpg');
 	position:relative;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center; 
 } 
 .bannerImage2 {
   background-image: url('../img/banner/comercio.jpg');
   position:relative;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+    background-position: center; 
 }
 .bannerImage3 {
 	background-image: url('../img/banner/ganaderia.jpg');
 	position:relative;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center; 
 } 
 .bannerImage4 {
 	background-image: url('../img/banner/turismo.jpg');
 	position:relative;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center; 
 } 
 .bannerImage5 {
 	background-image: url('../img/banner/sector-pesquero.jpg');
 	position:relative;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center; 
 } 
 .bannerImage6 {
 	background-image: url('../img/banner/sector-acuicola.jpg');
 	position:relative;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center; 
 } 
 
 #auxOtic{
@@ -165,9 +171,11 @@ td img{
 }
 
 
-.nav-wrapper ul li a{
-	border-bottom: 2px solid #e6e6e6;
-	color:#e6e6e6 !important;
+#login{
+  float: right;
+   -ms-transform: rotateY(180deg); /* IE 9 */
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+    transform: rotateY(180deg);
 }
 
 li.active{
@@ -192,3 +200,4 @@ li.active{
 #logo_twitter{
   height: 50px;
 }
+

@@ -83,7 +83,8 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#!" data-activates="mobile-demo" class="button-collapse"><div class='grey-text text-darken-3'>MENU</div></a>
-      <ul class="center hide-on-med-and-down">
+      <div id="menu-bar">
+      <ul class="center hide-on-med-and-down" style="min-width:400px">
         <li id="about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
         <li id="panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
         <li id="sectors"><a class='grey-text text-darken-3' href="{% url 'gui:sectors'%}">SECTORES PRODUCTIVOS</a></li>
@@ -95,6 +96,7 @@
           <li id="login"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:login' %}" data-tooltip="Ingresar" data-position="top"><i class="large material-icons">input</i></a></li>
         {% endif %}
       </ul>
+      </div>
       <ul class="side-nav" id="mobile-demo">
         <li id="s_about"><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown2">QUIÉNES SOMOS<i class="material-icons right">arrow_drop_down</i></a></li>
         <li id="s_panorama"><a class='grey-text text-darken-3' href="{% url 'gui:panorama'%}">PANORAMA REGIONAL</a></li>
@@ -104,7 +106,7 @@
         {% if user.is_authenticated %}
           <li id="logout"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:logout' %}" data-tooltip="Salir" data-position="top"><i class="large material-icons">power_settings_new</i></a></li>
         {% else %}
-          <li id="login"><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:login' %}" data-tooltip="Ingresar" data-position="top"><i class="large material-icons">input</i></a></li>
+          <li ><a class='grey-text text-darken-3 tooltipped' href="{% url 'gui:login' %}" data-tooltip="Ingresar" data-position="top"><i class="large material-icons">input</i></a></li>
         {% endif %}
       </ul>
     </div>
