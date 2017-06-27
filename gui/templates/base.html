@@ -166,7 +166,7 @@
               <ul id="menu-main-menu" class="menu-main"><li id="menu-item-639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-639"><a href="{% url 'gui:about' %}">Quiénes Somos</a>
                 <ul class="sub-menu">
                   <li id="menu-item-641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641"><a href="{% url 'gui:advice' %}">Consejo Asesor</a></li>
-                  <li id="menu-item-640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="{% url 'gui:technicalCommitte' %}">Comité Técnico</a></li>
+                  <!--<li id="menu-item-640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="{% url 'gui:technicalCommitte' %}">Comité Técnico</a></li>-->
                   <li id="menu-item-643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="{% url 'gui:team' %}">Equipo</a></li>
                   <li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="{% url 'gui:frecuentQuestions' %}">Preguntas Frecuentes</a></li>
                 </ul>
@@ -193,7 +193,7 @@
           </div>
         </div>
 
-        <header style="background-image:url('http://observatorionacional.cl/wp-content/uploads/2016/05/cropped-cabecera3.jpg');">
+      <header style="background-image:url('/static/gui/img/cabecera.png');">
           <div class="wrap">
             <div class="logo-group">
               <a href="http://www.sence.cl" title="Sence" class="logo-header main-logo" target="_blank">
@@ -207,7 +207,7 @@
             
             <figure class="site-logo">
               <a href="{% url 'gui:home' %}" title="Volver al home">
-                <img src="http://observatorionacional.cl/wp-content/uploads/2016/04/olc.png" alt="Observatorio Laboral Chile" class="img-responsive">
+                <img src="{% static 'gui/img/logo_observatorio_aysen.png' %}" alt="Observatorio Laboral Aysén" class="img-responsive">
               </a>
             </figure>
 
@@ -216,7 +216,7 @@
               <ul id="menu-main-menu" class="menu-main"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-639 " id='about'><a href="{% url 'gui:about' %}">Quiénes Somos</a>
                 <ul class="sub-menu">
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641"><a href="{% url 'gui:advice' %}">Consejo Asesor</a></li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="{% url 'gui:technicalCommitte' %}">Comité Técnico</a></li>
+                  <!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="{% url 'gui:technicalCommitte' %}">Comité Técnico</a></li>-->
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="{% url 'gui:team' %}">Equipo</a></li>
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="{% url 'gui:frecuentQuestions' %}">Preguntas Frecuentes</a></li>
                 </ul>

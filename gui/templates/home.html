@@ -11,125 +11,126 @@ Observatorio Laboral Aysen
 
 {% block content %}
 <div id="content">
-          <div class="wrap">
-            <div id="main">
-              <div class="stream">
-                <h5 class="titulo-seccion">Bienvenidos al Observatorio Laboral para la Región de Aysén</h5>
-                <section class="entry text-gris">
-                  <p>El Observatorio Laboral es un espacio para que los trabajadores y trabajadoras del país, estudiantes, empresas e instituciones formadoras puedan encontrar información de la situación productiva y de ocupaciones a nivel nacional y regional.</p>
-                </section>
-              </div>
-              <div class="stream">
-                <!--
-                <h4 class='subtitulo-seccion'>Aquí puedes buscar:</h4>
+  <div class="wrap">
+    <div id="main">
+      <div class="stream">
+        <h5 class="titulo-seccion">Bienvenidos al Observatorio Laboral para la Región de Aysén</h5>
+        <section class="entry text-gris">
+          <p>El Observatorio Laboral es un espacio para que los trabajadores y trabajadoras del país, estudiantes, empresas e instituciones formadoras puedan encontrar información de la situación productiva y de ocupaciones a nivel nacional y regional.</p>
+        </section>
+      </div>
+      <div class="stream">
+        <!--
+<h4 class='subtitulo-seccion'>Aquí puedes buscar:</h4>
 
-                <form method="POST" action="">
-                  <table>
-                    <tr>
-                      <td>
-                        <select class='form-control' name='idFiltro' onchange='this.form.submit()'><option selected value='1'>Las 10 ocupaciones con mayor ingreso</option><option  value='2'>Las 10 ocupaciones con mayor escolaridad</option><option  value='4'>Las 10 ocupaciones con mayor proporción de mujeres</option><option  value='5'>Las 10 ocupaciones con mayor número de mujeres</option><option  value='6'>Las  10 ocupaciones con mayor proporción de hombres</option><option  value='7'>Las 10 ocupaciones con mayor proporción de personas en situación de discapacidad (moderada y severa)</option><option  value='8'>Las 10 ocupaciones con mayor número de personas en situación de discapacidad (moderada y severa)</option><option  value='9'>Las 10 ocupaciones con mayor edad promedio</option><option  value='10'>Las 10 ocupaciones con mayor proporción de trabajadores por cuenta propia</option><option  value='11'>Las 10 ocupaciones con mayor proporción de personas con protección social</option><option  value='12'>Las 10 ocupaciones con mayor número de personas con protección social</option><option  value='13'>Las 10 ocupaciones con mayor proporción de jóvenes</option><option  value='14'>Las 10 ocupaciones con mayor número de jóvenes </option><option  value='16'>Las 10 ocupaciones con mayor proporción de trabajadores con contrato indefinido</option><option  value='17'>Las 10 ocupaciones con mayor proporción de trabajadores sin contrato</option><option  value='18'>Las 10 ocupaciones con menor ingreso</option><option  value='19'>Las 10 ocupaciones con menor proporción de personas con protección social</option><option  value='20'>Las 10 ocupaciones con menor número de personas con protección social</option><option  value='22'>Las 10 ocupaciones con menor escolaridad</option></select>                                </td>
-                      </tr>
-                    </table>
-                  </form>
-                -->
-                </br>
-                <h4 class='subtitulo-seccion'>Las 10 ocupaciones con mayor ingreso</h4><div class='table-responsive bg-white'><table class='table home-ocupaciones-table'><tr><th>Ocupación</th><th>Ingreso promedio</th><th>Años de escolaridad</th>
-                <th>% Mujeres</th><th>% Capacitados</th><th></th><th></th></tr><tr><td class='derecha'>Médicos</td><td>2.373.088</td><td>18,8</td>
-                <td>44</td><td>56</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Gerentes de empresas de intermediación y servicios a empresas </td><td>1.942.594</td><td>15,8</td>
-                <td>25</td><td>19</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Abogados y abogadas</td><td>1.648.135</td><td>17,4</td>
-                <td>47</td><td>22</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Ingenieros e ingenieras civiles</td><td>1.639.470</td><td>17,4</td>
-                <td>19</td><td>33</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Gerentes de empresas de construcción y obras públicas</td><td>1.426.790</td><td>13,8</td>
-                <td>6</td><td>13</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Gerentes de servicios recreativos, de enseñanza y salud</td><td>1.404.611</td><td>15</td>
-                <td>27</td><td>19</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Arquitectos(as), urbanistas e ingenieros(as) de tránsito</td><td>1.247.049</td><td>17,7</td>
-                <td>29</td><td>23</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Analistas de gestión y organización y afines</td><td>1.236.116</td><td>16,9</td>
-                <td>50</td><td>31</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Ingenieros industriales y de producción</td><td>1.172.869</td><td>16,9</td>
-                <td>31</td><td>37</td>
-                <td></td><td></td></tr><tr><td class='derecha'>Desarrolladores(as) y analistas de sistemas informáticos</td><td>1.159.485</td><td>17,1</td>
-                <td>11</td><td>28</td>
-                <td></td><td></td></tr></table><div class='nota-tabla'><p>Fuente: Casen, 2015<br/>Nota 1: Ranking se calcula sobre las 100 ocupaciones más ejercidas en Chile, que concentraban al 84,5% de la población ocupada el año 2015.<br/>Nota 2: Los datos de la Encuesta Casen no capturan de manera adecuada a la población de mayores ingresos.<br/>Nota 3: "Con protección social" corresponde al % de ocupados que cotizan en el sistema previsional y de salud.<br/>Nota 4: El empleo permanente corresponde a aquellos empleos de duración indefinida, en contraposición a los empleos de carácter temporal (plazo fijo o por obra).<br/>Nota 5: el % de ocupados con contrato indefinido o sin contrato se calculan sobre el total de ocupados y no sobre el total de asalariados.<br/>Nota 6: El ingreso por hora se calcula diviendo la suma de los ingresos por la suma de las horas habitualmente trabajadas.<br/>Nota 7: Se entiende por horas excesivas las jornadas que superan las 49 horas semanales.<br/></p></div>                     </div>
+<form method="POST" action="">
+<table>
+<tr>
+<td>
+<select class='form-control' name='idFiltro' onchange='this.form.submit()'><option selected value='1'>Las 10 ocupaciones con mayor ingreso</option><option  value='2'>Las 10 ocupaciones con mayor escolaridad</option><option  value='4'>Las 10 ocupaciones con mayor proporción de mujeres</option><option  value='5'>Las 10 ocupaciones con mayor número de mujeres</option><option  value='6'>Las  10 ocupaciones con mayor proporción de hombres</option><option  value='7'>Las 10 ocupaciones con mayor proporción de personas en situación de discapacidad (moderada y severa)</option><option  value='8'>Las 10 ocupaciones con mayor número de personas en situación de discapacidad (moderada y severa)</option><option  value='9'>Las 10 ocupaciones con mayor edad promedio</option><option  value='10'>Las 10 ocupaciones con mayor proporción de trabajadores por cuenta propia</option><option  value='11'>Las 10 ocupaciones con mayor proporción de personas con protección social</option><option  value='12'>Las 10 ocupaciones con mayor número de personas con protección social</option><option  value='13'>Las 10 ocupaciones con mayor proporción de jóvenes</option><option  value='14'>Las 10 ocupaciones con mayor número de jóvenes </option><option  value='16'>Las 10 ocupaciones con mayor proporción de trabajadores con contrato indefinido</option><option  value='17'>Las 10 ocupaciones con mayor proporción de trabajadores sin contrato</option><option  value='18'>Las 10 ocupaciones con menor ingreso</option><option  value='19'>Las 10 ocupaciones con menor proporción de personas con protección social</option><option  value='20'>Las 10 ocupaciones con menor número de personas con protección social</option><option  value='22'>Las 10 ocupaciones con menor escolaridad</option></select>                                </td>
+</tr>
+</table>
+</form>
+-->
+        <br>
+        <h4 class='subtitulo-seccion'>Principales ocupaciones de la Región</h4><div class='table-responsive bg-white'><table class='table home-ocupaciones-table'><tr><th>Ocupación</th><th>Ingreso promedio</th><th>Años de escolaridad</th>
+        <th>% Mujeres</th><th>% Capacitados</th><th></th><th></th></tr><tr><td class='derecha'>Médicos</td><td>2.373.088</td><td>18,8</td>
+        <td>44</td><td>56</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Gerentes de empresas de intermediación y servicios a empresas </td><td>1.942.594</td><td>15,8</td>
+        <td>25</td><td>19</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Abogados y abogadas</td><td>1.648.135</td><td>17,4</td>
+        <td>47</td><td>22</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Ingenieros e ingenieras civiles</td><td>1.639.470</td><td>17,4</td>
+        <td>19</td><td>33</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Gerentes de empresas de construcción y obras públicas</td><td>1.426.790</td><td>13,8</td>
+        <td>6</td><td>13</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Gerentes de servicios recreativos, de enseñanza y salud</td><td>1.404.611</td><td>15</td>
+        <td>27</td><td>19</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Arquitectos(as), urbanistas e ingenieros(as) de tránsito</td><td>1.247.049</td><td>17,7</td>
+        <td>29</td><td>23</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Analistas de gestión y organización y afines</td><td>1.236.116</td><td>16,9</td>
+        <td>50</td><td>31</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Ingenieros industriales y de producción</td><td>1.172.869</td><td>16,9</td>
+        <td>31</td><td>37</td>
+        <td></td><td></td></tr><tr><td class='derecha'>Desarrolladores(as) y analistas de sistemas informáticos</td><td>1.159.485</td><td>17,1</td>
+        <td>11</td><td>28</td>
+        <td></td><td></td></tr></table><div class='nota-tabla'><p>Fuente: Elaboración propia en base a encuesta CASEN 2015<br/>Nota 1: El ingreso mensual promedio corresponde al ingreso mensual líquido de todas las personas que se emplean en esta ocupación, incluyendo personas que trabajan a jornada parcial, por cuenta propia o sin contrato.</p></div>
+        </div>
 
-              </div>
+      </div>
 
-              <div class="clearfix"></div>
+      <div class="clearfix"></div>
 
+    </div>
+
+    <!-- Sidebar -->
+
+    <div id="sidebar">
+      <section class="map-container map-primary">
+        <h3>Observatorios regionales</h3>
+        <br/>
+        <div class="observatorios-regionales dropdown">
+          <div class="logo-obsregionales">
+            <div class="post-obsregionales"><img src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/logo-obs-regional.png" class="responsive" style="max-width:90px"></div>
+            <div class="desc-obsregionales">
+              <p>Te invitamos a conocer todos los observatorios a nivel regional</p>
             </div>
-
-            <!-- Sidebar -->
-
-            <div id="sidebar">
-              <section class="map-container map-primary">
-                <h3>Observatorios regionales</h3>
-                <br/>
-                <div class="observatorios-regionales dropdown">
-                  <div class="logo-obsregionales">
-                    <div class="post-obsregionales"><img src="http://observatorionacional.cl/wp-content/themes/observatorio-laboral/img/logo-obs-regional.png" class="responsive" style="max-width:90px"></div>
-                    <div class="desc-obsregionales">
-                      <p>Te invitamos a conocer todos los observatorios a nivel regional</p>
-                    </div>
-                  </div>
-                  <ul class="dropdown-content">
-                    <li><a class="items-obsregional" target="_blank" href="http://www.observatorioantof.cl/ ">
-                      Observatorio Laboral Antofagasta</a>
-                    </li>
-                    <li>
-                      <a class="items-obsregional" target="_blank" href="http://observatoriomaule.cl/ ">Observatorio Laboral Maule</a>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <br/>
-              <div class="clearfix"></div>
-              <section class="map-container map-primary">
-                <h3>Noticias</h3>
-                <br/>
-                <div class="stream contenedor-noticias">
-
-                  <div class="post tarjeta destacado">
-                    <div class="pic alignleft">
-                      <a href="http://observatorionacional.cl/observatorio-nacional-expone-en-jornada-de-capacitacion-de-omil/">
-                        <img width="1024" height="615" src="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-1024x615.jpg" class="attachment-large size-large wp-post-image" alt="noticia_29032017" srcset="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-1024x615.jpg 1024w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-300x180.jpg 300w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-768x461.jpg 768w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-660x396.jpg 660w" sizes="(max-width: 1024px) 100vw, 1024px" />                  </a>
-                      </div>
-                      <div class="texto">
-                        <span class="meta">29 de Marzo de 2017 </span>
-                        <h4 class="titulo-noticia"><a href="http://observatorionacional.cl/observatorio-nacional-expone-en-jornada-de-capacitacion-de-omil/">Observatorio nacional expone en jornada de capacitación de OMIL</a></h4>
-                        <p>Frente a OMIL de la región metropolitana, el observatorio laboral nacional expuso respecto del proyecto y los beneficios para los usuarios de las mismas.</p>
-                        <a href="http://observatorionacional.cl/observatorio-nacional-expone-en-jornada-de-capacitacion-de-omil/" title="Observatorio nacional expone en jornada de capacitación de OMIL" class="btn btn-action btn-blue alignright">+</a>
-                      </div>
-                      <div class="clearfix"></div>
-                    </div>
-
-                  </div>  
-                </section>
-                <div class="map-container map-primary">
-                  <a href="http://www.sence.cl/portal/Contactenos/" target="_blank">
-                    <div class="contactenos-banner">
-                      <div class="contactenos-logo">
-                        <!--<div class="contactenos-post"><img src="http://observatorionacional.cl/wp-content/uploads/2016/04/olc.png" class="responsive"></div>-->
-                        <div class="contactenos-desc">
-                          <p>Contáctenos</p>
-                        </div>
-                      </div>    
-                    </div>
-                  </a>
-                </div>  
-                <div class="map-container map-primary">
-                  <a href="http://www.sil.mintrab.gob.cl/" target="_blank">
-                    <img class="sombra" src="http://observatoriomaule.cl/wp-content/uploads/2016/08/02.jpg">  
-                  </a>
-                </div>     
-              </div>
-
-              <div class="clearfix"></div>
-
-            </div>
-
           </div>
+          <ul class="dropdown-content">
+            <li><a class="items-obsregional" target="_blank" href="http://www.observatorioantof.cl/ ">
+              Observatorio Laboral Antofagasta</a>
+            </li>
+            <li>
+              <a class="items-obsregional" target="_blank" href="http://observatoriomaule.cl/ ">Observatorio Laboral Maule</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <br/>
+      <div class="clearfix"></div>
+      <section class="map-container map-primary">
+        <h3>Noticias</h3>
+        <br/>
+        <div class="stream contenedor-noticias">
+
+          <div class="post tarjeta destacado">
+            <div class="pic alignleft">
+              <a href="http://observatorionacional.cl/observatorio-nacional-expone-en-jornada-de-capacitacion-de-omil/">
+                <img width="1024" height="615" src="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-1024x615.jpg" class="attachment-large size-large wp-post-image" alt="noticia_29032017" srcset="http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-1024x615.jpg 1024w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-300x180.jpg 300w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-768x461.jpg 768w, http://observatorionacional.cl/wp-content/uploads/2017/03/noticia_29032017-660x396.jpg 660w" sizes="(max-width: 1024px) 100vw, 1024px" />                  </a>
+            </div>
+            <div class="texto">
+              <span class="meta">29 de Marzo de 2017 </span>
+              <h4 class="titulo-noticia"><a href="http://observatorionacional.cl/observatorio-nacional-expone-en-jornada-de-capacitacion-de-omil/">Observatorio nacional expone en jornada de capacitación de OMIL</a></h4>
+              <p>Frente a OMIL de la región metropolitana, el observatorio laboral nacional expuso respecto del proyecto y los beneficios para los usuarios de las mismas.</p>
+              <a href="http://observatorionacional.cl/observatorio-nacional-expone-en-jornada-de-capacitacion-de-omil/" title="Observatorio nacional expone en jornada de capacitación de OMIL" class="btn btn-action btn-blue alignright">+</a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+        </div>  
+      </section>
+      <div class="map-container map-primary">
+        <a href="http://www.sence.cl/portal/Contactenos/" target="_blank">
+          <div class="contactenos-banner">
+            <div class="contactenos-logo">
+              <!--<div class="contactenos-post"><img src="http://observatorionacional.cl/wp-content/uploads/2016/04/olc.png" class="responsive"></div>-->
+              <div class="contactenos-desc">
+                <p>Contáctenos</p>
+              </div>
+            </div>    
+          </div>
+        </a>
+      </div>  
+      <div class="map-container map-primary">
+        <a href="http://www.sil.mintrab.gob.cl/" target="_blank">
+          <img class="sombra" src="http://observatoriomaule.cl/wp-content/uploads/2016/08/02.jpg">  
+        </a>
+      </div>     
+    </div>
+
+    <div class="clearfix"></div>
+
+  </div>
+
+</div>
 {% endblock content %}	
